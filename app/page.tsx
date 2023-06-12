@@ -20,6 +20,18 @@ export default function Home() {
         <Image src={"/pink-inference-icon.png"} fill alt="Pink Inference Logo" />
       </section>
 
+      <section className="rounded-[5rem] bg-clip-text bg-gradient-to-br from-[#f0f0f0] to-[#ffffff] shadow-lg w-full p-10">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic quia facere explicabo error voluptatum quidem cupiditate magnam numquam praesentium sit, aut quas fuga rem non voluptates repudiandae ut illum culpa!
+      </section>
+
+      <section className="rounded-[5rem] bg-clip-text bg-gradient-to-br from-[#f0f0f0] to-[#ffffff] shadow-lg w-full p-10">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic quia facere explicabo error voluptatum quidem cupiditate magnam numquam praesentium sit, aut quas fuga rem non voluptates repudiandae ut illum culpa!
+      </section>
+
+      <section className="rounded-[5rem] bg-clip-text bg-gradient-to-br from-[#f0f0f0] to-[#ffffff] shadow-lg w-full p-10">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic quia facere explicabo error voluptatum quidem cupiditate magnam numquam praesentium sit, aut quas fuga rem non voluptates repudiandae ut illum culpa!
+      </section>
+
       <ParticlesWrapper />
     </main>
   )
