@@ -12,7 +12,7 @@ export default function Home() {
       </header>
 
       <section className='w-full flex flex-col gap-4'>
-        <h3 className='text-3xl text-center'><span className='font- font-bold'>Scalable & Powerful</span> Wetware Computing</h3>
+        <h3 className='text-3xl text-center'><span className='font- font-bold'>Scalable &amp; Powerful</span> Wetware Computing</h3>
         <p className="text-center">Developing wetware architecture for the next generation of computing and neuropharmacology.</p>
       </section>
 
