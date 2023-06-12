@@ -97,13 +97,18 @@ export default function ParticlesWrapper() {
             value: 80,
           },
           opacity: {
-            value: 0.5,
+            value: .3,
           },
           shape: {
-            type: "circle",
+            type: "image",
+            image: {
+              src: "/neuron-svgrepo-com.svg",
+              width: 100,
+              height: 100
+            }
           },
           size: {
-            value: { min: 1, max: 5 },
+            value: { min: 5, max: 10 },
           },
         },
         detectRetina: true,
