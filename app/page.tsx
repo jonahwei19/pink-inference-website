@@ -8,7 +8,7 @@ export default function Home() {
     <main className="flex min-h-screen h-max flex-col gap-8 items-center p-8 md:p-16">
       <header className='flex justify-between w-full'>
         <h1 className='text-4xl font-bold flex flex-col sm:flex-row gap-x-2'><span className='text-[#e06666]'>Pink</span>Inference</h1>
-        <button className='w-max h-max  border border-solid'>Let's Connect</button>
+        <button className='w-max h-max  border border-solid'>Let&apos;s Connect</button>
       </header>
 
       <section className='w-full flex flex-col gap-4'>
