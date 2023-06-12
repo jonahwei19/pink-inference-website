@@ -1,5 +1,6 @@
 import './globals.css'
 import { Play } from 'next/font/google'
+import SmoothScroll from '@/utilities/SmoothScroll'
 
 const playFont = Play({
   weight: ['400', '700'],
@@ -18,7 +19,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={playFont.className}>{children}</body>
+      <body className={playFont.className}>
+        {children}
+        <SmoothScroll />
+      </body>
     </html>
   )
 }
