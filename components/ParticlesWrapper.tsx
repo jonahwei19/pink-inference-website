@@ -35,7 +35,7 @@ export default function ParticlesWrapper() {
               detectsOn: 'window',
               events: {
                 onClick: {
-                  enable: true,
+                  enable: false,
                   mode: 'push',
                 },
                 onHover: {
