@@ -16,7 +16,7 @@ export default function Home() {
   
   return (
     <main className="flex min-h-screen h-max flex-col gap-8 items-center p-8 md:p-16">
-      <div className="w-full h-screen flex flex-col items-center gap-6">
+      <div className="w-full h-screen flex flex-col items-center gap-10">
         <header className='flex justify-between w-full'>
           <h1 className='text-4xl font-bold flex flex-col sm:flex-row gap-x-2'><span className='text-[#e06666]'>Pink</span>Inference</h1>
           <a 
@@ -29,9 +29,9 @@ export default function Home() {
 
         <motion.section
             ref={ref}
-            initial={{ opacity: 0, y: 70 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: .5 }}
             className="relative aspect-square w-36 animate-[spin_25s_linear_infinite]">
           <Image src={"/pink-inference-icon.png"} fill alt="Pink Inference Logo" />
         </motion.section>
@@ -39,14 +39,14 @@ export default function Home() {
         <section className='w-full flex flex-col gap-4'>
           <motion.h3
             ref={ref}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            initial={{ opacity: 0, y:20 }}
+            animate={{ opacity: 1, y:0 }}
             transition={{ duration: 1 }}
             className='text-5xl md:text-6xl text-center'><span className="font-bold">Scalable &amp; Powerful</span> Wetware Computing</motion.h3>
           <motion.p
             ref={ref}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            initial={{ opacity: 0, y:20 }}
+            animate={{ opacity: 1, y:0 }}
             transition={{ duration: 1 }}
           className="text-center text-lg md:text-2xl">Developing wetware architecture for the next generation of computing and neuropharmacology.</motion.p>
         </section>
