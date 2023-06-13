@@ -52,8 +52,9 @@ export default function ParticlesWrapper() {
             },
             onHover: {
               enable: mobile,
-              mode: "repulse",
+              mode: "attract",
             },
+            resize: true,
           },
           modes: {
             push: {
@@ -100,15 +101,10 @@ export default function ParticlesWrapper() {
             value: .3,
           },
           shape: {
-            type: "image",
-            image: {
-              src: "/neuron-svgrepo-com.svg",
-              width: 100,
-              height: 100
-            }
+            type: "circle",
           },
           size: {
-            value: { min: 5, max: 10 },
+            value: { min: 1, max: 5 },
           },
         },
         detectRetina: true,

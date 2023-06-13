@@ -4,6 +4,7 @@ import ParticlesWrapper from "@/components/ParticlesWrapper";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import ContactForm from "@/components/ContactForm";
 
 
 export default function Home() {
@@ -15,7 +16,7 @@ export default function Home() {
 
   
   return (
-    <main className="flex min-h-screen h-max flex-col gap-8 items-center p-8 md:p-16">
+    <main className="flex min-h-screen h-max flex-col gap-8 items-center p-8 md:p-16 max-w-[1500px] mx-auto">
       <div className="w-full h-screen flex flex-col items-center gap-10">
         <header className='flex justify-between w-full'>
           <h1 className='text-4xl font-bold flex flex-col sm:flex-row gap-x-2'><span className='text-[#e06666]'>Pink</span>Inference</h1>
@@ -85,8 +86,9 @@ export default function Home() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="rounded-[5rem] bg-gradient-to-br from-[#f0f0f0] to-[#ffffff] shadow-lg w-full p-10">
-          Contact Form
+          className="flex flex-col items-center rounded-[5rem] bg-gradient-to-br from-[#f0f0f0] to-[#ffffff] shadow-lg w-full p-10 gap-6">
+          <p className="text-3xl">Contact Us</p>
+          <ContactForm />
       </motion.section>
 
       <hr className="border border-opacity-10 border-solid border-black w-full"/>
