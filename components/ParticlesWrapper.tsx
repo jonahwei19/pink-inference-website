@@ -60,9 +60,9 @@ export default function ParticlesWrapper() {
             push: {
               quantity: 4,
             },
-            repulse: {
-              distance: 100,
-              duration: 5,
+            attract: {
+              distance: 200,
+              duration: 3,
             },
           },
         },
@@ -78,7 +78,7 @@ export default function ParticlesWrapper() {
             width: 1,
           },
           collisions: {
-            enable: true,
+            enable: false,
           },
           move: {
             direction: "none",
@@ -87,7 +87,7 @@ export default function ParticlesWrapper() {
               default: "bounce",
             },
             random: false,
-            speed: 1,
+            speed: 2,
             straight: false,
           },
           number: {

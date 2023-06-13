@@ -21,7 +21,7 @@ export default function Home() {
         <header className='flex justify-between w-full'>
           <h1 className='text-4xl font-bold flex flex-col sm:flex-row gap-x-2'><span className='text-[#e06666]'>Pink</span>Inference</h1>
           <a 
-            href="#contactForm"
+            href="#About"
             data-smooth-scroll
             className='w-max h-max bg-[#3772FF] text-[#f0f0f0] px-3 py-2 border border-solid
             rounded-tl-[1.4rem] rounded-tr-[0.3rem] rounded-bl-[0.5rem] rounded-br-[1.4rem] hover:opacity-70'>
@@ -54,33 +54,40 @@ export default function Home() {
       </div>
 
       <motion.section
-          ref={ref} 
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="rounded-[5rem] bg-gradient-to-br from-[#f0f0f0] to-[#ffffff] shadow-lg w-full p-10">
-          Problem Statement and Solution
+        ref={ref}
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="rounded-[5rem] bg-gradient-to-br from-[#f0f0f0] to-[#ffffff] shadow-lg w-full p-10"
+      >
+        <h2 className="text-3xl mb-4">Problem Statement and Solution</h2>
+        <p>We are designing wetware computing to be scalable and powerful. Current approaches to wetware systems focus on electrical interfaces with metallic electrodes. However, these designs are inflexible and challenging to scale.</p>
       </motion.section>
 
       <motion.section
-          ref={ref}  
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="rounded-[5rem] bg-gradient-to-br from-[#f0f0f0] to-[#ffffff] shadow-lg w-full p-10">
-          Key Features and Benefits
+        ref={ref}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="rounded-[5rem] bg-gradient-to-br from-[#f0f0f0] to-[#ffffff] shadow-lg w-full p-10"
+      >
+        <h2 className="text-3xl mb-4">Key Features and Benefits</h2>
+        <p>We've been able to sidestep these flaws by developing a system that skips the electrode interface altogether. We are making wetware a computational reality.</p>
       </motion.section>
 
       <motion.section
-          ref={ref}  
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="rounded-[5rem] bg-gradient-to-br from-[#f0f0f0] to-[#ffffff] shadow-lg w-full p-10">
-          Team Overview
+        id="About"
+        ref={ref}
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="rounded-[5rem] bg-gradient-to-br from-[#f0f0f0] to-[#ffffff] shadow-lg w-full p-10"
+      >
+        <h2 className="text-3xl mb-4">Team Overview</h2>
+        <p>Placeholder content for the team overview section.</p>
       </motion.section>
 
-      <motion.section
+      {/* <motion.section
           id="contactForm"
           ref={ref}  
           initial={{ opacity: 0, y: -20 }}
@@ -89,7 +96,7 @@ export default function Home() {
           className="flex flex-col items-center rounded-[5rem] bg-gradient-to-br from-[#f0f0f0] to-[#ffffff] shadow-lg w-full p-10 gap-6">
           <p className="text-3xl">Contact Us</p>
           <ContactForm />
-      </motion.section>
+      </motion.section> */}
 
       <hr className="border border-opacity-10 border-solid border-black w-full"/>
 
