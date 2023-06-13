@@ -16,7 +16,7 @@ export default function Home() {
 
   
   return (
-    <main className="flex min-h-screen h-max flex-col gap-8 items-center p-8 md:p-16 max-w-[1500px] mx-auto">
+    <main className="flex min-h-screen h-max sm:h-screen flex-col gap-8 items-center p-8 md:p-16 max-w-[1500px] mx-auto">
       <div className="w-full h-screen flex flex-col items-center gap-10">
         <header className='flex justify-between w-full'>
           <h1 className='text-4xl font-bold flex flex-col sm:flex-row gap-x-2'><span className='text-[#e06666]'>Pink</span>Inference</h1>
@@ -72,7 +72,7 @@ export default function Home() {
         className="rounded-[5rem] bg-gradient-to-br from-[#f0f0f0] to-[#ffffff] shadow-lg w-full p-10"
       >
         <h2 className="text-3xl mb-4">Key Features and Benefits</h2>
-        <p>We've been able to sidestep these flaws by developing a system that skips the electrode interface altogether. We are making wetware a computational reality.</p>
+        <p>We&apos;ve been able to sidestep these flaws by developing a system that skips the electrode interface altogether. We are making wetware a computational reality.</p>
       </motion.section>
 
       <motion.section
