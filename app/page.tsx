@@ -16,9 +16,9 @@ export default function Home() {
 
   
   return (
-    <main className="flex min-h-screen h-max sm:h-screen flex-col gap-8 items-center p-8 md:p-16 max-w-[1500px] mx-auto">
-      <div className="w-full h-screen flex flex-col items-center gap-10">
-        <header className='flex justify-between w-full'>
+    <main className="flex min-h-screen flex-col gap-8 items-center p-8 md:p-16 max-w-[1500px] mx-auto">
+      <div className="w-full h-screen sm:h-max flex flex-col items-center gap-10 relative">
+        <header className='flex justify-between w-full sticky top-4'>
           <h1 className='text-4xl font-bold flex flex-col sm:flex-row gap-x-2'><span className='text-[#e06666]'>Pink</span>Inference</h1>
           <a 
             href="#About"
@@ -51,16 +51,24 @@ export default function Home() {
             transition={{ duration: 1 }}
           className="text-center text-lg md:text-2xl">Developing wetware architecture for the next generation of computing and neuropharmacology.</motion.p>
         </section>
+
+        <a 
+            href="#ProblemStatement"
+            data-smooth-scroll
+            className='absolute bottom-28 w-max h-max bg-[#f0f0f0] text-[#f0f0f0] px-3 py-2 border border-solid
+            rounded-tl-[1.4rem] rounded-tr-[0.3rem] rounded-bl-[0.5rem] rounded-br-[1.4rem] hover:opacity-70 rotate-90'>
+              <Image src={'/arrow.png'} height={20} width={20} alt="Move to next section" /></a>
       </div>
 
       <motion.section
+        id="ProblemStatement"
         ref={ref}
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         className="rounded-[5rem] bg-gradient-to-br from-[#f0f0f0] to-[#ffffff] shadow-lg w-full p-10"
       >
-        <h2 className="text-3xl mb-4">Problem Statement and Solution</h2>
+        <h2 className="text-3xl mb-4 font-bold">Innovative Solutions for the Future</h2>
         <p>We are designing wetware computing to be scalable and powerful. Current approaches to wetware systems focus on electrical interfaces with metallic electrodes. However, these designs are inflexible and challenging to scale.</p>
       </motion.section>
 
@@ -71,7 +79,10 @@ export default function Home() {
         transition={{ duration: 0.5 }}
         className="rounded-[5rem] bg-gradient-to-br from-[#f0f0f0] to-[#ffffff] shadow-lg w-full p-10"
       >
-        <h2 className="text-3xl mb-4">Key Features and Benefits</h2>
+        <h2 className="text-3xl font-bold">
+          Powerful Features
+          <p className="mb-4 ml-8">Exciting Discoveries</p>
+        </h2>
         <p>We&apos;ve been able to sidestep these flaws by developing a system that skips the electrode interface altogether. We are making wetware a computational reality.</p>
       </motion.section>
 
@@ -83,7 +94,7 @@ export default function Home() {
         transition={{ duration: 0.5 }}
         className="rounded-[5rem] bg-gradient-to-br from-[#f0f0f0] to-[#ffffff] shadow-lg w-full p-10"
       >
-        <h2 className="text-3xl mb-4">Team Overview</h2>
+        <h2 className="text-3xl mb-4 font-bold">Introducing Our Talented Team</h2>
         <p>Placeholder content for the team overview section.</p>
       </motion.section>
 
