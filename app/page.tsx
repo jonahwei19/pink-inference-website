@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col gap-8 items-center p-8 md:p-16 max-w-[1500px] mx-auto">
       <div className="w-full h-screen sm:h-max flex flex-col items-center gap-10 relative">
-        <header className='flex justify-between w-full sticky top-4'>
+        <header className='flex justify-between w-full top-4'>
           <h1 className='text-4xl font-bold flex flex-col sm:flex-row gap-x-2'><span className='text-[#e06666]'>Pink</span>Inference</h1>
           <a 
             href="#About"
@@ -33,11 +33,11 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: .5 }}
-            className="relative aspect-square w-36 animate-[spin_25s_linear_infinite]">
+            className="relative aspect-square w-28 sm:w-36 animate-[spin_25s_linear_infinite]">
           <Image src={"/pink-inference-icon.png"} fill alt="Pink Inference Logo" />
         </motion.section>
 
-        <section className='w-full flex flex-col gap-4'>
+        <section className='w-full flex flex-col gap-4 items-center'>
           <motion.h3
             ref={ref}
             initial={{ opacity: 0, y:20 }}
@@ -50,14 +50,16 @@ export default function Home() {
             animate={{ opacity: 1, y:0 }}
             transition={{ duration: 1 }}
           className="text-center text-lg md:text-2xl">Developing wetware architecture for the next generation of computing and neuropharmacology.</motion.p>
-        </section>
 
-        <a 
+          <a 
             href="#ProblemStatement"
             data-smooth-scroll
-            className='absolute bottom-28 w-max h-max bg-[#f0f0f0] text-[#f0f0f0] px-3 py-2 border border-solid
+            className='sm:hidden w-max h-max bg-[#3772FF] text-[#f0f0f0] px-3 py-2 border border-solid
             rounded-tl-[1.4rem] rounded-tr-[0.3rem] rounded-bl-[0.5rem] rounded-br-[1.4rem] hover:opacity-70 rotate-90'>
-              <Image src={'/arrow.png'} height={20} width={20} alt="Move to next section" /></a>
+              {`--->`}</a>
+
+        </section>
+
       </div>
 
       <motion.section
