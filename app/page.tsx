@@ -96,8 +96,14 @@ export default function Home() {
         transition={{ duration: 0.5 }}
         className="rounded-[5rem] bg-gradient-to-br from-[#f0f0f0] to-[#ffffff] shadow-lg w-full p-10"
       >
-        <h2 className="text-3xl mb-4 font-bold">Introducing Our Talented Team</h2>
-        <p>Placeholder content for the team overview section.</p>
+        <h2 className="text-3xl mb-4 font-bold">Our Talented Team</h2>
+        <div className="flex justify-center flex-wrap w-full px-12 gap-10">
+          <MemberDisplay name="Michael Loftus" role="Co-founder (CSO)" image="/Michael-Loftus-Pic.jpg" />
+          <MemberDisplay name="Jonah Weinbaum" role="Co-founder (CEO)" image="/Jonah-Weinbaum-Pic.jpg" />
+          <MemberDisplay name="Zan Huang" role="Co-founder (CTO)" image="/Zan-Huang-Pic.png" />
+          <MemberDisplay name="Sami Barmada" role="Science Advisor" image="/Sami-Barmada-Pic.jpg" />
+          <MemberDisplay name="Don Stein" role="Business Advisor" image="/Don-Stein-Pic.png" />
+        </div>
       </motion.section>
 
       {/* <motion.section
@@ -124,3 +130,18 @@ export default function Home() {
   )
 }
 
+function MemberDisplay({name, role, image}:{
+  name: string,
+  role: string,
+  image: string,
+}) {
+  return (
+    <div className="flex flex-col items-center gap-4">
+      <div className="relative overflow-hidden rounded-3xl w-60 h-60 sm:w-72 sm:h-72">
+        <Image fill alt={name} src={image} />
+      </div>
+      <p className="text-2xl font-bold">{name}</p>
+      <p className="text-base">{role}</p>
+    </div>
+  )
+}
