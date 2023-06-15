@@ -16,10 +16,10 @@ export default function Home() {
 
   
   return (
-    <main className="flex min-h-screen flex-col gap-8 items-center p-8 md:p-16 max-w-[1500px] mx-auto">
+    <main className="flex min-h-screen flex-col gap-24 items-center p-8 md:p-16 max-w-[1500px] mx-auto">
       <div className="w-full h-screen sm:h-max flex flex-col items-center gap-10 relative">
         <header className='flex justify-between w-full top-4'>
-          <h1 className='text-4xl font-bold flex flex-col sm:flex-row gap-x-2'><span className='text-[#e06666]'>Pink</span>Inference</h1>
+          <h1 className='text-4xl font-bold flex flex-col sm:flex-row gap-x-2'><span className='text-[#FD5DA8]'>Pink</span>Inference</h1>
           <a 
             href="#About"
             data-smooth-scroll
@@ -33,7 +33,7 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: .5 }}
-            className="relative aspect-square w-28 sm:w-36 animate-[spin_25s_linear_infinite]">
+            className="relative aspect-square w-28 sm:w-36 animate-[spin_30s_linear_infinite]">
           <Image src={"/pink-inference-icon.png"} fill alt="Pink Inference Logo" />
         </motion.section>
 
@@ -68,10 +68,32 @@ export default function Home() {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="rounded-[5rem] bg-gradient-to-br from-[#f0f0f0] to-[#ffffff] shadow-lg w-full p-10"
+        className="rounded-[5rem] bg-gradient-to-br from-[#f0f0f0] to-[#ffffff] shadow-lg w-full p-10 text-lg flex flex-col gap-8"
       >
         <h2 className="text-3xl mb-4 font-bold">Innovative Solutions for the Future</h2>
-        <p>We are designing wetware computing to be scalable and powerful. Current approaches to wetware systems focus on electrical interfaces with metallic electrodes. However, these designs are inflexible and challenging to scale.</p>
+        <p>Current approaches to wetware systems focus on electrical interfaces with metallic electrodes. However, these designs are <strong>inflexible and challenging</strong> to scale. We are designing wetware computing to be <strong>scalable and powerful</strong>.</p>
+        <div className="flex flex-col lg:flex-row justify-center items-start gap-6 rounded-lg border-2 border-solid p-4">
+          <div className="flex flex-col gap-2 lg:w-1/2">
+            <h1 className="text-2xl font-semibold">Current Models</h1>
+            {/* <ul>
+              <li>Inflexible and costly</li>
+              <li>Significant scalability issues</li>
+              <li>High energy consumption</li>
+              <li>Large amounts of data required</li>
+              <li>Neurological drug testing is difficult to replicate</li>
+            </ul> */}
+            <p>Current wetware models are inflexible and costly. - AI faces significant scalability issues in terms of data required and energy consumption. - Neurological drug testing is difficult and faces severe replicability issues. - Psychological research, due to measurement and stimulation constraints has had to focus on artifacts as opposed to source.</p>
+          </div>
+          <div className="flex flex-col gap-2 lg:w-1/2">
+            <h1 className="text-2xl font-semibold">Our Solution</h1>
+            {/* <ul>
+              <li>Yields the potential for less training time and energy consumption</li>
+              <li>Faster testing of neurological drugs</li>
+              <li>Offers more reliable method to study the brain</li>
+            </ul> */}
+            <p>Our model improves on the industry standard. Wetware, due to greater complexity and parallelization, yields the potential for less training time and energy consumption (theoretically). With our system, pharma companies will be able to more quickly and decisively test the effect of neurological drugs and their effects on neuronal cultures. Cognition experts will be able to use our system to study the brain in a more reliable method.</p>
+          </div>
+        </div>
       </motion.section>
 
       <motion.section
@@ -79,13 +101,25 @@ export default function Home() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="rounded-[5rem] bg-gradient-to-br from-[#f0f0f0] to-[#ffffff] shadow-lg w-full p-10"
+        className="rounded-[5rem] bg-gradient-to-br from-[#f0f0f0] to-[#ffffff] shadow-lg w-full p-10 text-lg flex flex-col gap-8"
       >
         <h2 className="text-3xl font-bold">
           Powerful Features
           <p className="mb-4 ml-8">Exciting Discoveries</p>
         </h2>
         <p>We&apos;ve been able to sidestep these flaws by developing a system that skips the electrode interface altogether. We are making wetware a computational reality.</p>
+        <ul className="text-xl list-disc">
+          <li>Versatile</li>
+          <li>Scalable</li>
+          <li>
+            Sustainable
+            <ul className="ml-4">
+              <li>- Long-lasting neuron life</li>
+              <li>- Lower energy consumption</li>
+            </ul>
+          </li>
+          <li>Cost-Effective</li>
+        </ul>
       </motion.section>
 
       <motion.section
@@ -94,7 +128,7 @@ export default function Home() {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="rounded-[5rem] bg-gradient-to-br from-[#f0f0f0] to-[#ffffff] shadow-lg w-full p-10"
+        className="rounded-[5rem] bg-gradient-to-br from-[#f0f0f0] to-[#ffffff] shadow-lg w-full p-10 text-lg"
       >
         <h2 className="text-3xl mb-4 font-bold">Our Talented Team</h2>
         <div className="flex justify-center flex-wrap w-full px-12 gap-10">
@@ -134,6 +168,7 @@ function MemberDisplay({name, role, image}:{
   name: string,
   role: string,
   image: string,
+  
 }) {
   return (
     <div className="flex flex-col items-center gap-4">

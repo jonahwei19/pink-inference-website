@@ -68,7 +68,7 @@ export default function ParticlesWrapper() {
         },
         particles: {
           color: {
-            value: "#e06666",
+            value: "#FD5DA8",
           },
           links: {
             color: "#000000",
@@ -98,7 +98,7 @@ export default function ParticlesWrapper() {
             value: 80,
           },
           opacity: {
-            value: .3,
+            value: .4,
           },
           shape: {
             type: "circle",
