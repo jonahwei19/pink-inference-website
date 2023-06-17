@@ -48,8 +48,8 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={inView ? { duration: .5 } : {}}
-            className="relative aspect-square w-24 h-24 sm:w-36 sm:h-36 animate-[spin_30s_linear_infinite]">
-          <Image src={"/pink-inference-icon.png"} fill alt="Pink Inference Logo" />
+            className="relative h-60 aspect-square animate-[spin_30s_linear_infinite]">
+          <Image className="" src={"/pink-inference-icon.png"} fill alt="Pink Inference Logo" />
         </motion.section>
 
         <section className='w-full flex flex-col gap-4 items-center'>
@@ -74,8 +74,10 @@ export default function Home() {
               {`--->`}</a>
 
         </section>
-
-        <ParticlesWrapper />
+            
+        <div className="w-full h-full">
+          <ParticlesWrapper />
+        </div>
       </div>
 
       <motion.section
