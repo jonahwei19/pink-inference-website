@@ -48,7 +48,7 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={inView ? { duration: .5 } : {}}
-            className="relative h-60 aspect-square animate-[spin_30s_linear_infinite]">
+            className="relative h-36 lg:h-48 aspect-square animate-[spin_30s_linear_infinite]">
           <Image className="" src={"/pink-inference-icon.png"} fill alt="Pink Inference Logo" />
         </motion.section>
 
