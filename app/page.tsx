@@ -14,6 +14,20 @@ export default function Home() {
     threshold: 0.5, // Percentage of section visible in the viewport to trigger the animation
   });
 
+  const [innovativeSolutionsRef, innovativeSolutionsInView] = useInView({
+    triggerOnce: false,
+    threshold: 0.1,
+  });
+
+  const [excitingDiscoveriesRef, excitingDiscoveriesInView] = useInView({
+    triggerOnce: false,
+    threshold: 0.1,
+  });
+
+  const [ourTeamRef, ourTeamInView] = useInView({
+    triggerOnce: false,
+    threshold: 0.1,
+  });
   
   return (
     <main className="flex min-h-screen flex-col gap-24 items-center p-8 md:p-16 max-w-[1500px] mx-auto">
@@ -32,7 +46,7 @@ export default function Home() {
             ref={ref}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: .5 }}
+            transition={inView ? { duration: .5 } : {}}
             className="relative aspect-square w-28 sm:w-36 animate-[spin_30s_linear_infinite]">
           <Image src={"/pink-inference-icon.png"} fill alt="Pink Inference Logo" />
         </motion.section>
@@ -41,13 +55,13 @@ export default function Home() {
           <motion.h3
             ref={ref}
             initial={{ opacity: 0, y:20 }}
-            animate={{ opacity: 1, y:0 }}
+            animate={inView ? { opacity: 1, y:0 } : {}}
             transition={{ duration: 1 }}
             className='text-5xl md:text-6xl text-center'><span className="font-bold">Scalable &amp; Powerful</span> Wetware Computing</motion.h3>
           <motion.p
             ref={ref}
-            initial={{ opacity: 0, y:20 }}
-            animate={{ opacity: 1, y:0 }}
+            initial={{ x: 100, opacity: 0 }}
+            animate={inView ? { x: 0, opacity: 1 } : {}}
             transition={{ duration: 1 }}
           className="text-center text-lg md:text-2xl">Developing wetware architecture for the next generation of computing and neuropharmacology.</motion.p>
 
@@ -64,9 +78,9 @@ export default function Home() {
 
       <motion.section
         id="ProblemStatement"
-        ref={ref}
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
+        ref={innovativeSolutionsRef}
+        initial={{ x: -100, opacity: 0 }}
+        animate={innovativeSolutionsInView ? { x: 0, opacity: 1 } : {}}
         transition={{ duration: 0.5 }}
         className="rounded-[5rem] bg-gradient-to-br from-[#f0f0f0] to-[#ffffff] shadow-lg w-full p-10 text-lg flex flex-col gap-8"
       >
@@ -97,9 +111,9 @@ export default function Home() {
       </motion.section>
 
       <motion.section
-        ref={ref}
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
+        ref={excitingDiscoveriesRef}
+        initial={{ x: 100, opacity: 0 }}
+        animate={excitingDiscoveriesInView ? { x: 0, opacity: 1 } : {}}
         transition={{ duration: 0.5 }}
         className="rounded-[5rem] bg-gradient-to-br from-[#f0f0f0] to-[#ffffff] shadow-lg w-full p-10 text-lg flex flex-col gap-8"
       >
@@ -124,9 +138,9 @@ export default function Home() {
 
       <motion.section
         id="About"
-        ref={ref}
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
+        ref={ourTeamRef}
+        initial={{ x: -100, opacity: 0 }}
+        animate={ourTeamInView ? { x: 0, opacity: 1 } : {}}
         transition={{ duration: 0.5 }}
         className="rounded-[5rem] bg-gradient-to-br from-[#f0f0f0] to-[#ffffff] shadow-lg w-full p-10 text-lg"
       >
