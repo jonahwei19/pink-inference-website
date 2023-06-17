@@ -17,15 +17,15 @@ export default function Home() {
   
   return (
     <main className="flex min-h-screen flex-col gap-24 items-center p-8 md:p-16 max-w-[1500px] mx-auto">
-      <div className="w-full h-screen sm:h-max flex flex-col items-center gap-10 relative">
+      <div className="w-full h-screen flex flex-col items-center gap-10 relative">
         <header className='flex justify-between w-full top-4'>
           <h1 className='text-4xl font-bold flex flex-col sm:flex-row gap-x-2'><span className='text-[#FD5DA8]'>Pink</span>Inference</h1>
-          <a 
+          {/* <a 
             href="#About"
             data-smooth-scroll
             className='w-max h-max bg-[#3772FF] text-[#f0f0f0] px-3 py-2 border border-solid
             rounded-tl-[1.4rem] rounded-tr-[0.3rem] rounded-bl-[0.5rem] rounded-br-[1.4rem] hover:opacity-70'>
-              Let&apos;s Connect</a>
+              Let&apos;s Connect</a> */}
         </header>
 
         <motion.section
@@ -54,7 +54,7 @@ export default function Home() {
           <a 
             href="#ProblemStatement"
             data-smooth-scroll
-            className='sm:hidden w-max h-max bg-[#3772FF] text-[#f0f0f0] px-3 py-2 border border-solid
+            className='w-max h-max bg-[#3772FF] text-[#f0f0f0] px-3 py-2 border border-solid
             rounded-tl-[1.4rem] rounded-tr-[0.3rem] rounded-bl-[0.5rem] rounded-br-[1.4rem] hover:opacity-70 rotate-90'>
               {`--->`}</a>
 
@@ -130,7 +130,7 @@ export default function Home() {
         transition={{ duration: 0.5 }}
         className="rounded-[5rem] bg-gradient-to-br from-[#f0f0f0] to-[#ffffff] shadow-lg w-full p-10 text-lg"
       >
-        <h2 className="text-3xl mb-4 font-bold">Our Talented Team</h2>
+        <h2 className="text-3xl mb-4 font-bold">Our Team</h2>
         <div className="flex justify-center flex-wrap w-full px-12 gap-10">
           <MemberDisplay name="Michael Loftus" role="Co-founder (CSO)" image="/Michael-Loftus-Pic.jpg" />
           <MemberDisplay name="Jonah Weinbaum" role="Co-founder (CEO)" image="/Jonah-Weinbaum-Pic.jpg" />
@@ -139,17 +139,6 @@ export default function Home() {
           <MemberDisplay name="Don Stein" role="Business Advisor" image="/Don-Stein-Pic.png" />
         </div>
       </motion.section>
-
-      {/* <motion.section
-          id="contactForm"
-          ref={ref}  
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="flex flex-col items-center rounded-[5rem] bg-gradient-to-br from-[#f0f0f0] to-[#ffffff] shadow-lg w-full p-10 gap-6">
-          <p className="text-3xl">Contact Us</p>
-          <ContactForm />
-      </motion.section> */}
 
       <hr className="border border-opacity-10 border-solid border-black w-full"/>
 
