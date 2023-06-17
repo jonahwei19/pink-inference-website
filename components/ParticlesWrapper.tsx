@@ -53,7 +53,7 @@ export default function ParticlesWrapper() {
             },
             onHover: {
               enable: mobile,
-              mode: "attract",
+              mode: "repulse",
             },
             resize: true,
           },
@@ -61,8 +61,8 @@ export default function ParticlesWrapper() {
             push: {
               quantity: 4,
             },
-            attract: {
-              distance: 200,
+            repulse: {
+              distance: 100,
               duration: 3,
             },
           },

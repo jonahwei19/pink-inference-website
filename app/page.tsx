@@ -75,7 +75,7 @@ export default function Home() {
 
         </section>
             
-        <div className="w-full h-full">
+        <div className=" -z-10 absolute top-0 w-full h-full">
           <ParticlesWrapper />
         </div>
       </div>
