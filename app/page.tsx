@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import ContactForm from "@/components/ContactForm";
+import { useRef } from "react";
 
 
 export default function Home() {
@@ -30,8 +31,8 @@ export default function Home() {
   });
   
   return (
-    <main className="flex min-h-screen flex-col gap-24 items-center p-8 md:p-16 max-w-[1500px] mx-auto">
-      <div className="w-full h-screen flex flex-col items-center gap-10 relative">
+    <main className="flex min-h-screen flex-col gap-24 items-center p-8 md:p-16 max-w-[1500px] mx-auto w-full">
+      <div className="w-full h-screen flex flex-col items-center gap-10 relative overflow-hidden">
         <header className='flex justify-between w-full top-4'>
           <h1 className='text-4xl font-bold flex flex-col sm:flex-row gap-x-2'><span className='text-[#FD5DA8]'>Pink</span>Inference</h1>
           {/* <a 
@@ -47,7 +48,7 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={inView ? { duration: .5 } : {}}
-            className="relative aspect-square w-28 sm:w-36 animate-[spin_30s_linear_infinite]">
+            className="relative aspect-square w-24 h-24 sm:w-36 sm:h-36 animate-[spin_30s_linear_infinite]">
           <Image src={"/pink-inference-icon.png"} fill alt="Pink Inference Logo" />
         </motion.section>
 
@@ -74,6 +75,7 @@ export default function Home() {
 
         </section>
 
+        <ParticlesWrapper />
       </div>
 
       <motion.section
@@ -162,7 +164,6 @@ export default function Home() {
         <p>Designed and Built by Hunter Samoy</p>
       </footer>
 
-      <ParticlesWrapper />
     </main>
   )
 }

@@ -4,6 +4,7 @@ import { useCallback, useEffect, useState } from "react";
 import Particles from "react-tsparticles";
 import type { Container, Engine } from "tsparticles-engine";
 import { loadFull } from "tsparticles";
+import { Fahkwang } from "next/font/google";
 
 export default function ParticlesWrapper() {
   const particlesInit = useCallback(async (engine: Engine) => {
@@ -33,7 +34,7 @@ export default function ParticlesWrapper() {
 
   return (
     <Particles
-      className="-z-10"
+      className="-z-10 w-full h-full"
       id="tsparticles"
       init={particlesInit}
       loaded={particlesLoaded}
@@ -52,7 +53,7 @@ export default function ParticlesWrapper() {
             },
             onHover: {
               enable: mobile,
-              mode: "repulse",
+              mode: "attract",
             },
             resize: true,
           },
@@ -60,8 +61,8 @@ export default function ParticlesWrapper() {
             push: {
               quantity: 4,
             },
-            repulse: {
-              distance: 125,
+            attract: {
+              distance: 200,
               duration: 3,
             },
           },
@@ -108,6 +109,9 @@ export default function ParticlesWrapper() {
           },
         },
         detectRetina: true,
+        fullScreen: {
+          enable: false,
+        },
       }}
     />
   );
