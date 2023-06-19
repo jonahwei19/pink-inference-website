@@ -18,17 +18,17 @@ export default function Home() {
 
   const [innovativeSolutionsRef, innovativeSolutionsInView] = useInView({
     triggerOnce: false,
-    threshold: 0.1,
+    threshold: 0.05,
   });
 
   const [excitingDiscoveriesRef, excitingDiscoveriesInView] = useInView({
     triggerOnce: false,
-    threshold: 0.1,
+    threshold: 0.05,
   });
 
   const [ourTeamRef, ourTeamInView] = useInView({
     triggerOnce: false,
-    threshold: 0.1,
+    threshold: 0.05,
   });
   
   return (
@@ -87,10 +87,10 @@ export default function Home() {
         initial={{ x: -100 }}
         animate={innovativeSolutionsInView ? { x: 0 } : {}}
         transition={{ duration: 0.3, ease: "easeOut" }}
-        className="rounded-[5rem] bg-gradient-to-br from-[#f0f0f0] to-[#ffffff] shadow-lg w-full p-10 text-lg flex flex-col gap-8"
+        className="rounded-[5rem] bg-gradient-to-br from-[#f0f0f0] to-[#ffffff] shadow-lg px-2 sm:px-4 py-10 w-full text-lg flex flex-col gap-8"
       >
-        <h2 className="text-3xl mb-4 font-bold">Innovative Solutions for the Future</h2>
-        <p>Current approaches to wetware systems focus on electrical interfaces with metallic electrodes. However, these designs are <strong>inflexible and challenging</strong> to scale. We are designing wetware computing to be <strong>scalable and powerful</strong>.</p>
+        <h2 className="text-3xl mb-4 font-bold px-6">Innovative Solutions for the Future</h2>
+        <p className="px-6">Current approaches to wetware systems focus on electrical interfaces with metallic electrodes. However, these designs are <strong>inflexible and challenging</strong> to scale. We are designing wetware computing to be <strong>scalable and powerful</strong>.</p>
         <div className="flex flex-col lg:flex-row justify-center items-start gap-6 rounded-lg border-2 border-solid p-4">
           <div className="flex flex-col gap-2 lg:w-1/2">
             <h1 className="text-2xl font-semibold">Current Models</h1>
@@ -101,7 +101,7 @@ export default function Home() {
               <li>Large amounts of data required</li>
               <li>Neurological drug testing is difficult to replicate</li>
             </ul> */}
-            <p>Current wetware models are inflexible and costly. - AI faces significant scalability issues in terms of data required and energy consumption. - Neurological drug testing is difficult and faces severe replicability issues. - Psychological research, due to measurement and stimulation constraints has had to focus on artifacts as opposed to source.</p>
+            <p>Current wetware models are inflexible and costly. AI faces significant scalability issues in terms of data required and energy consumption. Neurological drug testing is difficult and faces severe replicability issues. Psychological research, due to measurement and stimulation constraints has had to focus on artifacts as opposed to source.</p>
           </div>
           <div className="flex flex-col gap-2 lg:w-1/2">
             <h1 className="text-2xl font-semibold">Our Solution</h1>
