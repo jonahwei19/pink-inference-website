@@ -60,15 +60,12 @@ export default function Home() {
             animate={inView ? { opacity: 1, y:0 } : {}}
             transition={{ duration: 1 }}
             className='text-5xl md:text-6xl text-center'><span className="font-bold">Scalable &amp; Powerful</span> Wetware Computing</motion.h3>
-          <div
-            // ref={ref}
-            // initial={{ x: 100, opacity: 0 }}
-            // animate={inView ? { x: 0, opacity: 1 } : {}}
-            // transition={{ duration: 1 }}
+          <motion.div
+            ref={ref}
           className="text-center text-lg md:text-2xl">
             <TypewriterComponent onInit={(typewriter) => 
                                 typewriter.changeDelay(40).typeString(HEADER_DESCRIPTION).start()} />
-            </div>
+            </motion.div>
 
           {/* <a 
             href="#ProblemStatement"
