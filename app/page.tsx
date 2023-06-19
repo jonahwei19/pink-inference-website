@@ -4,8 +4,9 @@ import ParticlesWrapper from "@/components/ParticlesWrapper";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import ContactForm from "@/components/ContactForm";
-import { useRef } from "react";
+import TypewriterComponent from "typewriter-effect";
+
+const HEADER_DESCRIPTION = "Developing wetware architecture for the next generation of computing and neuropharmacology."
 
 
 export default function Home() {
@@ -59,19 +60,22 @@ export default function Home() {
             animate={inView ? { opacity: 1, y:0 } : {}}
             transition={{ duration: 1 }}
             className='text-5xl md:text-6xl text-center'><span className="font-bold">Scalable &amp; Powerful</span> Wetware Computing</motion.h3>
-          <motion.p
-            ref={ref}
-            initial={{ x: 100, opacity: 0 }}
-            animate={inView ? { x: 0, opacity: 1 } : {}}
-            transition={{ duration: 1 }}
-          className="text-center text-lg md:text-2xl">Developing wetware architecture for the next generation of computing and neuropharmacology.</motion.p>
+          <div
+            // ref={ref}
+            // initial={{ x: 100, opacity: 0 }}
+            // animate={inView ? { x: 0, opacity: 1 } : {}}
+            // transition={{ duration: 1 }}
+          className="text-center text-lg md:text-2xl">
+            <TypewriterComponent onInit={(typewriter) => 
+                                typewriter.changeDelay(40).typeString(HEADER_DESCRIPTION).start()} />
+            </div>
 
-          <a 
+          {/* <a 
             href="#ProblemStatement"
             data-smooth-scroll
             className='w-max h-max bg-[#3772FF] text-[#f0f0f0] px-3 py-2 border border-solid
             rounded-tl-[1.4rem] rounded-tr-[0.3rem] rounded-bl-[0.5rem] rounded-br-[1.4rem] hover:opacity-70 rotate-90'>
-              {`--->`}</a>
+              {`--->`}</a> */}
 
         </section>
             
@@ -83,9 +87,9 @@ export default function Home() {
       <motion.section
         id="ProblemStatement"
         ref={innovativeSolutionsRef}
-        initial={{ x: -100, opacity: 0 }}
-        animate={innovativeSolutionsInView ? { x: 0, opacity: 1 } : {}}
-        transition={{ duration: 0.5 }}
+        initial={{ x: -100 }}
+        animate={innovativeSolutionsInView ? { x: 0 } : {}}
+        transition={{ duration: 0.3, ease: "easeOut" }}
         className="rounded-[5rem] bg-gradient-to-br from-[#f0f0f0] to-[#ffffff] shadow-lg w-full p-10 text-lg flex flex-col gap-8"
       >
         <h2 className="text-3xl mb-4 font-bold">Innovative Solutions for the Future</h2>
@@ -116,9 +120,9 @@ export default function Home() {
 
       <motion.section
         ref={excitingDiscoveriesRef}
-        initial={{ x: 100, opacity: 0 }}
-        animate={excitingDiscoveriesInView ? { x: 0, opacity: 1 } : {}}
-        transition={{ duration: 0.5 }}
+        initial={{ x: 100 }}
+        animate={excitingDiscoveriesInView ? { x: 0 } : {}}
+        transition={{ duration: 0.3, ease: "easeOut" }}
         className="rounded-[5rem] bg-gradient-to-br from-[#f0f0f0] to-[#ffffff] shadow-lg w-full p-10 text-lg flex flex-col gap-8"
       >
         <h2 className="text-3xl font-bold">
@@ -143,9 +147,9 @@ export default function Home() {
       <motion.section
         id="About"
         ref={ourTeamRef}
-        initial={{ x: -100, opacity: 0 }}
-        animate={ourTeamInView ? { x: 0, opacity: 1 } : {}}
-        transition={{ duration: 0.5 }}
+        initial={{ x: -100 }}
+        animate={ourTeamInView ? { x: 0 } : {}}
+        transition={{ duration: 0.3, ease: "easeOut" }}
         className="rounded-[5rem] bg-gradient-to-br from-[#f0f0f0] to-[#ffffff] shadow-lg w-full p-10 text-lg"
       >
         <h2 className="text-3xl mb-4 font-bold">Our Team</h2>
