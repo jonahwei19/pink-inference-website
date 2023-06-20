@@ -9,7 +9,7 @@ const playFont = Play({
 
 export const metadata = {
   title: 'Pink Inference',
-  description: 'Developing wetware architecture for the next generation of computing and neuropharmacology.',
+  description: 'Explore the Future of AI and Robotics with Pink Inference. We are developing wetware architecture for the next generation of computing and neuropharmacology.',
 }
 
 export default function RootLayout({

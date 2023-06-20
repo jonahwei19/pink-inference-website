@@ -32,7 +32,7 @@ export default function Home() {
   });
   
   return (
-    <main className="flex min-h-screen flex-col gap-24 items-center p-8 md:p-16 max-w-[1500px] mx-auto w-full">
+    <main className="flex min-h-screen flex-col gap-40 items-center p-8 md:p-16 max-w-[1500px] mx-auto w-full">
       <div className="w-full h-screen flex flex-col items-center gap-6 sm:gap-10 md:gap-12 lg:gap-16 relative overflow-hidden">
         <header className='flex justify-between w-full top-4'>
           <h1 className='text-4xl font-bold flex flex-col sm:flex-row gap-x-2'><span className='text-[#FD5DA8]'>Pink</span>Inference</h1>
@@ -91,7 +91,7 @@ export default function Home() {
       >
         <h2 className="text-3xl mb-4 font-bold px-6">Innovative Solutions for the Future</h2>
         <p className="px-6">Current approaches to wetware systems focus on electrical interfaces with metallic electrodes. However, these designs are <strong>inflexible and challenging</strong> to scale. We are designing wetware computing to be <strong>scalable and powerful</strong>.</p>
-        <div className="flex flex-col lg:flex-row justify-center items-start gap-6 rounded-lg border-2 border-solid p-4">
+        <div className="flex flex-col lg:flex-row justify-center items-start gap-6 rounded-3xl border-2 border-solid p-4">
           <div className="flex flex-col gap-2 lg:w-1/2">
             <h1 className="text-2xl font-semibold">Current Models</h1>
             {/* <ul>
