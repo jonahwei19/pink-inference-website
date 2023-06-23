@@ -32,9 +32,9 @@ export default function Home() {
   });
   
   return (
-    <main className="flex min-h-screen flex-col gap-40 items-center p-8 md:p-16 max-w-[1500px] mx-auto w-full">
+    <main className="flex min-h-screen flex-col ga-40 items-center sm:pp-16 max-w-[1500px] mx-auto w-full">
       <div className="w-full h-screen flex flex-col items-center gap-6 sm:gap-10 md:gap-12 lg:gap-16 relative overflow-hidden">
-        <header className='flex justify-between w-full top-4'>
+        <header className='flex justify-between w-full pl-4 pt-4'>
           <h1 className='text-4xl font-bold flex flex-col sm:flex-row gap-x-2'><span className='text-[#FD5DA8]'>Pink</span>Inference</h1>
           {/* <a 
             href="#About"
@@ -81,83 +81,110 @@ export default function Home() {
         </div>
       </div>
 
-      <motion.section
-        id="ProblemStatement"
-        ref={innovativeSolutionsRef}
-        initial={{ x: -100 }}
-        animate={innovativeSolutionsInView ? { x: 0 } : {}}
-        transition={{ duration: 0.3, ease: "easeOut" }}
-        className="rounded-[5rem] bg-gradient-to-br from-[#f0f0f0] to-[#ffffff] shadow-lg px-2 sm:px-4 py-10 w-full text-lg flex flex-col gap-8"
-      >
-        <h2 className="text-3xl mb-4 font-bold px-6">Innovative Solutions for the Future</h2>
-        <p className="px-6">Current approaches to wetware systems focus on electrical interfaces with metallic electrodes. However, these designs are <strong>inflexible and challenging</strong> to scale. We are designing wetware computing to be <strong>scalable and powerful</strong>.</p>
-        <div className="flex flex-col lg:flex-row justify-center items-start gap-6 rounded-3xl border-2 border-solid p-4">
-          <div className="flex flex-col gap-2 lg:w-1/2">
-            <h1 className="text-2xl font-semibold">Current Models</h1>
-            {/* <ul>
-              <li>Inflexible and costly</li>
-              <li>Significant scalability issues</li>
-              <li>High energy consumption</li>
-              <li>Large amounts of data required</li>
-              <li>Neurological drug testing is difficult to replicate</li>
-            </ul> */}
-            <p>Current wetware models are inflexible and costly. AI faces significant scalability issues in terms of data required and energy consumption. Neurological drug testing is difficult and faces severe replicability issues. Psychological research, due to measurement and stimulation constraints has had to focus on artifacts as opposed to source.</p>
+      <div className="bg-[#00bcd4] text-white w-full">
+        <motion.section
+          id="ProblemStatement"
+          ref={innovativeSolutionsRef}
+          initial={{ x: -100 }}
+          animate={innovativeSolutionsInView ? { x: 0 } : {}}
+          transition={{ duration: 0.3, ease: "easeOut" }}
+          className="rounded-[5rem] shadow-lg px-2 sm:px-4 py-10 w-full text-lg flex flex-col gap-8"
+        >
+          <h2 className="text-4xl mb-4 font-bold px-6">Innovative Solutions for the Future</h2>
+          <p className="px-6">Current approaches to wetware systems focus on electrical interfaces with metallic electrodes. However, these designs are <strong>inflexible and challenging</strong> to scale. We are designing wetware computing to be <strong>scalable and powerful</strong>.</p>
+          <div className="flex flex-col lg:flex-row justify-center items-start gap-6 rounded-3xl border-2 border-solid p-4">
+            <div className="flex flex-col gap-2 lg:w-1/2">
+              <h1 className="text-2xl font-semibold">Current Models</h1>
+              {/* <ul>
+                <li>Inflexible and costly</li>
+                <li>Significant scalability issues</li>
+                <li>High energy consumption</li>
+                <li>Large amounts of data required</li>
+                <li>Neurological drug testing is difficult to replicate</li>
+              </ul> */}
+              <p>Current wetware models are inflexible and costly. AI faces significant scalability issues in terms of data required and energy consumption. Neurological drug testing is difficult and faces severe replicability issues. Psychological research, due to measurement and stimulation constraints has had to focus on artifacts as opposed to source.</p>
+            </div>
+            <div className="flex flex-col gap-2 lg:w-1/2">
+              <h1 className="text-2xl font-semibold">Our Solution</h1>
+              {/* <ul>
+                <li>Yields the potential for less training time and energy consumption</li>
+                <li>Faster testing of neurological drugs</li>
+                <li>Offers more reliable method to study the brain</li>
+              </ul> */}
+              <p>Our model improves on the industry standard. Wetware, due to greater complexity and parallelization, yields the potential for less training time and energy consumption (theoretically). With our system, pharma companies will be able to more quickly and decisively test the effect of neurological drugs and their effects on neuronal cultures. Cognition experts will be able to use our system to study the brain in a more reliable method.</p>
+            </div>
           </div>
-          <div className="flex flex-col gap-2 lg:w-1/2">
-            <h1 className="text-2xl font-semibold">Our Solution</h1>
-            {/* <ul>
-              <li>Yields the potential for less training time and energy consumption</li>
-              <li>Faster testing of neurological drugs</li>
-              <li>Offers more reliable method to study the brain</li>
-            </ul> */}
-            <p>Our model improves on the industry standard. Wetware, due to greater complexity and parallelization, yields the potential for less training time and energy consumption (theoretically). With our system, pharma companies will be able to more quickly and decisively test the effect of neurological drugs and their effects on neuronal cultures. Cognition experts will be able to use our system to study the brain in a more reliable method.</p>
+          <div className="flex flex-wrap justify-center gap-5">
+            <div className="flex flex-col justify-center items-center">
+              <Image src={"/stopwatch300x300.png"} width={200} height={200} alt="stopwatch"/>
+              <p>Save Time</p>
+              </div>
+
+            <div className="flex flex-col justify-center items-center">
+              <Image className="opacity-[.85]" src={"/resources.png"} width={200} height={200} alt="stopwatch"/>
+              <p>Save Resources</p>
+              </div>
+
+            <div className="flex flex-col justify-center items-center">
+              <Image src={"/lab_tubes.png"} width={200} height={200} alt="stopwatch"/>
+              <p>Pharmaceutical Testing</p>
+              </div>
+
+            <div className="flex flex-col justify-center items-center">
+              <Image src={"/brain-icon.png"} width={200} height={200} alt="stopwatch"/>
+              <p>Brain Study</p>
+              </div>
           </div>
-        </div>
-      </motion.section>
+        </motion.section>
+      </div>
 
-      <motion.section
-        ref={excitingDiscoveriesRef}
-        initial={{ x: 100 }}
-        animate={excitingDiscoveriesInView ? { x: 0 } : {}}
-        transition={{ duration: 0.3, ease: "easeOut" }}
-        className="rounded-[5rem] bg-gradient-to-br from-[#f0f0f0] to-[#ffffff] shadow-lg w-full p-10 text-lg flex flex-col gap-8"
-      >
-        <h2 className="text-3xl font-bold">
-          Powerful Features
-          <p className="mb-4 ml-8">Exciting Discoveries</p>
-        </h2>
-        <p>We&apos;ve been able to sidestep these flaws by developing a system that skips the electrode interface altogether. We are making wetware a computational reality.</p>
-        <ul className="text-xl list-disc">
-          <li>Versatile</li>
-          <li>Scalable</li>
-          <li>
-            Sustainable
-            <ul className="ml-4">
-              <li>- Long-lasting neuron life</li>
-              <li>- Lower energy consumption</li>
-            </ul>
-          </li>
-          <li>Cost-Effective</li>
-        </ul>
-      </motion.section>
+      <div className="bg-[#2A2B2A] text-white w-full">
+        <motion.section
+          ref={excitingDiscoveriesRef}
+          initial={{ x: 100 }}
+          animate={excitingDiscoveriesInView ? { x: 0 } : {}}
+          transition={{ duration: 0.3, ease: "easeOut" }}
+          className="rounded-[5rem] shadow-lg w-full p-10 text-lg flex flex-col gap-8"
+        >
+          <h2 className="text-4xl font-bold">
+            Powerful Features
+            <p className="mb-4 ml-8">Exciting Discoveries</p>
+          </h2>
+          <p>We&apos;ve been able to sidestep these flaws by developing a system that skips the electrode interface altogether. We are making wetware a computational reality.</p>
+          <ul className="text-xl list-disc">
+            <li>Versatile</li>
+            <li>Scalable</li>
+            <li>
+              Sustainable
+              <ul className="ml-4">
+                <li>- Long-lasting neuron life</li>
+                <li>- Lower energy consumption</li>
+              </ul>
+            </li>
+            <li>Cost-Effective</li>
+          </ul>
+        </motion.section>
+      </div>
 
-      <motion.section
-        id="About"
-        ref={ourTeamRef}
-        initial={{ x: -100 }}
-        animate={ourTeamInView ? { x: 0 } : {}}
-        transition={{ duration: 0.3, ease: "easeOut" }}
-        className="rounded-[5rem] bg-gradient-to-br from-[#f0f0f0] to-[#ffffff] shadow-lg w-full p-10 text-lg"
-      >
-        <h2 className="text-3xl mb-4 font-bold">Our Team</h2>
-        <div className="flex justify-center flex-wrap w-full px-12 gap-10">
-          <MemberDisplay name="Michael Loftus" role="Co-founder (CSO)" image="/Michael-Loftus-Pic.jpg" />
-          <MemberDisplay name="Jonah Weinbaum" role="Co-founder (CEO)" image="/Jonah-Weinbaum-Pic.jpg" />
-          <MemberDisplay name="Zan Huang" role="Co-founder (CTO)" image="/Zan-Huang-Pic.png" />
-          <MemberDisplay name="Sami Barmada" role="Science Advisor" image="/Sami-Barmada-Pic.jpg" />
-          <MemberDisplay name="Don Stein" role="Business Advisor" image="/Don-Stein-Pic.png" />
-        </div>
-      </motion.section>
+      <div className="bg-[#FD5DA8] bg-opacity-40 text-black w-full">
+        <motion.section
+          id="About"
+          ref={ourTeamRef}
+          initial={{ x: -100 }}
+          animate={ourTeamInView ? { x: 0 } : {}}
+          transition={{ duration: 0.3, ease: "easeOut" }}
+          className="rounded-[5rem] mj shadow-lg w-full p-10 text-lg"
+        >
+          <h2 className="text-3xl mb-4 font-bold">Our Team</h2>
+          <div className="flex justify-center flex-wrap w-full px-12 gap-10">
+            <MemberDisplay name="Michael Loftus" role="Co-founder (CSO)" image="/Michael-Loftus-Pic.jpg" />
+            <MemberDisplay name="Jonah Weinbaum" role="Co-founder (CEO)" image="/Jonah-Weinbaum-Pic.jpg" />
+            <MemberDisplay name="Zan Huang" role="Co-founder (CTO)" image="/Zan-Huang-Pic.png" />
+            <MemberDisplay name="Sami Barmada" role="Science Advisor" image="/Sami-Barmada-Pic.jpg" />
+            <MemberDisplay name="Don Stein" role="Business Advisor" image="/Don-Stein-Pic.png" />
+          </div>
+        </motion.section>
+      </div>
 
       <hr className="border border-opacity-10 border-solid border-black w-full"/>
 
