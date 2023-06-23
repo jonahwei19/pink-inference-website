@@ -116,22 +116,30 @@ export default function Home() {
           </div>
           <div className="flex flex-wrap justify-center gap-5">
             <div className="flex flex-col justify-center items-center">
-              <Image src={"/stopwatch300x300.png"} width={200} height={200} alt="stopwatch"/>
+              <div className="relative aspect-square w-40 sm:w-52">
+                <Image src={"/stopwatch300x300.png"} fill alt="stopwatch"/>
+              </div>
               <p>Save Time</p>
               </div>
 
             <div className="flex flex-col justify-center items-center">
-              <Image className="opacity-[.85]" src={"/resources.png"} width={200} height={200} alt="stopwatch"/>
+              <div className="relative aspect-square w-40 sm:w-52">
+                <Image className="opacity-[.85]" src={"/resources.png"} width={200} height={200} alt="stopwatch"/>
+              </div>
               <p>Save Resources</p>
               </div>
 
             <div className="flex flex-col justify-center items-center">
-              <Image src={"/lab_tubes.png"} width={200} height={200} alt="stopwatch"/>
+              <div className="relative aspect-square w-40 sm:w-52">
+                <Image src={"/lab_tubes.png"} width={200} height={200} alt="stopwatch"/>
+              </div>
               <p>Pharmaceutical Testing</p>
               </div>
 
             <div className="flex flex-col justify-center items-center">
-              <Image src={"/brain-icon.png"} width={200} height={200} alt="stopwatch"/>
+              <div className="relative aspect-square w-40 sm:w-52">
+                <Image src={"/brain-icon.png"} width={200} height={200} alt="stopwatch"/>
+              </div>
               <p>Brain Study</p>
               </div>
           </div>
@@ -188,7 +196,7 @@ export default function Home() {
 
       <hr className="border border-opacity-10 border-solid border-black w-full"/>
 
-      <footer className="flex flex-col justify-around items-center">
+      <footer className="flex flex-col justify-around items-center mt-8">
         <Image src={"/pink-inference-icon.png"} width={30} height={30} alt="Pink Inference Logo" />
         <p>&copy; 2023 Pink Inference</p>
         <p>Designed and Built by Hunter Samoy</p>
