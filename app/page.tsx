@@ -97,18 +97,18 @@ export default function Home() {
         >
           <h2 className="text-4xl mb-4 font-bold px-6">What is Wetware</h2>
           <div className="flex flex-col gap-10 px-6">
-          <div>
-            <span className="text-2xl font-semibold">Wetware Computing</span> / (<span className="italic">wɛt</span>/<span className="italic">wɛə</span>) /
-            <p className="indent-20 mt-4">noun.</p>
-            <p className="indent-28 mt-4">Organic structures regarded as analogous to, or in contrast with, computer systems, esp. the brain.</p>
-          </div>
-          <div>
-            <h1 className="text-2xl font-semibold">Unlocking the Power of Wetware with Pink Inference</h1>
-            <div className="ml-5 mt-4">
-              <p className="indent-10">Neurons, with over ~525 million years of evolution, are advanced problem solvers. Yet, modern AIs consume the energy of hundreds of households for training, while the human brain uses only about 12 watts.</p>
-              <p className="indent-10">At Pink Inference, we're making wetware scalable and powerful. By bypassing traditional electrode interfaces, we're bringing wetware computing into reality. Our goal is to provide wetware computing as a cloud service. Through our open API, users can conduct wetware research and solve AI problems in various fields, from robotics to the life sciences.</p>
+            <div>
+              <span className="text-2xl font-semibold">Wetware Computing</span> / (<span className="italic">wɛt</span>/<span className="italic">wɛə</span>) /
+              <p className="indent-20 mt-4">noun.</p>
+              <p className="indent-28 mt-4">Organic structures regarded as analogous to, or in contrast with, computer systems, esp. the brain.</p>
             </div>
-          </div>
+            <div>
+              <h1 className="text-2xl font-semibold">Unlocking the Power of Wetware with Pink Inference</h1>
+              <div className="ml-5 mt-4">
+                <p className="indent-10">Neurons, with over ~525 million years of evolution, are advanced problem solvers. Yet, modern AIs consume the energy of hundreds of households for training, while the human brain uses only about 12 watts.</p>
+                <p className="indent-10">At Pink Inference, we&apos;re making wetware scalable and powerful. By bypassing traditional electrode interfaces, we&apos;re bringing wetware computing into reality. Our goal is to provide wetware computing as a cloud service. Through our open API, users can conduct wetware research and solve AI problems in various fields, from robotics to the life sciences.</p>
+              </div>
+            </div>
           </div>
           <div className="relative aspect-square w-40 sm:w-52 mx-auto">
               <Image src={"/wetware.png"} fill alt="stopwatch"/>
