@@ -16,6 +16,11 @@ export default function Home() {
     threshold: 0.5, // Percentage of section visible in the viewport to trigger the animation
   });
 
+  const [wetwareRef, wetwareInView] = useInView({
+    triggerOnce: false,
+    threshold: 0.05,
+  });
+
   const [innovativeSolutionsRef, innovativeSolutionsInView] = useInView({
     triggerOnce: false,
     threshold: 0.05,
@@ -81,7 +86,37 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="bg-[#00bcd4] text-white w-full">
+      <div className="bg-[#FD5DA8] bg-opacity-40 w-full">
+        <motion.section
+          id="Wetware"
+          ref={wetwareRef}
+          initial={{ x: 100 }}
+          animate={wetwareInView ? { x: 0 } : {}}
+          transition={{ duration: 0.3, ease: "easeOut" }}
+          className="rounded-[5rem] shadow-lg px-2 sm:px-4 py-10 w-full text-lg flex flex-col gap-8"
+        >
+          <h2 className="text-4xl mb-4 font-bold px-6">What is Wetware</h2>
+          <div className="flex flex-col gap-10 px-6">
+          <div>
+            <span className="text-2xl font-semibold">Wetware Computing</span> / (<span className="italic">wɛt</span>/<span className="italic">wɛə</span>) /
+            <p className="indent-20 mt-4">noun.</p>
+            <p className="indent-28 mt-4">Organic structures regarded as analogous to, or in contrast with, computer systems, esp. the brain.</p>
+          </div>
+          <div>
+            <h1 className="text-2xl font-semibold">Unlocking the Power of Wetware with Pink Inference</h1>
+            <div className="ml-5 mt-4">
+              <p className="indent-10">Neurons, with over ~525 million years of evolution, are advanced problem solvers. Yet, modern AIs consume the energy of hundreds of households for training, while the human brain uses only about 12 watts.</p>
+              <p className="indent-10">At Pink Inference, we're making wetware scalable and powerful. By bypassing traditional electrode interfaces, we're bringing wetware computing into reality. Our goal is to provide wetware computing as a cloud service. Through our open API, users can conduct wetware research and solve AI problems in various fields, from robotics to the life sciences.</p>
+            </div>
+          </div>
+          </div>
+          <div className="relative aspect-square w-40 sm:w-52 mx-auto">
+              <Image src={"/wetware.png"} fill alt="stopwatch"/>
+            </div>
+        </motion.section>
+      </div>
+
+      <div className="bg-[#00bcd4] w-full">
         <motion.section
           id="ProblemStatement"
           ref={innovativeSolutionsRef}
@@ -92,7 +127,7 @@ export default function Home() {
         >
           <h2 className="text-4xl mb-4 font-bold px-6">Innovative Solutions for the Future</h2>
           <p className="px-6">Current approaches to wetware systems focus on electrical interfaces with metallic electrodes. However, these designs are <strong>inflexible and challenging</strong> to scale. We are designing wetware computing to be <strong>scalable and powerful</strong>.</p>
-          <div className="flex flex-col lg:flex-row justify-center items-start gap-6 rounded-3xl border-2 border-solid p-4">
+          <div className="flex flex-col lg:flex-row justify-center items-start gap-6 rounded-3xl bord border-sold p-4">
             <div className="flex flex-col gap-2 lg:w-1/2">
               <h1 className="text-2xl font-semibold">Current Models</h1>
               {/* <ul>
@@ -114,7 +149,7 @@ export default function Home() {
               <p>Our model improves on the industry standard. Wetware, due to greater complexity and parallelization, yields the potential for less training time and energy consumption (theoretically). With our system, pharma companies will be able to more quickly and decisively test the effect of neurological drugs and their effects on neuronal cultures. Cognition experts will be able to use our system to study the brain in a more reliable method.</p>
             </div>
           </div>
-          <div className="flex flex-wrap justify-center gap-5">
+          <div className="flex flex-wrap justify-center sm:gap-16">
             <div className="flex flex-col justify-center items-center">
               <div className="relative aspect-square w-40 sm:w-52">
                 <Image src={"/stopwatch300x300.png"} fill alt="stopwatch"/>
@@ -174,7 +209,7 @@ export default function Home() {
         </motion.section>
       </div>
 
-      <div className="bg-[#FD5DA8] bg-opacity-40 text-black w-full">
+      <div className="w-full">
         <motion.section
           id="About"
           ref={ourTeamRef}
