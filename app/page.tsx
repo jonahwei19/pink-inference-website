@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import TypewriterComponent from "typewriter-effect";
+import GradientSeperator from "@/components/GradientSeperator";
 
 const HEADER_DESCRIPTION = "Developing wetware architecture for the next generation of computing and neuropharmacology."
 
@@ -86,14 +87,14 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="bg-[#FD5DA8] bg-opacity-40 w-full">
+      <div className="b-[#FD5DA8] bg-opacity-40 w-full md:p-12 min-h-screen">
         <motion.section
           id="Wetware"
           ref={wetwareRef}
           initial={{ x: 100 }}
           animate={wetwareInView ? { x: 0 } : {}}
           transition={{ duration: 0.3, ease: "easeOut" }}
-          className="rounded-[5rem] shadow-lg px-2 sm:px-4 py-10 w-full text-lg flex flex-col gap-8"
+          className="rounded-[5rem] shadow-3xl shadow-[#FD5DA8] bg-[#FD5DA8] bg-opacity-40 px-2 sm:px-4 py-10 w-full text-lg flex flex-col gap-8"
         >
           <h2 className="text-4xl mb-4 font-bold px-6">What is Wetware</h2>
           <div className="flex flex-col gap-10 px-6">
@@ -116,14 +117,16 @@ export default function Home() {
         </motion.section>
       </div>
 
-      <div className="bg-[#00bcd4] w-full">
+      <div className={`h-[30vh] w-full`} />
+
+      <div className="b-[#00bcd4] w-full md:p-12 min-h-screen">
         <motion.section
           id="ProblemStatement"
           ref={innovativeSolutionsRef}
           initial={{ x: -100 }}
           animate={innovativeSolutionsInView ? { x: 0 } : {}}
           transition={{ duration: 0.3, ease: "easeOut" }}
-          className="rounded-[5rem] shadow-lg px-2 sm:px-4 py-10 w-full text-lg flex flex-col gap-8"
+          className="rounded-[5rem] shadow-3xl shadow-[#00bcd4] bg-[#00bcd4] px-2 sm:px-4 py-10 w-full text-lg flex flex-col gap-8"
         >
           <h2 className="text-4xl mb-4 font-bold px-6">Innovative Solutions for the Future</h2>
           <p className="px-6">Current approaches to wetware systems focus on electrical interfaces with metallic electrodes. However, these designs are <strong>inflexible and challenging</strong> to scale. We are designing wetware computing to be <strong>scalable and powerful</strong>.</p>
@@ -152,20 +155,6 @@ export default function Home() {
           <div className="flex flex-wrap justify-center sm:gap-16">
             <div className="flex flex-col justify-center items-center">
               <div className="relative aspect-square w-40 sm:w-52">
-                <Image src={"/stopwatch300x300.png"} fill alt="stopwatch"/>
-              </div>
-              <p>Save Time</p>
-              </div>
-
-            <div className="flex flex-col justify-center items-center">
-              <div className="relative aspect-square w-40 sm:w-52">
-                <Image className="opacity-[.85]" src={"/resources.png"} width={200} height={200} alt="stopwatch"/>
-              </div>
-              <p>Save Resources</p>
-              </div>
-
-            <div className="flex flex-col justify-center items-center">
-              <div className="relative aspect-square w-40 sm:w-52">
                 <Image src={"/lab_tubes.png"} width={200} height={200} alt="stopwatch"/>
               </div>
               <p>Pharmaceutical Testing</p>
@@ -181,13 +170,15 @@ export default function Home() {
         </motion.section>
       </div>
 
-      <div className="bg-[#2A2B2A] text-white w-full">
+      <div className={`h-[30vh] w-full`} />
+
+      <div className="b-[#2A2B2A] text-white w-full md:p-12 min-h-screen">
         <motion.section
           ref={excitingDiscoveriesRef}
           initial={{ x: 100 }}
           animate={excitingDiscoveriesInView ? { x: 0 } : {}}
           transition={{ duration: 0.3, ease: "easeOut" }}
-          className="rounded-[5rem] shadow-lg w-full p-10 text-lg flex flex-col gap-8"
+          className="rounded-[5rem] shadow-3xl bg-[#2A2B2A] shadow-[#2A2B2A] w-full p-10 text-lg flex flex-col gap-8"
         >
           <h2 className="text-4xl font-bold">
             Powerful Features
@@ -206,10 +197,27 @@ export default function Home() {
             </li>
             <li>Cost-Effective</li>
           </ul>
+          <div className="flex flex-wrap justify-center sm:gap-16">
+            <div className="flex flex-col justify-center items-center">
+              <div className="relative aspect-square w-40 sm:w-52">
+                <Image src={"/stopwatch300x300white.png"} fill alt="stopwatch"/>
+              </div>
+              <p>Save Time</p>
+              </div>
+
+            <div className="flex flex-col justify-center items-center">
+              <div className="relative aspect-square w-40 sm:w-52">
+                <Image className="opacity-95 invert" src={"/resources.png"} width={200} height={200} alt="stopwatch"/>
+              </div>
+              <p>Save Resources</p>
+              </div>
+          </div>
         </motion.section>
       </div>
 
-      <div className="w-full">
+      <div className={`h-[30vh] w-full`} />
+
+      <div className="w-full md:px-12">
         <motion.section
           id="About"
           ref={ourTeamRef}
