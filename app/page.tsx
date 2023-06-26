@@ -105,9 +105,9 @@ export default function Home() {
             </div>
             <div>
               <h1 className="text-2xl font-semibold">Unlocking the Power of Wetware with Pink Inference</h1>
-              <div className="ml-5 mt-4">
-                <p className="indent-10">Neurons, with over ~525 million years of evolution, are advanced problem solvers. Yet, modern AIs consume the energy of hundreds of households for training, while the human brain uses only about 12 watts.</p>
-                <p className="indent-10">At Pink Inference, we&apos;re making wetware scalable and powerful. By bypassing traditional electrode interfaces, we&apos;re bringing wetware computing into reality. Our goal is to provide wetware computing as a cloud service. Through our open API, users can conduct wetware research and solve AI problems in various fields, from robotics to the life sciences.</p>
+              <div className="ml-5 mt-4 flex flex-col gap-4">
+                <p>Neurons, with over ~525 million years of evolution, are advanced problem solvers. Yet, modern AIs consume the energy of hundreds of households for training, while the human brain uses only about 12 watts.</p>
+                <p>At Pink Inference, we&apos;re making wetware scalable and powerful. By bypassing traditional electrode interfaces, we&apos;re bringing wetware computing into reality. Our goal is to provide wetware computing as a cloud service. Through our open API, users can conduct wetware research and solve AI problems in various fields, from robotics to the life sciences.</p>
               </div>
             </div>
           </div>
