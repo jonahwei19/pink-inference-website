@@ -7,6 +7,11 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function TeamSection() {
+  const [headerRef, headerInView] = useInView({
+    triggerOnce: false,
+    threshold: 0.05,
+  });
+
   const [ourTeamRef, ourTeamInView] = useInView({
     triggerOnce: false,
     threshold: 0.05,
@@ -23,17 +28,23 @@ export default function TeamSection() {
         </Link>
       </header>
 
-      <h1 className='mb-36 text-6xl w-max mr-auto md:ml-12 tracking-[-0.075em]'>
+      <motion.h1
+        className='mb-36 text-6xl w-max mr-auto md:ml-12 tracking-[-0.075em]'
+        ref={headerRef}
+        initial={{ x: -50, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+      >
         OUR TEAM
-      </h1>
+      </motion.h1>
 
       <div className='w-full md:px-12'>
         <motion.section
           id='About'
           ref={ourTeamRef}
-          initial={{ x: -100 }}
-          animate={ourTeamInView ? { x: 0 } : {}}
-          transition={{ duration: 0.3, ease: "easeOut" }}
+          initial={{ y: 50, opacity: 0 }}
+          animate={ourTeamInView ? { y: 0, opacity: 1 } : {}}
+          transition={{ duration: 0.5, ease: "easeOut", delay: 0.5 }}
         >
           <h2 className='text-2xl mb-4'>Founders</h2>
           <hr className='border-black w-full mb-8' />
