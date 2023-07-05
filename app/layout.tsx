@@ -1,32 +1,38 @@
-import './globals.css'
-import { Play } from 'next/font/google'
-import SmoothScroll from '@/utilities/SmoothScroll'
-import Head from 'next/head'
+import "./globals.css";
+import { Play, Noto_Sans } from "next/font/google";
+import SmoothScroll from "@/utilities/SmoothScroll";
+import Head from "next/head";
 
-const playFont = Play({
-  weight: ['400', '700'],
-  preload:false,
-})
+// const playFont = Play({
+//   weight: ['400', '700'],
+//   preload:false,
+// })
+
+const notoFont = Noto_Sans({
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  preload: false,
+});
 
 export const metadata = {
-  title: 'Pink Inference',
-  description: 'Explore the Future of AI and Robotics with Pink Inference. We are developing wetware architecture for the next generation of computing and neuropharmacology.',
-}
+  title: "Pink Inference",
+  description:
+    "Explore the Future of AI and Robotics with Pink Inference. We are developing wetware architecture for the next generation of computing and neuropharmacology.",
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang='en'>
       <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
       </Head>
-      <body className={playFont.className}>
+      <body className={notoFont.className}>
         {children}
         <SmoothScroll />
       </body>
     </html>
-  )
+  );
 }
