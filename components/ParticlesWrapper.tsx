@@ -1,10 +1,9 @@
-'use client'
+"use client";
 
 import { useCallback, useEffect, useState } from "react";
 import Particles from "react-tsparticles";
 import type { Container, Engine } from "tsparticles-engine";
 import { loadFull } from "tsparticles";
-
 
 export default function ParticlesWrapper() {
   const particlesInit = useCallback(async (engine: Engine) => {
@@ -12,11 +11,14 @@ export default function ParticlesWrapper() {
     await loadFull(engine);
   }, []);
 
-  const particlesLoaded = useCallback(async (container: Container | undefined) => {
-    // tsParticles container loaded
-  }, []);
+  const particlesLoaded = useCallback(
+    async (container: Container | undefined) => {
+      // tsParticles container loaded
+    },
+    []
+  );
 
-  const [mobile, setMobile] = useState(false)
+  const [mobile, setMobile] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -34,14 +36,14 @@ export default function ParticlesWrapper() {
 
   return (
     <Particles
-      className="-z-10 w-full h-full"
-      id="tsparticles"
+      className='w-full h-full'
+      id='tsparticles'
       init={particlesInit}
       loaded={particlesLoaded}
       options={{
         // Default options
         background: {
-          color: "#FFFFFF",
+          color: "transparent",
         },
         fpsLimit: 120,
         interactivity: {
@@ -99,7 +101,7 @@ export default function ParticlesWrapper() {
             value: 80,
           },
           opacity: {
-            value: .4,
+            value: 0.4,
           },
           shape: {
             type: "circle",

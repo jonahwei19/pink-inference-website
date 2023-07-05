@@ -5,9 +5,7 @@ import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import TypewriterComponent from "typewriter-effect";
-import GradientSeperator from "@/components/GradientSeperator";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 
 const HEADER_DESCRIPTION =
   "Developing wetware architecture for the next generation of computing and neuropharmacology.";
@@ -36,7 +34,7 @@ export default function Home() {
   return (
     <AnimatePresence mode='wait'>
       <motion.main
-        className='flex min-h-screen flex-col items-center mx-auto w-full relative'
+        className='flex min-h-screen flex-col items-center mx-auto w-full relative bg-gradient-to-b from-white to-[#FECEE5] '
         initial={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.3, ease: "easeOut" }}
@@ -67,7 +65,7 @@ export default function Home() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={inView ? { duration: 0.5 } : {}}
-            className='relative h-28 sm:h-32 md:h-36 lg:h-40 aspect-square animate-[spin_30s_linear_infinite]'
+            className='z-10 relative h-28 sm:h-32 md:h-36 lg:h-40 aspect-square animate-[spin_30s_linear_infinite]'
           >
             <Image
               className=''
@@ -77,7 +75,7 @@ export default function Home() {
             />
           </motion.section>
 
-          <section className='w-full flex flex-col gap-4 items-center'>
+          <section className='z-10 w-full flex flex-col gap-4 items-center'>
             <motion.h3
               ref={ref}
               initial={{ opacity: 0, y: 20 }}
@@ -107,7 +105,7 @@ export default function Home() {
               {`--->`}</a> */}
           </section>
 
-          <div className=' -z-10 absolute top-0 w-full h-full'>
+          <div className='absolute top-0 w-full h-full'>
             <ParticlesWrapper />
           </div>
         </div>
