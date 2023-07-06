@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-<<<<<<< HEAD
 @font-face {
   font-family: "AvenirLight";
   src: url("../public/fonts/AvenirLTStd-Book.otf") format("opentype");
@@ -13,8 +12,6 @@
   src: url("../public/fonts/AvenirLTStd-Black.otf") format("opentype");
 }
 
-=======
->>>>>>> 452db9089e094541304aaf3a864977ee99c3d2aa
 html,
 body {
   overflow-x: hidden;

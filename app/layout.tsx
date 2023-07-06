@@ -34,11 +34,7 @@ export default function RootLayout({
       <Head>
         <meta name='viewport' content='width=device-width, initial-scale=1.0' />
       </Head>
-<<<<<<< HEAD
       <body className={`font-avenirlight`}>
-=======
-      <body className='font-avenir'>
->>>>>>> 452db9089e094541304aaf3a864977ee99c3d2aa
         {children}
         <SmoothScroll />
       </body>
