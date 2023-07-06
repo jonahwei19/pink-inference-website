@@ -1,5 +1,5 @@
 import "./globals.css";
-import { Play, Noto_Sans } from "next/font/google";
+import { Play, Noto_Sans, Prompt } from "next/font/google";
 import SmoothScroll from "@/utilities/SmoothScroll";
 import Head from "next/head";
 
@@ -9,6 +9,11 @@ import Head from "next/head";
 // })
 
 const notoFont = Noto_Sans({
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  preload: false,
+});
+
+const promptFont = Prompt({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   preload: false,
 });
@@ -29,7 +34,7 @@ export default function RootLayout({
       <Head>
         <meta name='viewport' content='width=device-width, initial-scale=1.0' />
       </Head>
-      <body className={notoFont.className}>
+      <body className='font-avenir'>
         {children}
         <SmoothScroll />
       </body>

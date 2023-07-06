@@ -40,7 +40,7 @@ export default function Home() {
         exit={{ opacity: 0 }}
         transition={{ duration: 0.3, ease: "easeOut" }}
       >
-        <header className='bg-opacity-95 bg-white rounded-b-3xl fixed left-0 top-0 z-10 flex items-center justify-between w-full px-6 py-4 sm:px-16 sm:py-12'>
+        <header className='bg-opacity-90 bg-white rounded-b-3xl fixed left-0 top-0 z-10 flex items-center justify-between w-full px-6 py-4 sm:px-16 sm:py-12'>
           <Link
             href={"/"}
             className='text-4xl font-bold flex flex-col sm:flex-row gap-x-2'
@@ -125,7 +125,7 @@ export default function Home() {
             className='px-2 sm:px-4 py-10 w-full text-lg flex flex-col gap-8'
           >
             <div className='flex flex-col px-6 gap-8'>
-              <h2 className='text-5xl font-bold tracking-tighter'>
+              <h2 className='text-5xl font-bold tracking-tight'>
                 What <span className=''>Is</span> <br />{" "}
                 <span className=''>Wetware?</span>
               </h2>
