@@ -9,7 +9,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const HEADER_DESCRIPTION =
-  "Realizing the Neuron.";
+  "Wetware Architecture for the next generation of robotics.";
 
 export default function Home() {
   const [ref, inView] = useInView({
