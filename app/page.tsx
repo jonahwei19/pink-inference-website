@@ -84,8 +84,8 @@ export default function Home() {
               transition={{ duration: 1 }}
               className='text-5xl md:text-6xl text-center font-normal'
             >
-              <span className='font-bold'>Scalable &amp; Powerful</span> Wetware
-              Computing
+              <span className='font-bold'> Realizing the Neuron</span>; 
+                //Scalable &amp; Powerful</span> Wetware Computing;
             </motion.h3>
             <motion.div
               ref={ref}
