@@ -35,7 +35,7 @@ export default function Home() {
   return (
     <AnimatePresence mode='wait'>
       <motion.main
-        className={`font-medium flex min-h-screen flex-col items-center mx-auto w-full relative bg-gradient-to-b from-white to-[#FECEE5] `}
+        className={`flex min-h-screen flex-col items-center mx-auto w-full relative bg-gradient-to-b from-white to-[#FECEE5] `}
         initial={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.3, ease: "easeOut" }}
@@ -43,7 +43,7 @@ export default function Home() {
         <header className='bg-opacity-95 bg-white rounded-b-3xl fixed left-0 top-0 z-10 flex items-center justify-between w-full px-6 py-4 sm:px-16 sm:py-12'>
           <Link
             href={"/"}
-            className='text-4xl font-bold flex flex-col sm:flex-row gap-x-2'
+            className='text-4xl font-avenirbold flex flex-col sm:flex-row gap-x-2'
           >
             <span className='text-[#FD5DA8]'>Pink</span>Inference
           </Link>
@@ -84,8 +84,8 @@ export default function Home() {
               transition={{ duration: 1 }}
               className='text-5xl md:text-6xl text-center font-normal'
             >
-              <span className='font-bold'> Realizing the Neuron</span>; 
-                //Scalable &amp; Powerful</span> Wetware Computing;
+              <span className='font-extrabold'> Scalable &amp; Powerful</span>{" "}
+              Wetware Computing
             </motion.h3>
             <motion.div
               ref={ref}
@@ -130,8 +130,9 @@ export default function Home() {
                 <span className=''>Wetware?</span>
               </h2>
               <p>
-                Wetware computing is a blanket term referring to the utilization of biological neurons
-                for computationally difficult problems, sensory functions, and life science applications.
+                Wetware computing is a blanket term referring to the utilization
+                of biological neurons for computationally difficult problems,
+                sensory functions, and life science applications.
               </p>
             </div>
 
@@ -141,7 +142,7 @@ export default function Home() {
 
             <div className='flex flex-col gap-10 px-6'>
               <div>
-                <h1 className='text-3xl font-bold'>
+                <h1 className='text-3xl font-extrabold'>
                   Unlocking the Power of Wetware
                 </h1>
                 <div className='mt-4 flex flex-col gap-4'>
@@ -191,7 +192,7 @@ export default function Home() {
             </div>
             <div className='flex flex-col lg:flex-row justify-center items-start gap-6 rounded-3xl bord border-sold p-4'>
               <div className='flex flex-col gap-2 lg:w-1/2'>
-                <h1 className='text-3xl font-bold'>Current Models</h1>
+                <h1 className='text-3xl font-extrabold'>Current Models</h1>
                 {/* <ul>
                 <li>Inflexible and costly</li>
                 <li>Significant scalability issues</li>
@@ -209,7 +210,7 @@ export default function Home() {
                 </p>
               </div>
               <div className='flex flex-col gap-2 lg:w-1/2'>
-                <h1 className='text-3xl font-bold'>Our Solution</h1>
+                <h1 className='text-3xl font-extrabold'>Our Solution</h1>
                 {/* <ul>
                 <li>Yields the potential for less training time and energy consumption</li>
                 <li>Faster testing of neurological drugs</li>

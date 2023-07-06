@@ -2,8 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "AvenirLight";
+  src: url("../public/fonts/AvenirLTStd-Book.otf") format("opentype");
+}
 
-html,body{
+@font-face {
+  font-family: "AvenirBold";
+  src: url("../public/fonts/AvenirLTStd-Black.otf") format("opentype");
+}
+
+html,
+body {
   overflow-x: hidden;
 }
 
