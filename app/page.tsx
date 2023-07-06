@@ -130,9 +130,8 @@ export default function Home() {
                 <span className=''>Wetware?</span>
               </h2>
               <p>
-                Wetware computing harnesses the capabilities of biological
-                systems, such as the brain, to perform computational tasks and
-                solve complex problems.
+                Wetware computing is a blanket term referring to the utilization of biological neurons
+                for computationally difficult problems, sensory functions, and life science applications.
               </p>
             </div>
 
