@@ -125,7 +125,7 @@ export default function Home() {
             // transition={{ duration: 0.3, ease: "easeOut" }}
             className='px-2 sm:px-4 py-10 w-full text-lg flex flex-col gap-8'
           >
-            <div className='flex flex-col px-6 gap-8 items-center text-center'>
+            <div className='flex flex-col px-6 gap-8 md:items-center md:text-center'>
               <h2 className='text-5xl md:text-7xl font-bold tracking-tight'>
                 What <span className=''>Is</span>{" "}
                 <span className=''>Wetware?</span>
@@ -179,7 +179,7 @@ export default function Home() {
             // transition={{ duration: 0.3, ease: "easeOut" }}
             className='px-2 sm:px-4 py-10 w-full text-lg flex flex-col gap-24'
           >
-            <div className='flex flex-col px-6 gap-8 items-center text-center'>
+            <div className='flex flex-col px-6 gap-8 md:items-center md:text-center'>
               <h2 className='text-5xl md:text-7xl font-bold tracking-tighter'>
                 Innovative Solutions for the Future
               </h2>
@@ -267,7 +267,7 @@ export default function Home() {
             // transition={{ duration: 0.3, ease: "easeOut" }}
             className='px-2 sm:px-4 py-10 w-full text-lg flex flex-col gap-8'
           >
-            <div className='flex flex-col px-6 gap-8 items-center text-center'>
+            <div className='flex flex-col px-6 gap-8 md:items-center md:text-center'>
               <h2 className='text-5xl md:text-7xl font-bold tracking-tighter'>
                 Powerful Features
                 <p className='mb-4 ml-8'>Exciting Discoveries</p>
