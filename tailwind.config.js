@@ -16,8 +16,12 @@ module.exports = {
         "3xl": "0 35px 60px -15px rgba(0, 0, 0, 0.3)",
       },
       fontFamily: {
+<<<<<<< HEAD
         avenirlight: ["AvenirLight"],
         avenirbold: ["AvenirBold"],
+=======
+        avenir: ["AvenirLTStd-Black", "sans-serif"],
+>>>>>>> 452db9089e094541304aaf3a864977ee99c3d2aa
       },
     },
   },
