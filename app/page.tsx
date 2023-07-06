@@ -9,7 +9,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const HEADER_DESCRIPTION =
-  "Developing wetware architecture for the next generation of computing and neuropharmacology.";
+  "Realizing the Neuron.";
 
 export default function Home() {
   const [ref, inView] = useInView({
