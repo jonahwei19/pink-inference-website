@@ -191,6 +191,33 @@ export default function Home() {
                 <strong>scalable and powerful</strong>.
               </p>
             </div>
+
+            <div className='flex flex-wrap justify-center sm:gap-16'>
+              <div className='flex flex-col justify-center items-center'>
+                <div className='relative aspect-square w-40 sm:w-52'>
+                  <Image
+                    src={"/lab_tubes3.png"}
+                    width={200}
+                    height={200}
+                    alt='lab tubes'
+                  />
+                </div>
+                <p>Pharmaceutical Testing</p>
+              </div>
+
+              <div className='flex flex-col justify-center items-center'>
+                <div className='relative aspect-square w-40 sm:w-52'>
+                  <Image
+                    src={"/brain-icon.png"}
+                    width={200}
+                    height={200}
+                    alt='brain study'
+                  />
+                </div>
+                <p>Brain Study</p>
+              </div>
+            </div>
+
             <div className='flex flex-col lg:flex-ro justify-center items-center gap-16 rounded-3xl bord border-sold p-4'>
               <div className='flex flex-col gap-2 lg:w-1/2'>
                 <h1 className='text-3xl font-extrabold'>Current Models</h1>
@@ -227,31 +254,6 @@ export default function Home() {
                   to use our system to study the brain in a more reliable
                   method.
                 </p>
-              </div>
-            </div>
-            <div className='flex flex-wrap justify-center sm:gap-16'>
-              <div className='flex flex-col justify-center items-center'>
-                <div className='relative aspect-square w-40 sm:w-52'>
-                  <Image
-                    src={"/lab_tubes3.png"}
-                    width={200}
-                    height={200}
-                    alt='stopwatch'
-                  />
-                </div>
-                <p>Pharmaceutical Testing</p>
-              </div>
-
-              <div className='flex flex-col justify-center items-center'>
-                <div className='relative aspect-square w-40 sm:w-52'>
-                  <Image
-                    src={"/brain-icon.png"}
-                    width={200}
-                    height={200}
-                    alt='stopwatch'
-                  />
-                </div>
-                <p>Brain Study</p>
               </div>
             </div>
           </motion.section>
