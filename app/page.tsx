@@ -133,7 +133,9 @@ export default function Home() {
               <p className='md:w-2/3 lg:w-1/2 font-semibold text-xl md:text-2xl'>
                 Wetware computing is a blanket term referring to the utilization
                 of biological neurons for computationally difficult problems,
-                sensory functions, and life science applications.
+                sensory functions, and life science applications. Wetware describes
+                the interface used to stimulate and record activity in in-vitro neural
+                networks.
               </p>
             </div>
 
