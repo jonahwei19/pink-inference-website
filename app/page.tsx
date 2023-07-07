@@ -6,31 +6,40 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import TypewriterComponent from "typewriter-effect";
 import Link from "next/link";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { useEffect, useState } from "react";
 
 const HEADER_DESCRIPTION =
   "Wetware Architecture for the Next Generation of Robotics.";
 
 export default function Home() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1200,
+      once: false,
+    });
+  }, []);
+
   const [ref, inView] = useInView({
     triggerOnce: false, // Animation triggers only once
     threshold: 0.5, // Percentage of section visible in the viewport to trigger the animation
   });
 
-  const [wetwareRef, wetwareInView] = useInView({
-    triggerOnce: false,
-    threshold: 0.05,
-  });
+  // const [wetwareRef, wetwareInView] = useInView({
+  //   triggerOnce: false,
+  //   threshold: 0.05,
+  // });
 
-  const [innovativeSolutionsRef, innovativeSolutionsInView] = useInView({
-    triggerOnce: false,
-    threshold: 0.05,
-  });
+  // const [innovativeSolutionsRef, innovativeSolutionsInView] = useInView({
+  //   triggerOnce: false,
+  //   threshold: 0.05,
+  // });
 
-  const [excitingDiscoveriesRef, excitingDiscoveriesInView] = useInView({
-    triggerOnce: false,
-    threshold: 0.05,
-  });
+  // const [excitingDiscoveriesRef, excitingDiscoveriesInView] = useInView({
+  //   triggerOnce: false,
+  //   threshold: 0.05,
+  // });
 
   return (
     <AnimatePresence mode='wait'>
@@ -119,27 +128,36 @@ export default function Home() {
         <div className='w-full md:p-12 h-min'>
           <motion.section
             id='Wetware'
-            ref={wetwareRef}
             // initial={{ x: 100 }}
             // animate={wetwareInView ? { x: 0 } : {}}
             // transition={{ duration: 0.3, ease: "easeOut" }}
             className='px-2 sm:px-4 py-10 w-full text-lg flex flex-col gap-8'
           >
             <div className='flex flex-col px-6 gap-8 md:items-center md:text-center'>
-              <h2 className='text-5xl md:text-7xl font-bold tracking-tight'>
+              <h2
+                data-aos='fade-up'
+                className='text-5xl md:text-7xl font-bold tracking-tight'
+              >
                 What <span className=''>Is</span>{" "}
                 <span className=''>Wetware?</span>
               </h2>
-              <p className='md:w-2/3 lg:w-1/2 font-semibold text-xl md:text-2xl'>
+              <p
+                data-aos='fade-left'
+                data-aos-duration='1600'
+                className='md:w-2/3 lg:w-1/2 font-semibold text-xl md:text-2xl'
+              >
                 Wetware computing is a blanket term referring to the utilization
                 of biological neurons for computationally difficult problems,
-                sensory functions, and life science applications. Wetware describes
-                the interface used to stimulate and record activity in in-vitro neural
-                networks.
+                sensory functions, and life science applications. Wetware
+                describes the interface used to stimulate and record activity in
+                in-vitro neural networks.
               </p>
             </div>
 
-            <div className='relative aspect-square w-40 sm:w-52 mx-auto'>
+            <div
+              data-aos='zoom-in'
+              className='relative aspect-square w-40 sm:w-52 mx-auto'
+            >
               <Image src={"/wetware.png"} fill alt='stopwatch' />
             </div>
 
@@ -175,7 +193,6 @@ export default function Home() {
         <div className='b-[#00bcd4] w-full md:p-12'>
           <motion.section
             id='ProblemStatement'
-            ref={innovativeSolutionsRef}
             // initial={{ x: -100 }}
             // animate={innovativeSolutionsInView ? { x: 0 } : {}}
             // transition={{ duration: 0.3, ease: "easeOut" }}
@@ -265,7 +282,6 @@ export default function Home() {
 
         <div className='w-full md:p-12'>
           <motion.section
-            ref={excitingDiscoveriesRef}
             // initial={{ x: 100 }}
             // animate={excitingDiscoveriesInView ? { x: 0 } : {}}
             // transition={{ duration: 0.3, ease: "easeOut" }}
