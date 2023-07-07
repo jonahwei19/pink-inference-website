@@ -16,7 +16,7 @@ const HEADER_DESCRIPTION =
 export default function Home() {
   useEffect(() => {
     AOS.init({
-      duration: 1200,
+      duration: 1600,
       once: false,
     });
   }, []);
@@ -136,6 +136,7 @@ export default function Home() {
             <div className='flex flex-col px-6 gap-8 md:items-center md:text-center'>
               <h2
                 data-aos='fade-up'
+                data-aos-duration='1200'
                 className='text-5xl md:text-7xl font-bold tracking-tight'
               >
                 What <span className=''>Is</span>{" "}
@@ -143,7 +144,6 @@ export default function Home() {
               </h2>
               <p
                 data-aos='fade-left'
-                data-aos-duration='1600'
                 className='md:w-2/3 lg:w-1/2 font-semibold text-xl md:text-2xl'
               >
                 Wetware computing is a blanket term referring to the utilization
