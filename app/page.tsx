@@ -49,7 +49,7 @@ export default function Home() {
         exit={{ opacity: 0 }}
         transition={{ duration: 0.3, ease: "easeOut" }}
       >
-        <header className='bg-opacity-90 bg-white rounded-b-3xl fixed left-0 top-0 z-10 flex items-center justify-between w-full px-6 py-4 sm:px-16 sm:py-12'>
+        <header className='bg-opacity-95 bg-white rounded-b-3xl fixed left-0 top-0 z-10 flex items-center justify-between w-full px-6 py-4 sm:px-16 sm:py-12'>
           <Link
             href={"/"}
             className='text-4xl font-avenirbold flex flex-col sm:flex-row gap-x-2'
