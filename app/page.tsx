@@ -199,10 +199,17 @@ export default function Home() {
             className='px-2 sm:px-4 py-10 w-full text-lg flex flex-col gap-24'
           >
             <div className='flex flex-col px-6 gap-8 md:items-center md:text-center'>
-              <h2 className='text-5xl md:text-7xl font-bold tracking-tighter'>
+              <h2
+                data-aos='fade-up'
+                data-aos-duration='1200'
+                className='text-5xl md:text-7xl font-bold tracking-tighter'
+              >
                 Innovative Solutions for the Future
               </h2>
-              <p className='md:w-2/3 lg:w-1/2 font-semibold text-xl md:text-2xl'>
+              <p
+                data-aos='fade-left'
+                className='md:w-2/3 lg:w-1/2 font-semibold text-xl md:text-2xl'
+              >
                 Current approaches to wetware systems focus on electrical
                 interfaces with metallic electrodes. However, these designs are{" "}
                 <strong>inflexible and challenging</strong> to scale. We are
@@ -211,7 +218,10 @@ export default function Home() {
               </p>
             </div>
 
-            <div className='flex flex-wrap justify-center sm:gap-16'>
+            <div
+              data-aos='fade-up'
+              className='flex flex-wrap justify-center sm:gap-16'
+            >
               <div className='flex flex-col justify-center items-center'>
                 <div className='relative aspect-square w-40 sm:w-52'>
                   <Image
@@ -239,7 +249,9 @@ export default function Home() {
 
             <div className='flex flex-col lg:flex-ro justify-center items-center gap-16 rounded-3xl bord border-sold p-4'>
               <div className='flex flex-col gap-2 lg:w-1/2'>
-                <h1 className='text-3xl font-extrabold'>Current Models</h1>
+                <h1 data-aos='fade-up' className='text-3xl font-extrabold'>
+                  Current Models
+                </h1>
                 {/* <ul>
                 <li>Inflexible and costly</li>
                 <li>Significant scalability issues</li>
@@ -257,7 +269,9 @@ export default function Home() {
                 </p>
               </div>
               <div className='flex flex-col gap-2 lg:w-1/2'>
-                <h1 className='text-3xl font-extrabold'>Our Solution</h1>
+                <h1 data-aos='fade-up' className='text-3xl font-extrabold'>
+                  Our Solution
+                </h1>
                 {/* <ul>
                 <li>Yields the potential for less training time and energy consumption</li>
                 <li>Faster testing of neurological drugs</li>
@@ -288,11 +302,18 @@ export default function Home() {
             className='px-2 sm:px-4 py-10 w-full text-lg flex flex-col gap-8'
           >
             <div className='flex flex-col px-6 gap-8 md:items-center md:text-center'>
-              <h2 className='text-5xl md:text-7xl font-bold tracking-tighter'>
+              <h2
+                data-aos='fade-up'
+                data-aos-duration='1200'
+                className='text-5xl md:text-7xl font-bold tracking-tighter'
+              >
                 Powerful Features
                 <p className='mb-4 ml-8'>Exciting Discoveries</p>
               </h2>
-              <p className='md:w-2/3 lg:w-1/2 font-semibold text-xl md:text-2xl'>
+              <p
+                data-aos='fade-left'
+                className='md:w-2/3 lg:w-1/2 font-semibold text-xl md:text-2xl'
+              >
                 We&apos;ve been able to sidestep these flaws by developing a
                 system that skips the electrode interface altogether. We are
                 making wetware a computational reality.
