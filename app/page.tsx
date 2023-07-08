@@ -243,7 +243,7 @@ export default function Home() {
                     alt='brain study'
                   />
                 </div>
-                <p>Brain Study</p>
+                <p>Neural Research</p>
               </div>
             </div>
 
