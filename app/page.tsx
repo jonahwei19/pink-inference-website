@@ -16,7 +16,7 @@ const HEADER_DESCRIPTION =
 export default function Home() {
   return (
     <main
-      className={`flex min-h-screen flex-col items-center w-full bg-[#111111] text-white`}
+      className={`flex min-h-[100svh] flex-col items-center w-full bg-[#111111] text-white`}
     >
       <div className='h-[100svh] relative w-full bg-topological p-6 sm:p-16 bg-center bg-cover'>
         <div className='flex items-center gap-4 top-0 left-0'>
