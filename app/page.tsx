@@ -32,23 +32,23 @@ export default function Home() {
           <Image fill src={"/logo.svg"} alt='logo' />
         </div>
 
-        <div className='w-full relative md:bottom-[20%] flex flex-col gap-8 font-thin text-white break-words'>
-          <h1 className='text-[32px] sm:text-[64px]'>
+        <div className='w-full relative -top-16 md:-top-80 flex flex-col gap-8 font-thin text-white break-words'>
+          <h1 className='text-[32px] md:text-[64px]'>
             SCALABLE <br />
             & POWERFUL <br />
             WETWARE COMPUTING
           </h1>
-          <p className='text-xs sm:text-2xl'>
+          <p className='text-sm smdtext-2xl'>
             Wetware architecture for the next generation of robotics
           </p>
-          <div className='text-2xl flex gap-4 sm:gap-12 flex-wrap'>
-            <button className='border-solid border-white border-spacing-3 border px-7 py-2 rounded-md hover:opacity-70'>
+          <div className='text-sm md:text-2xl flex gap-4 sm:gap-12 flex-wrap'>
+            <button className='border-solid border-white border-spacing-3 border px-4 sm:px-7 py-2 rounded-md hover:opacity-70'>
               ABOUT
             </button>
-            <button className='border-solid border-white border-spacing-3 border px-7 py-2 rounded-md hover:opacity-70'>
+            <button className='border-solid border-white border-spacing-3 border px-4 sm:px-7 py-2 rounded-md hover:opacity-70'>
               TEAM
             </button>
-            <button className='border-solid border-white border-spacing-3 border px-7 py-2 rounded-md hover:opacity-70'>
+            <button className='border-solid border-white border-spacing-3 border px-4 sm:px-7 py-2 rounded-md hover:opacity-70'>
               INVESTORS
             </button>
           </div>
