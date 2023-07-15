@@ -1,20 +1,10 @@
 import "./globals.css";
-import { Play, Noto_Sans, Prompt } from "next/font/google";
+import { Roboto_Mono } from "next/font/google";
 import SmoothScroll from "@/utilities/SmoothScroll";
 import Head from "next/head";
 
-// const playFont = Play({
-//   weight: ['400', '700'],
-//   preload:false,
-// })
-
-const notoFont = Noto_Sans({
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-  preload: false,
-});
-
-const promptFont = Prompt({
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+const robotoMonoFont = Roboto_Mono({
+  weight: ["100", "300"],
   preload: false,
 });
 
@@ -34,7 +24,7 @@ export default function RootLayout({
       <Head>
         <meta name='viewport' content='width=device-width, initial-scale=1.0' />
       </Head>
-      <body className={`font-avenirlight`}>
+      <body className={robotoMonoFont.className}>
         {children}
         <SmoothScroll />
       </body>
