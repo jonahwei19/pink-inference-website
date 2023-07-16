@@ -101,11 +101,11 @@ export default function Home() {
               <br />
               <br />
               At Pink Inference, we are making wetware scalable and powerful. By
-              bypassing traditional electrode interfaces, we're bringing wetware
-              computing into reality. Our goal is to provide wetware computing
-              as a cloud service. Through our open API, users can conduct
-              wetware research and solve AI problems in various fields, from
-              robotics to the life sciences.
+              bypassing traditional electrode interfaces, we are bringing
+              wetware computing into reality. Our goal is to provide wetware
+              computing as a cloud service. Through our open API, users can
+              conduct wetware research and solve AI problems in various fields,
+              from robotics to the life sciences.
             </p>
           </div>
         </div>
