@@ -15,7 +15,7 @@ export default function Home() {
     <main
       className={`flex min-h-screen flex-col items-center w-full bg-[#111111] text-white`}
     >
-      <div className='h-screen flex flex-col w-full bg-topological p-6 sm:p-16 bg-center bg-cover'>
+      <div className='relative h-screen flex flex-col w-full bg-topological p-6 sm:p-16 bg-center bg-cover'>
         <div className='flex items-center gap-4'>
           <div className='relative h-12 w-12'>
             <Image src={"/logo_thick.svg"} fill alt='logo' />
@@ -45,18 +45,67 @@ export default function Home() {
             <button className='border-solid border-white border-spacing-3 border px-4 sm:px-7 py-2 rounded-md hover:opacity-70'>
               TEAM
             </button>
-            <button className='border-solid border-white border-spacing-3 border px-4 sm:px-7 py-2 rounded-md hover:opacity-70'>
+            <button className=' border-solid border-white border-spacing-3 border px-4 sm:px-7 py-2 rounded-md hover:opacity-70'>
               INVESTORS
             </button>
+          </div>
+        </div>
+
+        <hr className='absolute bottom-0 left-0 w-full border-8 border-[#FE5DA8]' />
+      </div>
+
+      <div className='flex flex-col w-full py-10 gap-12'>
+        <div className='flex flex-col w-full px-[15%] sm:px-[30%]'>
+          <div className='flex flex-col gap-8'>
+            <div className='relative h-24 w-24 sm:h-36 sm:w-36'>
+              <Image
+                className='invert opacity-90'
+                src={"/wetware.png"}
+                fill
+                alt='wetware symbol'
+              />
+            </div>
+            <h1 className=' font-thin text-4xl '>What is wetware?</h1>
+            <p className=' font-light text-sm'>
+              Wetware computing is a blanket term referring to the utilization
+              of biological neurons for computationally difficult problems,
+              sensory functions, and life science applications. Wetware
+              describes the interface used to stimulate and record activity in
+              in-vitro neural networks.
+            </p>
+          </div>
+        </div>
+
+        <div className='w-screen h-8 bg-cover bg-center bg-topological-2' />
+
+        <div className='flex flex-col w-full px-[15%] sm:px-[30%]'>
+          <div className='flex flex-col gap-8'>
+            <h1 className=' font-thin text-4xl '>
+              Unlocking the power of wetware
+            </h1>
+            <p className=' font-light text-sm'>
+              Neurons, with over ~525 million years of evolution, are advanced
+              problem solvers. Yet, modern AIs consume the energy of hundreds of
+              households for training, while the human brain uses only about 12
+              watts.
+              <br />
+              <br />
+              At Pink Inference, we're making wetware scalable and powerful. By
+              bypassing traditional electrode interfaces, we're bringing wetware
+              computing into reality. Our goal is to provide wetware computing
+              as a cloud service. Through our open API, users can conduct
+              wetware research and solve AI problems in various fields, from
+              robotics to the life sciences.
+            </p>
           </div>
         </div>
       </div>
 
       <footer className='flex flex-col justify-around items-center my-8'>
         <Image
-          src={"/pink-inference-icon.png"}
-          width={30}
-          height={30}
+          src={"/logo_thick.svg"}
+          width={48}
+          height={48}
           alt='Pink Inference Logo'
         />
         <p>&copy; 2023 Pink Inference</p>
