@@ -29,7 +29,7 @@ export default function Home() {
           <Image fill src={"/logo.svg"} alt='logo' />
         </div>
 
-        <div className='w-full relative top-8 md:-top-16 md:-bottom-1/2 flex flex-col gap-8 font-thin text-white break-words'>
+        <div className='w-full relative top-5 md:-top-16 md:-bottom-1/2 flex flex-col gap-8 font-thin text-white break-words'>
           <h1 className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl'>
             SCALABLE <br />
             & POWERFUL <br />
