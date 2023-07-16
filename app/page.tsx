@@ -18,8 +18,8 @@ export default function Home() {
     <main
       className={`flex min-h-screen flex-col items-center w-full bg-[#111111] text-white`}
     >
-      <div className='h-screen relative w-full bg-topological p-6 sm:p-16 bg-center bg-cover'>
-        <div className='flex items-center gap-4 top-0 left-0'>
+      <div className='h-screen flex flex-col w-full bg-topological p-6 sm:p-16 bg-center bg-cover'>
+        <div className='flex items-center gap-4'>
           <div className='relative h-12 w-12'>
             <Image src={"/logo_thick.svg"} fill alt='logo' />
           </div>
@@ -28,20 +28,20 @@ export default function Home() {
           </h1>
         </div>
 
-        <div className='relative md:w-[800px] lg:w-[900px] aspect-square sm:-top-10 md:-top-52 lg:-top-80 left-[40%] sm:left-[35%] xl:left-[45%] 2xl:left-[50%]'>
+        <div className='relative w-[300px] sm:w-[500px] md:w-[800px] lg:w-[1000px] aspect-square sm:-top-10 md:-top-36 left-[40%] sm:left-[35%] xl:left-[45%] 2xl:left-[50%]'>
           <Image fill src={"/logo.svg"} alt='logo' />
         </div>
 
-        <div className='w-full relative -top-16 md:-top-80 flex flex-col gap-8 font-thin text-white break-words'>
-          <h1 className='text-[32px] md:text-[64px]'>
+        <div className='w-full relative -top-16 md:-bottom-1/2 flex flex-col gap-8 font-thin text-white break-words'>
+          <h1 className='text-3xl sm:text-4xl md:text-6xl lg:text-7xl'>
             SCALABLE <br />
             & POWERFUL <br />
             WETWARE COMPUTING
           </h1>
-          <p className='text-sm md:text-2xl'>
+          <p className='text-sm sm:text-base md:text-2xl'>
             Wetware architecture for the next generation of robotics
           </p>
-          <div className='text-sm md:text-2xl flex gap-4 sm:gap-12 flex-wrap'>
+          <div className='text-sm sm:text-base md:text-2xl flex gap-4 sm:gap-12 flex-wrap'>
             <button className='border-solid border-white border-spacing-3 border px-4 sm:px-7 py-2 rounded-md hover:opacity-70'>
               ABOUT
             </button>
