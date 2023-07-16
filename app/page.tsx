@@ -10,9 +10,6 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect, useState } from "react";
 
-const HEADER_DESCRIPTION =
-  "Wetware Architecture for the Next Generation of Robotics.";
-
 export default function Home() {
   return (
     <main
@@ -32,7 +29,7 @@ export default function Home() {
           <Image fill src={"/logo.svg"} alt='logo' />
         </div>
 
-        <div className='w-full relative top-10 md:-top-16 md:-bottom-1/2 flex flex-col gap-8 font-thin text-white break-words'>
+        <div className='w-full relative top-8 md:-top-16 md:-bottom-1/2 flex flex-col gap-8 font-thin text-white break-words'>
           <h1 className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl'>
             SCALABLE <br />
             & POWERFUL <br />
