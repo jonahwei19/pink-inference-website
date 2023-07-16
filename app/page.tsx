@@ -11,7 +11,7 @@ export default function Home() {
       <div className='relative h-screen flex flex-col w-full bg-topological p-6 sm:p-16 bg-center bg-cover'>
         <div className='flex items-center gap-4'>
           <div className='relative h-12 w-12'>
-            <Image src={"/logo_thick.svg"} fill alt='logo' />
+            <Image src={"/logo.svg"} fill alt='logo' />
           </div>
           <h1
             className={`text-white font-thin text-2xl ${robotoMonoFont.className}`}
@@ -115,9 +115,11 @@ export default function Home() {
         </div>
       </div>
 
-      <footer className='flex flex-col justify-around items-center my-8'>
+      <footer
+        className={`flex flex-col gap-2 justify-around items-center my-8 ${robotoMonoFont.className} font-light`}
+      >
         <Image
-          src={"/logo_thick.svg"}
+          src={"/logo.svg"}
           width={48}
           height={48}
           alt='Pink Inference Logo'
