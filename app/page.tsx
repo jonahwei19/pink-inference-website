@@ -1,14 +1,6 @@
-"use client";
-
-import ParticlesWrapper from "@/components/ParticlesWrapper";
 import Image from "next/image";
-import { AnimatePresence, motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import TypewriterComponent from "typewriter-effect";
-import Link from "next/link";
-import AOS from "aos";
+import { robotoMonoFont, montserratFont } from "@/utilities/fonts";
 import "aos/dist/aos.css";
-import { useEffect, useState } from "react";
 
 export default function Home() {
   return (
@@ -20,7 +12,9 @@ export default function Home() {
           <div className='relative h-12 w-12'>
             <Image src={"/logo_thick.svg"} fill alt='logo' />
           </div>
-          <h1 className='text-white font-thin text-2xl'>
+          <h1
+            className={`text-white font-thin text-2xl ${robotoMonoFont.className}`}
+          >
             <span className='text-[#FE5DA8]'>PINK</span> INFERENCE
           </h1>
         </div>
@@ -30,15 +24,21 @@ export default function Home() {
         </div>
 
         <div className='w-full relative top-5 md:-top-16 md:-bottom-1/2 flex flex-col gap-8 font-thin text-white break-words'>
-          <h1 className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl'>
+          <h1
+            className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl ${robotoMonoFont.className} font-thin`}
+          >
             SCALABLE <br />
             & POWERFUL <br />
             WETWARE COMPUTING
           </h1>
-          <p className='text-sm sm:text-base md:text-2xl'>
+          <p
+            className={`text-sm sm:text-base md:text-2xl ${montserratFont.className} font-light max-w-[50vw]`}
+          >
             Wetware architecture for the next generation of robotics
           </p>
-          <div className='text-sm sm:text-base md:text-2xl flex gap-4 sm:gap-12 flex-wrap'>
+          <div
+            className={`text-sm sm:text-base md:text-2xl flex gap-4 sm:gap-12 flex-wrap max-w-[50vw] ${robotoMonoFont.className} font-thin`}
+          >
             <button className='border-solid border-white border-spacing-3 border px-4 sm:px-7 py-2 rounded-md hover:opacity-70'>
               ABOUT
             </button>
@@ -65,8 +65,14 @@ export default function Home() {
                 alt='wetware symbol'
               />
             </div>
-            <h1 className=' font-thin text-4xl '>What is wetware?</h1>
-            <p className=' font-light text-sm'>
+            <h1
+              className={`font-thin text-4xl ${robotoMonoFont.className} font-thin`}
+            >
+              What is wetware?
+            </h1>
+            <p
+              className={`font-light text-sm ${montserratFont.className} font-light`}
+            >
               Wetware computing is a blanket term referring to the utilization
               of biological neurons for computationally difficult problems,
               sensory functions, and life science applications. Wetware
@@ -80,17 +86,21 @@ export default function Home() {
 
         <div className='flex flex-col w-full px-[15%] sm:px-[30%]'>
           <div className='flex flex-col gap-8'>
-            <h1 className=' font-thin text-4xl '>
+            <h1
+              className={`font-thin text-4xl ${robotoMonoFont.className} font-thin`}
+            >
               Unlocking the power of wetware
             </h1>
-            <p className=' font-light text-sm'>
+            <p
+              className={`font-light text-sm ${montserratFont.className} font-light`}
+            >
               Neurons, with over ~525 million years of evolution, are advanced
               problem solvers. Yet, modern AIs consume the energy of hundreds of
               households for training, while the human brain uses only about 12
               watts.
               <br />
               <br />
-              At Pink Inference, we're making wetware scalable and powerful. By
+              At Pink Inference, we are making wetware scalable and powerful. By
               bypassing traditional electrode interfaces, we're bringing wetware
               computing into reality. Our goal is to provide wetware computing
               as a cloud service. Through our open API, users can conduct
