@@ -33,12 +33,12 @@ export default function Home() {
             WETWARE COMPUTING
           </h1>
           <p
-            className={`text-sm sm:text-base md:text-2xl ${montserratFont.className} font-light max-w-[50vw]`}
+            className={`text-sm sm:text-base md:text-2xl ${montserratFont.className} font-light lg:max-w-[60vw]`}
           >
             Wetware architecture for the next generation of robotics
           </p>
           <div
-            className={`text-sm sm:text-base md:text-2xl flex gap-4 sm:gap-12 flex-wrap max-w-[50vw] ${robotoMonoFont.className} font-thin`}
+            className={`text-sm sm:text-base md:text-2xl flex gap-4 sm:gap-12 flex-wrap lg:max-w-[60vw] ${robotoMonoFont.className} font-thin`}
           >
             <button className='border-solid border-white border-spacing-3 border px-4 sm:px-7 py-2 rounded-md hover:opacity-70'>
               ABOUT
