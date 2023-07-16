@@ -63,7 +63,7 @@ export default function Home() {
           <div className='flex flex-col gap-8'>
             <div className='relative h-24 w-24 sm:h-36 sm:w-36'>
               <Image
-                className='invert opacity-90'
+                className='invert opacity-80'
                 src={"/wetware.png"}
                 fill
                 alt='wetware symbol'
