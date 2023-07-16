@@ -1,12 +1,6 @@
 import "./globals.css";
-import { Roboto_Mono } from "next/font/google";
 import SmoothScroll from "@/utilities/SmoothScroll";
 import Head from "next/head";
-
-const robotoMonoFont = Roboto_Mono({
-  weight: ["100", "300"],
-  preload: false,
-});
 
 export const metadata = {
   title: "Pink Inference",
@@ -24,7 +18,7 @@ export default function RootLayout({
       <Head>
         <meta name='viewport' content='width=device-width, initial-scale=1.0' />
       </Head>
-      <body className={robotoMonoFont.className}>
+      <body>
         {children}
         <SmoothScroll />
       </body>
