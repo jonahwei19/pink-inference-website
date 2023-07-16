@@ -1,5 +1,5 @@
 import "./globals.css";
-import { Roboto_Mono } from "next/font/google";
+import { Roboto_Mono, Montserrat } from "next/font/google";
 import SmoothScroll from "@/utilities/SmoothScroll";
 import Head from "next/head";
 
