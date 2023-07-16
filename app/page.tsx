@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { robotoMonoFont, montserratFont } from "@/utilities/fonts";
 import "aos/dist/aos.css";
 
@@ -39,12 +40,18 @@ export default function Home() {
           <div
             className={`text-sm sm:text-base md:text-2xl flex gap-4 sm:gap-12 flex-wrap max-w-[50vw] ${robotoMonoFont.className} font-thin`}
           >
-            <button className='border-solid border-white border-spacing-3 border px-4 sm:px-7 py-2 rounded-md hover:opacity-70'>
+            <button
+              href='/TeamSection'
+              className='border-solid border-white border-spacing-3 border px-4 sm:px-7 py-2 rounded-md hover:opacity-70'
+            >
               ABOUT
             </button>
-            <button className='border-solid border-white border-spacing-3 border px-4 sm:px-7 py-2 rounded-md hover:opacity-70'>
+            <Link
+              href='/TeamSection'
+              className='border-solid border-white border-spacing-3 border px-4 sm:px-7 py-2 rounded-md hover:opacity-70'
+            >
               TEAM
-            </button>
+            </Link>
             <button className=' border-solid border-white border-spacing-3 border px-4 sm:px-7 py-2 rounded-md hover:opacity-70'>
               INVESTORS
             </button>
