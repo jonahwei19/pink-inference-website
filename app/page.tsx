@@ -38,7 +38,7 @@ export default function Home() {
             & POWERFUL <br />
             WETWARE COMPUTING
           </h1>
-          <p className='text-sm smdtext-2xl'>
+          <p className='text-sm md:text-2xl'>
             Wetware architecture for the next generation of robotics
           </p>
           <div className='text-sm md:text-2xl flex gap-4 sm:gap-12 flex-wrap'>
