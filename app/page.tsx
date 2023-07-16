@@ -10,9 +10,6 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect, useState } from "react";
 
-const HEADER_DESCRIPTION =
-  "Wetware Architecture for the Next Generation of Robotics.";
-
 export default function Home() {
   return (
     <main
