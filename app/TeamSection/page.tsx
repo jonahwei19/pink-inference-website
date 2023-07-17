@@ -52,10 +52,15 @@ export default function TeamSection() {
             animate={ourTeamInView ? { y: 0, opacity: 1 } : {}}
             transition={{ duration: 0.5, ease: "easeOut", delay: 0.5 }}
           >
-            <h2 className='text-2xl mb-4'>Founders</h2>
-            <hr className='border-black w-full mb-8' />
+            <h2
+              className={`text-3xl mb-12 ${montserratFont.className} font-thin`}
+            >
+              Founders
+            </h2>
 
-            <div className='flex justify-around flex-wrap w-full px-12 gap-10 mb-12'>
+            <div
+              className={`flex justify-around flex-wrap w-full px-12 gap-10 mb-12 ${montserratFont.className} font-light`}
+            >
               <MemberDisplay
                 name='Michael Loftus'
                 role='Co-founder (CSO)'
@@ -73,10 +78,15 @@ export default function TeamSection() {
               />
             </div>
 
-            <h2 className='text-2xl mb-4'>Advisors</h2>
-            <hr className='border-black w-full mb-8' />
+            <h2
+              className={`text-3xl mb-12 ${montserratFont.className} font-thin`}
+            >
+              Advisors
+            </h2>
 
-            <div className='flex justify-around w-full px-12 gap-10'>
+            <div
+              className={`flex justify-around w-full px-12 gap-10 ${montserratFont.className}`}
+            >
               <MemberDisplay
                 name='Sami Barmada'
                 role='Science Advisor'
@@ -85,20 +95,19 @@ export default function TeamSection() {
             </div>
           </motion.section>
         </div>
-        <div className={`h-[30vh] w-full`} />
-        <footer
-          className={`flex flex-col gap-2 justify-around items-center my-8 ${robotoMonoFont.className} font-light`}
-        >
-          <Image
-            src={"/logo.svg"}
-            width={48}
-            height={48}
-            alt='Pink Inference Logo'
-          />
-          <p>&copy; 2023 Pink Inference</p>
-          <p>Designed and Built by Hunter Samoy</p>
-        </footer>
       </div>
+      <footer
+        className={`flex flex-col gap-2 justify-around items-center my-8 ${robotoMonoFont.className} font-light`}
+      >
+        <Image
+          src={"/logo.svg"}
+          width={48}
+          height={48}
+          alt='Pink Inference Logo'
+        />
+        <p>&copy; 2023 Pink Inference</p>
+        <p>Designed and Built by Hunter Samoy</p>
+      </footer>
     </main>
   );
 }
