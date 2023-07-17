@@ -11,7 +11,7 @@ export default function Home() {
   useEffect(() => {
     AOS.init({
       duration: 1000,
-      once: false,
+      once: true,
     });
   }, []);
 
@@ -46,42 +46,33 @@ export default function Home() {
               WETWARE COMPUTING
             </p>
           </h1>
-          <p
+          <div
             data-aos='fade-right'
             data-aos-duration={2000}
             data-aos-delay={2400}
-            className={`text-sm sm:text-base md:text-2xl ${montserratFont.className} font-light lg:max-w-[60vw]`}
+            className='flex flex-col gap-8'
           >
-            Wetware architecture for the next generation of robotics
-          </p>
-          <div
-            className={`text-sm sm:text-base md:text-2xl flex gap-4 sm:gap-12 flex-wrap lg:max-w-[60vw] ${robotoMonoFont.className} font-thin`}
-          >
-            <button
-              data-aos='fade-right'
-              data-aos-duration={2000}
-              data-aos-delay={2400}
-              className='border-solid border-white border-spacing-3 border px-4 sm:px-7 py-2 rounded-md hover:opacity-70'
+            <p
+              className={`text-sm sm:text-base md:text-2xl ${montserratFont.className} font-light lg:max-w-[60vw]`}
             >
-              ABOUT
-            </button>
-            <Link
-              data-aos='fade-right'
-              data-aos-duration={2000}
-              data-aos-delay={2400}
-              href='/TeamSection'
-              className='border-solid border-white border-spacing-3 border px-4 sm:px-7 py-2 rounded-md hover:opacity-70'
+              Wetware architecture for the next generation of robotics
+            </p>
+            <div
+              className={`text-sm sm:text-base md:text-2xl flex gap-4 sm:gap-12 flex-wrap lg:max-w-[60vw] ${robotoMonoFont.className} font-thin`}
             >
-              TEAM
-            </Link>
-            <button
-              data-aos='fade-right'
-              data-aos-duration={2000}
-              data-aos-delay={2400}
-              className=' border-solid border-white border-spacing-3 border px-4 sm:px-7 py-2 rounded-md hover:opacity-70'
-            >
-              INVESTORS
-            </button>
+              <button className='border-solid border-white border-spacing-3 border px-4 sm:px-7 py-2 rounded-md hover:opacity-70'>
+                ABOUT
+              </button>
+              <Link
+                href='/TeamSection'
+                className='border-solid border-white border-spacing-3 border px-4 sm:px-7 py-2 rounded-md hover:opacity-70'
+              >
+                TEAM
+              </Link>
+              <button className=' border-solid border-white border-spacing-3 border px-4 sm:px-7 py-2 rounded-md hover:opacity-70'>
+                INVESTORS
+              </button>
+            </div>
           </div>
         </div>
 
