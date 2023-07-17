@@ -1,15 +1,26 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { robotoMonoFont, montserratFont } from "@/utilities/fonts";
+import AOS from "aos";
 import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 export default function Home() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,
+    });
+  }, []);
+
   return (
     <main
       className={`flex min-h-screen flex-col items-center w-full bg-[#111111] text-white`}
     >
       <div className='relative h-screen flex flex-col w-full bg-topological p-6 sm:p-16 bg-center bg-cover'>
-        <div className='flex items-center gap-4'>
+        <Link href={"/"} className='flex items-center gap-4'>
           <div className='relative h-12 w-12'>
             <Image src={"/logo.svg"} fill alt='logo' />
           </div>
@@ -18,9 +29,9 @@ export default function Home() {
           >
             <span className='text-[#FE5DA8]'>PINK</span> INFERENCE
           </h1>
-        </div>
+        </Link>
 
-        <div className='relative w-[300px] sm:w-[500px] md:w-[800px] lg:w-[1000px] aspect-square sm:-top-10 md:-top-36 left-[40%] sm:left-[35%] xl:left-[45%] 2xl:left-[50%]'>
+        <div className='relative w-[300px] sm:w-[500px] md:w-[800px] lg:w-[1000px] aspect-square sm:-top-10 md:-top-64 left-[40%] sm:left-[35%] xl:left-[45%] 2xl:left-[50%]'>
           <Image fill src={"/logo.svg"} alt='logo' />
         </div>
 
@@ -28,11 +39,17 @@ export default function Home() {
           <h1
             className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl ${robotoMonoFont.className} font-thin`}
           >
-            SCALABLE <br />
-            & POWERFUL <br />
-            WETWARE COMPUTING
+            <p data-aos='fade-up'>
+              SCALABLE <br />& POWERFUL
+            </p>
+            <p data-aos='fade-up' data-aos-delay={1200}>
+              WETWARE COMPUTING
+            </p>
           </h1>
           <p
+            data-aos='fade-right'
+            data-aos-duration={2000}
+            data-aos-delay={2400}
             className={`text-sm sm:text-base md:text-2xl ${montserratFont.className} font-light lg:max-w-[60vw]`}
           >
             Wetware architecture for the next generation of robotics
@@ -40,16 +57,29 @@ export default function Home() {
           <div
             className={`text-sm sm:text-base md:text-2xl flex gap-4 sm:gap-12 flex-wrap lg:max-w-[60vw] ${robotoMonoFont.className} font-thin`}
           >
-            <button className='border-solid border-white border-spacing-3 border px-4 sm:px-7 py-2 rounded-md hover:opacity-70'>
+            <button
+              data-aos='fade-right'
+              data-aos-duration={2000}
+              data-aos-delay={2400}
+              className='border-solid border-white border-spacing-3 border px-4 sm:px-7 py-2 rounded-md hover:opacity-70'
+            >
               ABOUT
             </button>
             <Link
+              data-aos='fade-right'
+              data-aos-duration={2000}
+              data-aos-delay={2400}
               href='/TeamSection'
               className='border-solid border-white border-spacing-3 border px-4 sm:px-7 py-2 rounded-md hover:opacity-70'
             >
               TEAM
             </Link>
-            <button className=' border-solid border-white border-spacing-3 border px-4 sm:px-7 py-2 rounded-md hover:opacity-70'>
+            <button
+              data-aos='fade-right'
+              data-aos-duration={2000}
+              data-aos-delay={2400}
+              className=' border-solid border-white border-spacing-3 border px-4 sm:px-7 py-2 rounded-md hover:opacity-70'
+            >
               INVESTORS
             </button>
           </div>
