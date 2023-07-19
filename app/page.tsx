@@ -31,7 +31,7 @@ export default function Home() {
           </h1>
         </Link>
 
-        <div className='relative w-[300px] sm:w-[500px] md:w-[800px] lg:w-[1000px] aspect-square sm:-top-10 md:-top-64 left-[40%] sm:left-[35%] xl:left-[45%] 2xl:left-[50%]'>
+        <div className='relative w-[400px] sm:w-[700px] md:w-[900px] aspect-square sm:-top-44 md:-top-64 left-[40%] sm:left-[45%] md:left-[45%] lg:left-[55%] xl:left-[60%]'>
           <Image fill src={"/logo.svg"} alt='logo' />
         </div>
 
@@ -80,11 +80,11 @@ export default function Home() {
       </div>
 
       <div className='flex flex-col w-full py-10 gap-12'>
-        <div className='flex flex-col w-full px-[15%] sm:px-[30%]'>
+        <div className='flex flex-col w-full px-[15%] sm:px-[25%]'>
           <div className='flex flex-col gap-8'>
-            <div className='relative h-24 w-24 sm:h-36 sm:w-36'>
+            <div className='relative h-28 w-28 md:h-40 md:w-40 bg-[#FE5DA8]'>
               <Image
-                className='invert opacity-80'
+                className='p-4'
                 src={"/wetware.png"}
                 fill
                 alt='wetware symbol'
@@ -98,39 +98,42 @@ export default function Home() {
             <p
               className={`font-light text-sm ${montserratFont.className} font-light`}
             >
-              Wetware computing is a blanket term referring to the utilization
-              of biological neurons for computationally difficult problems,
-              sensory functions, and life science applications. Wetware
-              describes the interface used to stimulate and record activity in
-              in-vitro neural networks.
+              Wetware, a term coined by science fiction novelist Rudy Rucker in
+              his titular novel, is a blanket term referring to the utilization
+              of biological neurons for computation, sensory tasks, and medical
+              applications. Wetware describes the interface used to stimulate
+              and record activity of in-vitro neural networks.
             </p>
           </div>
         </div>
 
         <div className='w-screen h-8 bg-cover bg-center bg-topological-2' />
 
-        <div className='flex flex-col w-full px-[15%] sm:px-[30%]'>
+        <div className='flex flex-col w-full px-[15%] sm:px-[25%]'>
           <div className='flex flex-col gap-8'>
             <h1
               className={`font-thin text-4xl ${robotoMonoFont.className} font-thin`}
             >
-              Unlocking the power of wetware
+              Why Wetware?
             </h1>
             <p
               className={`font-light text-sm ${montserratFont.className} font-light`}
             >
-              Neurons, with over ~525 million years of evolution, are advanced
-              problem solvers. Yet, modern AIs consume the energy of hundreds of
-              households for training, while the human brain uses only about 12
-              watts.
-              <br />
-              <br />
-              At Pink Inference, we are making wetware scalable and powerful. By
-              bypassing traditional electrode interfaces, we are bringing
-              wetware computing into reality. Our goal is to provide wetware
-              computing as a cloud service. Through our open API, users can
-              conduct wetware research and solve AI problems in various fields,
-              from robotics to the life sciences.
+              It is no secret that neurons are notoriously difficult to keep
+              alive, let alone even obtain. So why would one bother with all the
+              hassle?
+            </p>
+            <p
+              className={`font-light text-sm ${montserratFont.className} font-light`}
+            >
+              One compelling reason is that biological neurons are advantageous
+              in both energy and data efficiency compared to traditional silicon
+              systems. More, biological neural networks exhibit self-healing and
+              massively parallel computing power as well as have been
+              hypothesized to exhibit active cognition and real-time learning
+              in-vitro. Wetware presents itself as a potential solution to
+              general intelligence problems and possesses interesting new ways
+              to research age-old questions of cognition and brain mechanisms.
             </p>
           </div>
         </div>
