@@ -5,33 +5,55 @@ export default function MemberDisplay({
   name,
   role,
   image,
+  linkedIn,
+  twitter,
 }: {
   name: string;
   role: string;
   image: string;
+  linkedIn?: string | "#";
+  twitter?: string | "#";
 }) {
+  const linkedInHref = linkedIn || "#";
+  const twitterHref = twitter || "#";
+
   return (
     <div className='flex flex-col bg-transparent items-start gap-4 font-thin'>
       <div className='relative overflow-hidden rounded-lg w-60 h-64 sm:w-68 sm:h-72'>
         <Image className='object-cover' fill alt={name} src={image} />
       </div>
-      <div className='flex justify-between items-center w-full'>
+      <div className='flex flex-col w-full gap-4'>
         <div className='flex flex-col'>
           <p className='text-xl'>{name}</p>
           <p className='text-sm'>{role}</p>
         </div>
         {role !== "Science Advisor" && (
-          <Link
-            href={"#"}
-            className='border-solid border-2 border-white rounded-full hover:opacity-70'
-          >
-            <Image
-              width={50}
-              height={50}
-              src={"/linkedin_icon_full.png"}
-              alt='linked In'
-            />
-          </Link>
+          <div className='flex gap-2'>
+            <Link
+              href={linkedInHref}
+              target='blank'
+              className='w-12 h-12 flex items-center justify-center border-solid border-2 border-white rounded-full hover:opacity-70'
+            >
+              <Image
+                width={50}
+                height={50}
+                src={"/linkedin_icon_full.png"}
+                alt='LinkedIn'
+              />
+            </Link>
+            <Link
+              href={twitterHref}
+              target='blank'
+              className='w-12 h-12 flex items-center justify-center border-solid border-2 border-white rounded-full hover:opacity-70'
+            >
+              <Image
+                width={30}
+                height={30}
+                src={"/twitter_icon.png"}
+                alt='Twitter'
+              />
+            </Link>
+          </div>
         )}
       </div>
     </div>

@@ -31,7 +31,7 @@ export default function Home() {
           </h1>
         </Link>
 
-        <div className='relative w-[90vw] md:w-[70vw] lg:w-[60vw] xl:w-[50vw] 3xl:w-[45vw] aspect-square sm:-top-36 md:-top-52 left-[40%] sm:left-[50%] lg:left-[60%] xl:left-[70%] 2xl:left-[60%]'>
+        <div className='relative w-[90vw] md:w-[70vw] lg:w-[60vw] xl:w-[50vw] 3xl:w-[45vw] aspect-square sm:-top-36 md:-top-52 left-[40%] lg:left-[50%] xl:left-[60%]'>
           <Image
             className='overflow-visible object-cover'
             fill
