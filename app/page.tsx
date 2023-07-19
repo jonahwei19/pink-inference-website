@@ -31,8 +31,13 @@ export default function Home() {
           </h1>
         </Link>
 
-        <div className='relative w-[400px] sm:w-[700px] md:w-[900px] aspect-square sm:-top-44 md:-top-64 left-[40%] sm:left-[45%] md:left-[45%] lg:left-[55%] xl:left-[60%]'>
-          <Image fill src={"/logo.svg"} alt='logo' />
+        <div className='relative w-[90vw] md:w-[70vw] lg:w-[60vw] xl:w-[50vw] 2xl:w-[40vw] aspect-square sm:-top-36 md:-top-32 left-[50%] md:left-[60%]'>
+          <Image
+            className='overflow-visible object-cover'
+            fill
+            src={"/logo.svg"}
+            alt='logo'
+          />
         </div>
 
         <div className='w-full relative top-5 md:-top-16 md:-bottom-1/2 flex flex-col gap-8 font-thin text-white break-words'>
