@@ -23,7 +23,7 @@ export default function TeamSection() {
       className={`flex min-h-screen flex-col items-center w-full bg-[#111111] text-white`}
     >
       <div
-        className={`relative min-h-screen h-max flex flex-col gap-12 w-full bg-topological p-6 sm:p-16 bg-center bg-cover font-thin ${robotoMonoFont.className}`}
+        className={`relative min-h-screen h-max flex flex-col gap-12 w-full p-6 sm:p-16 bg-center bg-cover font-thin ${robotoMonoFont.className}`}
       >
         <Link href={"/"} className='flex items-center gap-4'>
           <div className='relative h-12 w-12'>
@@ -36,7 +36,7 @@ export default function TeamSection() {
           </h1>
         </Link>
         <motion.h1
-          className='mb-36 text-6xl w-max mr-auto md:ml-12 tracking-[-0.075em]'
+          className='mb-16 m:mb-36 text-6xl lg:text-7xl font-thin w-max mr-auto md:ml-12'
           ref={headerRef}
           initial={{ x: -50, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
@@ -50,13 +50,25 @@ export default function TeamSection() {
             ref={ourTeamRef}
             initial={{ y: 50, opacity: 0 }}
             animate={ourTeamInView ? { y: 0, opacity: 1 } : {}}
-            transition={{ duration: 0.5, ease: "easeOut", delay: 0.5 }}
+            transition={{
+              duration: 0.5,
+              ease: "easeOut",
+              delay: 0.5,
+            }}
           >
-            <h2
-              className={`text-3xl mb-12 ${montserratFont.className} font-thin`}
-            >
-              Founders
-            </h2>
+            <div className='relative w-max'>
+              <h2
+                className={`text-3xl mb-12 ${montserratFont.className} font-thin`}
+              >
+                Founders
+              </h2>
+              <motion.hr
+                initial={{ width: 0 }}
+                animate={{ width: "100%" }}
+                transition={{ duration: 1.3, delay: 1, ease: "backInOut" }}
+                className='absolute -bottom-2 left-0 h-[2px] bg-[#FE5DA8] border-none'
+              ></motion.hr>
+            </div>
 
             <div
               className={`flex justify-around flex-wrap w-full px-12 gap-10 mb-12 ${montserratFont.className} font-light`}
@@ -78,11 +90,19 @@ export default function TeamSection() {
               />
             </div>
 
-            <h2
-              className={`text-3xl mb-12 ${montserratFont.className} font-thin`}
-            >
-              Advisors
-            </h2>
+            <div className='relative w-max'>
+              <h2
+                className={`text-3xl mb-12 ${montserratFont.className} font-thin`}
+              >
+                Advisors
+              </h2>
+              <motion.hr
+                initial={{ width: 0 }}
+                animate={{ width: "100%" }}
+                transition={{ duration: 1.3, delay: 1.5, ease: "backInOut" }}
+                className='absolute -bottom-2 left-0 h-[2px] bg-[#FE5DA8] border-none'
+              ></motion.hr>
+            </div>
 
             <div
               className={`flex justify-around w-full px-12 gap-10 ${montserratFont.className}`}

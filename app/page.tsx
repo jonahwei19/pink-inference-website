@@ -40,9 +40,9 @@ export default function Home() {
           />
         </div>
 
-        <div className='w-full relative top-5 md:-top-16 md:-bottom-1/2 flex flex-col gap-8 font-thin text-white break-words'>
+        <div className='w-full relative sm:top-5 md:-top-16 md:-bottom-1/2 flex flex-col gap-4 sm:gap-8 font-thin text-white break-words'>
           <h1
-            className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl ${robotoMonoFont.className} font-thin`}
+            className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl ${robotoMonoFont.className} font-thin `}
           >
             <p data-aos='fade-up'>
               SCALABLE <br />& POWERFUL
@@ -55,7 +55,7 @@ export default function Home() {
             data-aos='fade-right'
             data-aos-duration={2000}
             data-aos-delay={2400}
-            className='flex flex-col gap-8'
+            className='flex flex-col gap-4 sm:gap-8'
           >
             <p
               className={`text-sm sm:text-base md:text-2xl ${montserratFont.className} font-light lg:max-w-[60vw]`}
