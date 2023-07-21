@@ -13,7 +13,12 @@ export default function AboutSection() {
     threshold: 0.05,
   });
 
-  const [contentRef, contentInView] = useInView({
+  const [controlRef, controlInView] = useInView({
+    triggerOnce: true,
+    threshold: 0.05,
+  });
+
+  const [differenceRef, differenceInView] = useInView({
     triggerOnce: true,
     threshold: 0.05,
   });
@@ -48,9 +53,9 @@ export default function AboutSection() {
           <motion.section
             className='flex flex-col gap-24'
             id='About'
-            ref={contentRef}
+            ref={controlRef}
             initial={{ y: 50, opacity: 0 }}
-            animate={contentInView ? { y: 0, opacity: 1 } : {}}
+            animate={controlInView ? { y: 0, opacity: 1 } : {}}
             transition={{
               duration: 0.5,
               ease: "easeOut",
@@ -88,9 +93,10 @@ export default function AboutSection() {
                   How Pink Inference Differs
                 </h2>
                 <motion.hr
+                  ref={differenceRef}
                   initial={{ width: 0 }}
-                  animate={{ width: "100%" }}
-                  transition={{ duration: 1.3, delay: 1.5, ease: "backInOut" }}
+                  animate={differenceInView ? { width: "100%" } : {}}
+                  transition={{ duration: 1.3, delay: 1, ease: "backInOut" }}
                   className='absolute -bottom-2 left-0 h-[2px] bg-[#FE5DA8] border-none'
                 ></motion.hr>
               </div>
