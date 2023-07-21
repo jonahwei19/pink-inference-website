@@ -78,9 +78,12 @@ export default function Home() {
               >
                 TEAM
               </Link>
-              <button className=' border-solid border-white border-spacing-3 border px-4 sm:px-7 py-2 rounded-md hover:opacity-70'>
+              <Link
+                href={"/Investors"}
+                className=' border-solid border-white border-spacing-3 border px-4 sm:px-7 py-2 rounded-md hover:opacity-70'
+              >
                 INVESTORS
-              </button>
+              </Link>
             </div>
           </div>
         </div>
