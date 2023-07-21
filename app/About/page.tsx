@@ -47,7 +47,8 @@ export default function AboutSection() {
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
         >
-          Where Biological Neurons <br /> Truly Shine
+          Where Biological Neurons <br className='hidden sm:block' /> Truly
+          Shine
         </motion.h1>
         <div className='w-full md:px-12'>
           <motion.section
