@@ -13,6 +13,11 @@ export default function AboutSection() {
     threshold: 0.05,
   });
 
+  const [contentRef, contentInView] = useInView({
+    triggerOnce: true,
+    threshold: 0.05,
+  });
+
   const [controlRef, controlInView] = useInView({
     triggerOnce: true,
     threshold: 0.05,
@@ -54,9 +59,9 @@ export default function AboutSection() {
           <motion.section
             className='flex flex-col gap-24'
             id='About'
-            ref={controlRef}
+            ref={contentRef}
             initial={{ y: 50, opacity: 0 }}
-            animate={controlInView ? { y: 0, opacity: 1 } : {}}
+            animate={contentInView ? { y: 0, opacity: 1 } : {}}
             transition={{
               duration: 0.5,
               ease: "easeOut",
@@ -71,8 +76,9 @@ export default function AboutSection() {
                   Wetware For Control Applications
                 </h2>
                 <motion.hr
+                  ref={controlRef}
                   initial={{ width: 0 }}
-                  animate={{ width: "100%" }}
+                  animate={controlInView ? { width: "100%" } : {}}
                   transition={{ duration: 1, delay: 1, ease: "backInOut" }}
                   className='absolute -bottom-2 left-0 h-[2px] bg-[#FE5DA8] border-none'
                 ></motion.hr>
@@ -103,10 +109,15 @@ export default function AboutSection() {
               </div>
 
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Blanditiis fugiat eveniet cumque saepe ab nisi soluta debitis
-                sunt atque numquam dicta facere quis tempore ad at, quidem
-                praesentium. Similique, nisi?
+                Current approaches to wetware systems focus on electrical
+                interfaces with multielectrode arrays &#40;MEAs&#41;. However,
+                these designs could be more flexible and challenging to scale,
+                both in terms of cost and size constraints. <br />
+                We&apos;ve sidestepped these flaws by developing a system that
+                skips the electrode interface altogether. We are making wetware
+                a computational reality. Moreover, Pink Inference is focusing on
+                reinforcement learning applications where silicon simply cannot
+                compare.
               </p>
             </div>
           </motion.section>
