@@ -9,12 +9,22 @@ import { robotoMonoFont, montserratFont } from "@/utilities/fonts";
 
 export default function TeamSection() {
   const [headerRef, headerInView] = useInView({
-    triggerOnce: false,
+    triggerOnce: true,
     threshold: 0.05,
   });
 
   const [ourTeamRef, ourTeamInView] = useInView({
-    triggerOnce: false,
+    triggerOnce: true,
+    threshold: 0.05,
+  });
+
+  const [foundersRef, foundersInView] = useInView({
+    triggerOnce: true,
+    threshold: 0.05,
+  });
+
+  const [advisorsRef, advisorsInView] = useInView({
+    triggerOnce: true,
     threshold: 0.05,
   });
 
@@ -54,6 +64,7 @@ export default function TeamSection() {
               duration: 0.5,
               ease: "easeOut",
               delay: 0.5,
+              when: "beforeChildren",
             }}
           >
             <div className='relative w-max'>
@@ -63,9 +74,10 @@ export default function TeamSection() {
                 Founders
               </h2>
               <motion.hr
+                ref={foundersRef}
                 initial={{ width: 0 }}
-                animate={{ width: "100%" }}
-                transition={{ duration: 1.3, delay: 1, ease: "backInOut" }}
+                animate={foundersInView ? { width: "100%" } : {}}
+                transition={{ duration: 1.3, delay: 0.5, ease: "backInOut" }}
                 className='absolute -bottom-2 left-0 h-[2px] bg-[#FE5DA8] border-none'
               ></motion.hr>
             </div>
@@ -106,9 +118,10 @@ export default function TeamSection() {
                 Advisors
               </h2>
               <motion.hr
+                ref={advisorsRef}
                 initial={{ width: 0 }}
-                animate={{ width: "100%" }}
-                transition={{ duration: 1.3, delay: 1.5, ease: "backInOut" }}
+                animate={advisorsInView ? { width: "100%" } : {}}
+                transition={{ duration: 1.3, delay: 0.5, ease: "backInOut" }}
                 className='absolute -bottom-2 left-0 h-[2px] bg-[#FE5DA8] border-none'
               ></motion.hr>
             </div>

@@ -13,7 +13,7 @@ export default function AboutSection() {
     threshold: 0.05,
   });
 
-  const [ourTeamRef, ourTeamInView] = useInView({
+  const [contentRef, contentInView] = useInView({
     triggerOnce: false,
     threshold: 0.05,
   });
@@ -36,7 +36,7 @@ export default function AboutSection() {
           </h1>
         </Link>
         <motion.h1
-          className='mb-16 m:mb-36 text-4xl sm:text-5xl md:text-6xl ${robotoMonoFont.className} font-thin tracking-tighter w-max mr-auto md:ml-12'
+          className={`mb-16 m:mb-36 text-4xl sm:text-5xl md:text-6xl ${robotoMonoFont.className} font-thin mr-auto md:ml-12`}
           ref={headerRef}
           initial={{ x: -50, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
@@ -46,57 +46,62 @@ export default function AboutSection() {
         </motion.h1>
         <div className='w-full md:px-12'>
           <motion.section
+            className='flex flex-col gap-24'
             id='About'
-            ref={ourTeamRef}
+            ref={contentRef}
             initial={{ y: 50, opacity: 0 }}
-            animate={ourTeamInView ? { y: 0, opacity: 1 } : {}}
+            animate={contentInView ? { y: 0, opacity: 1 } : {}}
             transition={{
               duration: 0.5,
               ease: "easeOut",
               delay: 0.5,
             }}
           >
-            <div className='relative w-max'>
-              <h2
-                className={`text-3xl mb-12 ${montserratFont.className} font-thin`}
-              >
-                Wetware For Control Applications
-              </h2>
-              <motion.hr
-                initial={{ width: 0 }}
-                animate={{ width: "100%" }}
-                transition={{ duration: 1.3, delay: 1, ease: "backInOut" }}
-                className='absolute -bottom-2 left-0 h-[2px] bg-[#FE5DA8] border-none'
-              ></motion.hr>
+            <div>
+              <div className='relative w-fit'>
+                <h2
+                  className={`text-3xl mb-12 ${montserratFont.className} font-thin`}
+                >
+                  Wetware For Control Applications
+                </h2>
+                <motion.hr
+                  initial={{ width: 0 }}
+                  animate={{ width: "100%" }}
+                  transition={{ duration: 1.3, delay: 1, ease: "backInOut" }}
+                  className='absolute -bottom-2 left-0 h-[2px] bg-[#FE5DA8] border-none'
+                ></motion.hr>
+              </div>
+
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Cupiditate eum ipsum exercitationem architecto ipsam, fugit
+                error nam nesciunt temporibus sit ex consequatur, dignissimos
+                nobis tempore iste ab cum explicabo magni!
+              </p>
             </div>
 
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Cupiditate eum ipsum exercitationem architecto ipsam, fugit error
-              nam nesciunt temporibus sit ex consequatur, dignissimos nobis
-              tempore iste ab cum explicabo magni!
-            </p>
+            <div>
+              <div className='relative w-fit'>
+                <h2
+                  className={`text-3xl mb-12 ${montserratFont.className} font-thin`}
+                >
+                  How Pink Inference Differs
+                </h2>
+                <motion.hr
+                  initial={{ width: 0 }}
+                  animate={{ width: "100%" }}
+                  transition={{ duration: 1.3, delay: 1.5, ease: "backInOut" }}
+                  className='absolute -bottom-2 left-0 h-[2px] bg-[#FE5DA8] border-none'
+                ></motion.hr>
+              </div>
 
-            <div className='relative w-max'>
-              <h2
-                className={`text-3xl mb-12 ${montserratFont.className} font-thin`}
-              >
-                How Pink Inference Differs
-              </h2>
-              <motion.hr
-                initial={{ width: 0 }}
-                animate={{ width: "100%" }}
-                transition={{ duration: 1.3, delay: 1.5, ease: "backInOut" }}
-                className='absolute -bottom-2 left-0 h-[2px] bg-[#FE5DA8] border-none'
-              ></motion.hr>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Blanditiis fugiat eveniet cumque saepe ab nisi soluta debitis
+                sunt atque numquam dicta facere quis tempore ad at, quidem
+                praesentium. Similique, nisi?
+              </p>
             </div>
-
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Blanditiis fugiat eveniet cumque saepe ab nisi soluta debitis sunt
-              atque numquam dicta facere quis tempore ad at, quidem praesentium.
-              Similique, nisi?
-            </p>
           </motion.section>
         </div>
       </div>
