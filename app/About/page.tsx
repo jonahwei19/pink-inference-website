@@ -9,12 +9,12 @@ import { robotoMonoFont, montserratFont } from "@/utilities/fonts";
 
 export default function AboutSection() {
   const [headerRef, headerInView] = useInView({
-    triggerOnce: false,
+    triggerOnce: true,
     threshold: 0.05,
   });
 
   const [contentRef, contentInView] = useInView({
-    triggerOnce: false,
+    triggerOnce: true,
     threshold: 0.05,
   });
 

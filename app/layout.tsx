@@ -1,6 +1,7 @@
 import "./globals.css";
 import SmoothScroll from "@/utilities/SmoothScroll";
 import Head from "next/head";
+import "@/public/animations/topological/style.css";
 
 export const metadata = {
   title: "Pink Inference",

@@ -21,7 +21,7 @@ export default function Home() {
       className={`flex min-h-screen flex-col items-center w-full bg-[#111111] text-white`}
     >
       <div className='relative h-screen flex flex-col w-full bg-topological p-6 sm:p-16 bg-center bg-cover'>
-        <TopologicalBackground />
+        {/* <TopologicalBackground /> */}
         <Link href={"/"} className='flex items-center gap-4'>
           <div className='relative h-12 w-12'>
             <Image src={"/logo.svg"} fill alt='logo' />
@@ -42,7 +42,7 @@ export default function Home() {
           />
         </div>
 
-        <div className='w-full relative sm:top-5 md:-top-16 md:-bottom-1/2 flex flex-col gap-4 sm:gap-8 font-thin text-white break-words'>
+        <div className='w-full relative -top-8 sm:top-5 md:-top-16 md:-bottom-1/2 flex flex-col gap-2 sm:gap-8 font-thin text-white break-words'>
           <h1
             className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl ${robotoMonoFont.className} font-thin `}
           >
@@ -55,9 +55,8 @@ export default function Home() {
           </h1>
           <div
             data-aos='fade-right'
-            data-aos-duration={2000}
             data-aos-delay={2400}
-            className='flex flex-col gap-4 sm:gap-8'
+            className='flex flex-col gap-2 sm:gap-8'
           >
             <p
               className={`text-sm sm:text-base md:text-2xl ${montserratFont.className} font-light lg:max-w-[60vw]`}
