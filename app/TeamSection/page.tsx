@@ -77,7 +77,7 @@ export default function TeamSection() {
                 ref={foundersRef}
                 initial={{ width: 0 }}
                 animate={foundersInView ? { width: "100%" } : {}}
-                transition={{ duration: 1.3, delay: 0.5, ease: "backInOut" }}
+                transition={{ duration: 1, delay: 0.5, ease: "backInOut" }}
                 className='absolute -bottom-2 left-0 h-[2px] bg-[#FE5DA8] border-none'
               ></motion.hr>
             </div>
@@ -121,7 +121,7 @@ export default function TeamSection() {
                 ref={advisorsRef}
                 initial={{ width: 0 }}
                 animate={advisorsInView ? { width: "100%" } : {}}
-                transition={{ duration: 1.3, delay: 0.5, ease: "backInOut" }}
+                transition={{ duration: 1, delay: 0.5, ease: "backInOut" }}
                 className='absolute -bottom-2 left-0 h-[2px] bg-[#FE5DA8] border-none'
               ></motion.hr>
             </div>
