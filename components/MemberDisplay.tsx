@@ -19,7 +19,7 @@ export default function MemberDisplay({
 
   return (
     <div className='flex flex-col bg-transparent items-start gap-4 font-thin'>
-      <div className='relative overflow-hidden rounded-lg w-60 h-64 sm:w-68 sm:h-72'>
+      <div className='relative overflow-hidden rounded-lg w-60 h-64 sm:w-64 sm:h-72 md:w-72 md:h-80'>
         <Image className='object-cover' fill alt={name} src={image} />
       </div>
       <div className='flex flex-col w-full gap-4'>

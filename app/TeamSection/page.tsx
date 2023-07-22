@@ -69,7 +69,7 @@ export default function TeamSection() {
           >
             <div className='relative w-max'>
               <h2
-                className={`text-3xl mb-12 ${montserratFont.className} font-thin`}
+                className={`text-4xl mb-12 ${montserratFont.className} font-thin`}
               >
                 Founders
               </h2>
@@ -113,7 +113,7 @@ export default function TeamSection() {
 
             <div className='relative w-max'>
               <h2
-                className={`text-3xl mb-12 ${montserratFont.className} font-thin`}
+                className={`text-4xl mb-12 ${montserratFont.className} font-thin`}
               >
                 Advisors
               </h2>

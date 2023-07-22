@@ -71,7 +71,7 @@ export default function AboutSection() {
             <div>
               <div className='relative w-fit'>
                 <h2
-                  className={`text-3xl mb-12 ${montserratFont.className} font-thin`}
+                  className={`text-4xl mb-12 ${montserratFont.className} font-thin`}
                 >
                   Wetware For Control Applications
                 </h2>
@@ -95,7 +95,7 @@ export default function AboutSection() {
             <div>
               <div className='relative w-fit'>
                 <h2
-                  className={`text-3xl mb-12 ${montserratFont.className} font-thin`}
+                  className={`text-4xl mb-12 ${montserratFont.className} font-thin`}
                 >
                   How Pink Inference Differs
                 </h2>
@@ -104,7 +104,7 @@ export default function AboutSection() {
                   initial={{ width: 0 }}
                   animate={differenceInView ? { width: "100%" } : {}}
                   transition={{ duration: 1, delay: 1, ease: "backInOut" }}
-                  className='absolute -bottom-2 left-0 h-[2px] bg-[#FE5DA8] border-none'
+                  className='absolute -bottom-2 left-0 h-[3px] bg-[#FE5DA8] border-none'
                 ></motion.hr>
               </div>
 
