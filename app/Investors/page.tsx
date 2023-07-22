@@ -30,17 +30,17 @@ export default function InvestorSection() {
 
   const [invisibleRef, invisibleInView] = useInView({
     triggerOnce: true,
-    threshold: 0.05,
+    threshold: 0.1,
   });
 
   const [emergentRef, emergentInView] = useInView({
     triggerOnce: true,
-    threshold: 0.05,
+    threshold: 0.1,
   });
 
   const [sparkRef, sparkInView] = useInView({
     triggerOnce: true,
-    threshold: 0.05,
+    threshold: 0.1,
   });
 
   return (
@@ -103,7 +103,7 @@ export default function InvestorSection() {
                   ref={invisibleRef}
                   initial={{ x: 100 }}
                   animate={invisibleInView ? { x: 0 } : {}}
-                  transition={{ duration: 1, delay: 1, ease: "backInOut" }}
+                  transition={{ duration: 1, ease: "backInOut" }}
                   className='flex gap-8 w-full lg:w-[80%] 2xl:w-[60%]'
                 >
                   <div className='relative w-1/3'>
@@ -132,7 +132,7 @@ export default function InvestorSection() {
                   ref={emergentRef}
                   initial={{ x: -100 }}
                   animate={emergentInView ? { x: 0 } : {}}
-                  transition={{ duration: 1, delay: 1, ease: "backInOut" }}
+                  transition={{ duration: 1, ease: "backInOut" }}
                   className='ml-auto flex gap-8 w-full lg:w-[80%] 2xl:w-[60%]'
                 >
                   <div className='relative w-1/3'>
@@ -161,7 +161,7 @@ export default function InvestorSection() {
                   ref={sparkRef}
                   initial={{ x: 100 }}
                   animate={sparkInView ? { x: 0 } : {}}
-                  transition={{ duration: 1, delay: 1, ease: "backInOut" }}
+                  transition={{ duration: 1, ease: "backInOut" }}
                   className='flex gap-8 w-full lg:w-[80%] 2xl:w-[60%]'
                 >
                   <div className='relative w-1/3'>
@@ -190,12 +190,13 @@ export default function InvestorSection() {
             </div>
 
             <div>
-              <div className='relative w-fit'>
-                <h2
-                  className={`text-3xl mb-24 ${montserratFont.className} font-thin`}
+              <div className='relative w-fit mx-auto'>
+                <Link
+                  href={"#"}
+                  className={`text-5xl mb-24 ${montserratFont.className} font-thin`}
                 >
-                  Want to invest?
-                </h2>
+                  Want to Join?
+                </Link>
                 <motion.hr
                   ref={futureRef}
                   initial={{ width: 0 }}
@@ -204,7 +205,6 @@ export default function InvestorSection() {
                   className='absolute -bottom-2 left-0 h-[2px] bg-[#FE5DA8] border-none'
                 ></motion.hr>
               </div>
-              <p>I could add something here like contact info or some form</p>
             </div>
           </motion.section>
         </div>
