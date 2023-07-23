@@ -1,6 +1,5 @@
 import axios from "axios";
-import { NextApiRequest, NextApiResponse } from "next";
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
 // // Custom CORS middleware
 // const cors =
@@ -55,7 +54,7 @@ export async function POST(request: Request) {
 }
 
 // Handler for the POST method
-export function GET(req: NextApiRequest, res: NextApiResponse) {
+export function GET(req: NextRequest, res: NextResponse) {
   // Handle the POST request here
 }
 
