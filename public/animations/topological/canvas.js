@@ -1,7 +1,5 @@
-const canvas = document.createElement('canvas');
+const canvas = document.getElementById('yourCanvasId');
 const sandbox = new GlslCanvas(canvas);
-
-document.getElementById("hero").appendChild(canvas);
 
 sandbox.load(frag);
 sandbox.setUniform("seed", Math.random());
