@@ -1,3 +1,4 @@
+
 "use client";
 
 import Image from "next/image";
@@ -20,8 +21,8 @@ export default function Home() {
     <main
       className={`flex min-h-screen flex-col items-center w-full bg-[#111111] text-white`}
     >
+      <TopologicalBackground />
       <div className='relative h-screen flex flex-col w-full bg-topological p-6 sm:p-16 bg-center bg-cover'>
-        {/* <TopologicalBackground /> */}
         <Link href={"/"} className='flex items-center gap-4'>
           <div className='relative h-12 w-12'>
             <Image src={"/logo.svg"} fill alt='logo' />
@@ -32,7 +33,6 @@ export default function Home() {
             <span className='text-[#FE5DA8]'>PINK</span> INFERENCE
           </h1>
         </Link>
-
         <div className='relative w-[90vw] md:w-[70vw] lg:w-[60vw] xl:w-[50vw] 3xl:w-[45vw] aspect-square sm:-top-36 md:-top-52 left-[40%] lg:left-[50%] xl:left-[60%]'>
           <Image
             className='overflow-visible object-cover'
