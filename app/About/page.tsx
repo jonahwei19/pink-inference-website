@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import MemberDisplay from "@/components/MemberDisplay";
+import SubscribeForm from "@/components/SubscribeForm";
 import Image from "next/image";
 import Link from "next/link";
 import { robotoMonoFont, montserratFont } from "@/utilities/fonts";
@@ -71,7 +71,7 @@ export default function AboutSection() {
             <div>
               <div className='relative w-fit'>
                 <h2
-                  className={`text-4xl mb-12 ${montserratFont.className} font-thin`}
+                  className={`text-4xl mb-12 ${robotoMonoFont.className} font-thin`}
                 >
                   Wetware For Control Applications
                 </h2>
@@ -84,7 +84,7 @@ export default function AboutSection() {
                 ></motion.hr>
               </div>
 
-              <p>
+              <p className={`${montserratFont.className} font-light`}>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                 Cupiditate eum ipsum exercitationem architecto ipsam, fugit
                 error nam nesciunt temporibus sit ex consequatur, dignissimos
@@ -95,7 +95,7 @@ export default function AboutSection() {
             <div>
               <div className='relative w-fit'>
                 <h2
-                  className={`text-4xl mb-12 ${montserratFont.className} font-thin`}
+                  className={`text-4xl mb-12 ${robotoMonoFont.className} font-thin`}
                 >
                   How Pink Inference Differs
                 </h2>
@@ -104,11 +104,11 @@ export default function AboutSection() {
                   initial={{ width: 0 }}
                   animate={differenceInView ? { width: "100%" } : {}}
                   transition={{ duration: 1, delay: 1, ease: "backInOut" }}
-                  className='absolute -bottom-2 left-0 h-[3px] bg-[#FE5DA8] border-none'
+                  className='absolute -bottom-2 left-0 h-[2px] bg-[#FE5DA8] border-none'
                 ></motion.hr>
               </div>
 
-              <p>
+              <p className={`${montserratFont.className} font-light`}>
                 Current approaches to wetware systems focus on electrical
                 interfaces with multielectrode arrays &#40;MEAs&#41;. However,
                 these designs could be more flexible and challenging to scale,
@@ -120,6 +120,8 @@ export default function AboutSection() {
                 compare.
               </p>
             </div>
+
+            <SubscribeForm />
           </motion.section>
         </div>
       </div>

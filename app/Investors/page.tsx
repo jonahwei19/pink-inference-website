@@ -85,7 +85,7 @@ export default function InvestorSection() {
             <div>
               <div className='relative w-fit'>
                 <h2
-                  className={`text-4xl mb-24 ${montserratFont.className} font-thin`}
+                  className={`text-4xl mb-24 ${robotoMonoFont.className} font-thin`}
                 >
                   Current Investors
                 </h2>
@@ -193,7 +193,7 @@ export default function InvestorSection() {
               <div className='relative w-fit mx-auto'>
                 <Link
                   href={"#"}
-                  className={`text-4xl lg:text-5xl mb-24 ${montserratFont.className} font-thin`}
+                  className={`text-4xl lg:text-5xl mb-24 ${robotoMonoFont.className} font-thin`}
                 >
                   Want to Join?
                 </Link>
