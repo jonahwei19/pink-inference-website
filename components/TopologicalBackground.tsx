@@ -2,7 +2,7 @@ import Script from "next/script";
 
 export default function TopologicalBackground() {
   return (
-    <div className='absolute w-full h-full top-0 left-0 z-50 bg-blue-100'>
+    <div className='w-full h-full top-0 left-0 z-[-1]'>
       <Script
         src='/animations/topological/assets/glslcanvas.min.js'
         strategy='beforeInteractive'
@@ -20,7 +20,6 @@ export default function TopologicalBackground() {
         strategy='beforeInteractive'
       />
       <canvas id="yourCanvasId" />
-      {/* Rest of your component */}
     </div>
   );
 }
