@@ -213,7 +213,7 @@ export default function InvestorSection() {
                   ref={futureRef}
                   initial={{ width: 0 }}
                   animate={futureInView ? { width: "100%" } : {}}
-                  transition={{ duration: 1, delay: 1, ease: "backInOut" }}
+                  transition={{ duration: 1, ease: "backInOut" }}
                   className='absolute -bottom-2 left-0 h-[2px] bg-[#FE5DA8] border-none'
                 ></motion.hr>
               </div>
