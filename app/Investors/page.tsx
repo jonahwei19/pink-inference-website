@@ -6,6 +6,8 @@ import MemberDisplay from "@/components/MemberDisplay";
 import Image from "next/image";
 import Link from "next/link";
 import { robotoMonoFont, montserratFont } from "@/utilities/fonts";
+import { useState } from "react";
+import SubscribeForm from "@/components/SubscribeForm";
 
 export default function InvestorSection() {
   const [headerRef, headerInView] = useInView({
@@ -42,6 +44,8 @@ export default function InvestorSection() {
     triggerOnce: true,
     threshold: 0.1,
   });
+
+  const [showForm, setShowForm] = useState(false);
 
   return (
     <main
@@ -202,21 +206,26 @@ export default function InvestorSection() {
             </div>
 
             <div>
-              <div className='relative w-fit mx-auto'>
-                <Link
-                  href={"#"}
-                  className={`text-4xl lg:text-5xl mb-24 ${robotoMonoFont.className} font-thin`}
+              <div className='relative w-fit mx-auto mb-24'>
+                <button
+                  onClick={() => setShowForm(true)}
+                  className={`text-4xl lg:text-5xl ${robotoMonoFont.className} font-thin`}
                 >
                   Want to Join?
-                </Link>
+                </button>
                 <motion.hr
                   ref={futureRef}
                   initial={{ width: 0 }}
                   animate={futureInView ? { width: "100%" } : {}}
-                  transition={{ duration: 1, ease: "backInOut" }}
+                  transition={{ duration: 1, delay: 1, ease: "backInOut" }}
                   className='absolute -bottom-2 left-0 h-[2px] bg-[#FE5DA8] border-none'
                 ></motion.hr>
               </div>
+              {showForm && (
+                <div className='mx-auto max-w-xl transition duration-100 ease-in'>
+                  <SubscribeForm message={"Subsribe to Our Email List"} />
+                </div>
+              )}
             </div>
           </motion.section>
         </div>

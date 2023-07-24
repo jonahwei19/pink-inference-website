@@ -4,7 +4,7 @@ import axios from "axios";
 import { robotoMonoFont, montserratFont } from "@/utilities/fonts";
 import { useState } from "react";
 
-export default function FormComponent() {
+export default function FormComponent({ message }: { message?: string }) {
   const [userType, setUserType] = useState<string | null>(null);
 
   const handleSubmit = async (event: any) => {
@@ -36,9 +36,9 @@ export default function FormComponent() {
   return (
     <div className='flex flex-col gap-16 mx-auto'>
       <h1
-        className={`${robotoMonoFont.className} text-3xl md:text-4xl font-thin`}
+        className={`${robotoMonoFont.className} text-3xl md:text-4xl font-thin text-center`}
       >
-        Interested? Subscribe to Our Email List
+        {message ? message : "Interested? Subsribe to Our Email List"}
       </h1>
       <form
         onSubmit={handleSubmit}
