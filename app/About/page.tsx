@@ -71,7 +71,7 @@ export default function AboutSection() {
             <div>
               <div className='relative w-fit'>
                 <h2
-                  className={`text-4xl mb-12 ${robotoMonoFont.className} font-thin`}
+                  className={`text-3xl sm:text-4xl mb-12 ${robotoMonoFont.className} font-thin`}
                 >
                   Wetware For Control Applications
                 </h2>
@@ -95,7 +95,7 @@ export default function AboutSection() {
             <div>
               <div className='relative w-fit'>
                 <h2
-                  className={`text-4xl mb-12 ${robotoMonoFont.className} font-thin`}
+                  className={`text-3xl sm:text-4xl mb-12 ${robotoMonoFont.className} font-thin`}
                 >
                   How Pink Inference Differs
                 </h2>

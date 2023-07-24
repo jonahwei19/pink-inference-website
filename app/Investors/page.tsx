@@ -85,7 +85,7 @@ export default function InvestorSection() {
             <div>
               <div className='relative w-fit'>
                 <h2
-                  className={`text-4xl mb-24 ${robotoMonoFont.className} font-thin`}
+                  className={`text-3xl sm:text-4xl mb-24 ${robotoMonoFont.className} font-thin`}
                 >
                   Current Investors
                 </h2>
@@ -114,9 +114,13 @@ export default function InvestorSection() {
                       src={"/1517_logo.svg"}
                     />
                   </div>
-                  <div className='flex flex-col gap-12 w-2/3'>
+                  <div
+                    className={`${montserratFont.className} font-thin flex flex-col gap-12 w-2/3`}
+                  >
                     <div className='flex flex-col'>
-                      <p className='text-3xl font-light'>1517 Fund</p>
+                      <p className='text-2xl sm:text-3xl font-light'>
+                        1517 Fund
+                      </p>
                       <p className='text-sm'>Invisible College Investment</p>
                     </div>
                     <p>
@@ -143,9 +147,13 @@ export default function InvestorSection() {
                       src={"/mercatus_logo.png"}
                     />
                   </div>
-                  <div className='flex flex-col gap-12 w-2/3'>
+                  <div
+                    className={`${montserratFont.className} font-thin flex flex-col gap-12 w-2/3`}
+                  >
                     <div className='flex flex-col'>
-                      <p className='text-3xl font-light'>MERCATUS CENTER</p>
+                      <p className='text-2xl sm:text-3xl font-light'>
+                        Mercatus Center
+                      </p>
                       <p className='text-sm'>Emergent Venture Grant</p>
                     </div>
                     <p>
@@ -172,9 +180,13 @@ export default function InvestorSection() {
                       src={"/spark_logo.svg"}
                     />
                   </div>
-                  <div className='flex flex-col gap-12 w-2/3'>
+                  <div
+                    className={`${montserratFont.className} font-thin flex flex-col gap-12 w-2/3`}
+                  >
                     <div className='flex flex-col'>
-                      <p className='text-3xl font-light'>Ann Arbor Spark</p>
+                      <p className='text-2xl sm:text-3xl font-light'>
+                        Ann Arbor Spark
+                      </p>
                       <p className='text-sm'>Accelerator Grant</p>
                     </div>
                     <p>
