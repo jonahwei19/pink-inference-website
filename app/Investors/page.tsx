@@ -221,11 +221,15 @@ export default function InvestorSection() {
                   className='absolute -bottom-2 left-0 h-[2px] bg-[#FE5DA8] border-none'
                 ></motion.hr>
               </div>
-              {showForm && (
-                <div className='mx-auto max-w-xl transition duration-100 ease-in'>
-                  <SubscribeForm message={"Subsribe to Our Email List"} />
-                </div>
-              )}
+
+              <motion.div
+                initial={{ display: "none", opacity: 0 }}
+                animate={showForm ? { display: "block", opacity: 100 } : {}}
+                transition={{ duration: 0.5 }}
+                className='mx-auto max-w-xl transition duration-100 ease-in'
+              >
+                <SubscribeForm message={"Subsribe to Our Email List"} />
+              </motion.div>
             </div>
           </motion.section>
         </div>
