@@ -7,18 +7,10 @@ export default function TopologicalBackground() {
         src='/animations/topological/includes.js'
         strategy='beforeInteractive'
       />
-      <Script
-        src='/animations/topological/canvas.js'
-        strategy='beforeInteractive'
-      />
-      <Script
-        src='/animations/topological/frag.js'
-        strategy='beforeInteractive'
-      />
-      <Script
-        src='/animations/topological/assets/glslcanvas.min.js'
-        strategy='beforeInteractive'
-      />
+<Script src='/animations/topological/includes.js' strategy='beforeInteractive' />
+<Script src='/animations/topological/assets/glslcanvas.min.js' strategy='beforeInteractive' />
+<Script src='/animations/topological/canvas.js' strategy='beforeInteractive' />
+<Script src='/animations/topological/frag.js' strategy='beforeInteractive' />
       {/* Rest of your component */}
     </div>
   );
