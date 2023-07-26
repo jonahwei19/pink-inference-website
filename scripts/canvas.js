@@ -1,26 +1,34 @@
-module.exports = async function startAnimation(frag) {
-  const canvas = document.createElement('canvas');
-  const GlslCanvas = (await import('../public/animations/topological/assets/glslCanvas.min.js')).default;
-  const sandbox = new GlslCanvas(canvas);
+module.exports = function startAnimation(frag) {
+  return new Promise(async (resolve, reject) => {
+    try {
+      const canvas = document.createElement('canvas');
+      const GlslCanvas = (await import('../public/animations/topological/assets/glslCanvas.min.js')).default;
+      const sandbox = new GlslCanvas(canvas);
 
-  document.getElementById("hero").appendChild(canvas);
+      document.getElementById("hero").appendChild(canvas);
 
-  sandbox.load(frag);
-  sandbox.setUniform("seed", Math.random());
+      sandbox.load(frag);
+      sandbox.setUniform("seed", Math.random());
 
-  const sizer = function () {
-    const ww = window.innerWidth;
-    const wh = window.innerHeight;
-    const dpi = window.devicePixelRatio;
-    const s = Math.max(ww, wh);
-    
-    canvas.width = s * dpi;
-    canvas.height = s * dpi;
-    canvas.style.width = s + 'px';
-    canvas.style.height = s + 'px';
-  }
+      const sizer = function () {
+        const ww = window.innerWidth;
+        const wh = window.innerHeight;
+        const dpi = window.devicePixelRatio;
+        const s = Math.max(ww, wh);
+        
+        canvas.width = s * dpi;
+        canvas.height = s * dpi;
+        canvas.style.width = s + 'px';
+        canvas.style.height = s + 'px';
+      }
 
-  sizer();
+      sizer();
 
-  window.addEventListener('resize', sizer);
+      window.addEventListener('resize', sizer);
+
+      resolve();
+    } catch (error) {
+      reject(error);
+    }
+  });
 }
