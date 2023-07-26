@@ -1,4 +1,4 @@
-export default function startAnimation() {
+module.exports = function startAnimation() {
   const canvas = document.createElement('canvas');
   const sandbox = new GlslCanvas(canvas);
 
