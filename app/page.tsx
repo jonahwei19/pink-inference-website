@@ -6,7 +6,7 @@ import { robotoMonoFont, montserratFont } from "@/utilities/fonts";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-import TopologicalBackground from "@/components/TopologicalBackground";
+import TopologicalBackground from "@/app/TopologicalBackground";
 
 export default function Home() {
   useEffect(() => {
