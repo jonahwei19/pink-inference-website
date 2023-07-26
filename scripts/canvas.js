@@ -1,5 +1,6 @@
 module.exports = function startAnimation(frag) {
   const canvas = document.createElement('canvas');
+  const GlslCanvas = require('glslCanvas').default;
   const sandbox = new GlslCanvas(canvas);
 
   document.getElementById("hero").appendChild(canvas);
