@@ -1,4 +1,4 @@
-const frag = `
+module.exports.frag = `
 #ifdef GL_ES
 precision highp float;
 #endif
@@ -10,8 +10,6 @@ uniform vec2 u_mouse;
 uniform float seed;
 
 varying vec2 v_texcoord;
-
-${includes}
 
 void main(void)
 {
@@ -39,4 +37,4 @@ void main(void)
     
     gl_FragColor = color;
 }
-`
+`;
