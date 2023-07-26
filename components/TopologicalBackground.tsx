@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import Script from 'next/script';
 
 export default function TopologicalBackground() {
   useEffect(() => {
@@ -9,8 +8,8 @@ export default function TopologicalBackground() {
   }, []);
 
   return (
-    <div className='absolute w-full h-full top-0 left-0 z-50 bg-blue-100'>
-      <Script src='/animations/topological/assets/glslcanvas.min.js' strategy="beforeInteractive" />
+    <div id="hero" className='absolute w-full h-full top-0 left-0 z-50 bg-blue-100'>
+      <script src='/animations/topological/assets/glslcanvas.min.js' />
       {/* Rest of your component */}
     </div>
   );
