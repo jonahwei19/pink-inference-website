@@ -1,6 +1,5 @@
-module.exports = function startAnimation(frag) {
+module.exports = function startAnimation() {
   const canvas = document.createElement('canvas');
-  const GlslCanvas = require('../public/animations/topological/assets/glslCanvas.min.js').default;
   const sandbox = new GlslCanvas(canvas);
 
   document.getElementById("hero").appendChild(canvas);
