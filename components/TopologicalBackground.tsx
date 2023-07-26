@@ -9,7 +9,6 @@ export default function TopologicalBackground() {
 
   return (
     <div id="hero" className='absolute w-full h-full top-0 left-0 z-50 bg-blue-100'>
-      <script src='/animations/topological/assets/glslcanvas.min.js' />
       {/* Rest of your component */}
     </div>
   );
