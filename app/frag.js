@@ -58,7 +58,7 @@ void main(void)
     f += grain*3.0;
     f += pow(mouse_distance, 0.10);
     f = fract(f);
-`;
+`; 
     float mixer = step(0.8, f) - step(0.9, f);
     
     vec4 black = vec4(0., 0., 0., 0.);
