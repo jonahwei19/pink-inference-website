@@ -2,7 +2,7 @@ module.exports = function startAnimation(frag) {
   return new Promise(async (resolve, reject) => {
     try {
       const canvas = document.createElement('canvas');
-      const GlslCanvas = (await import('./glslCanvas.min.js')).default;
+      const GlslCanvas = (await import('./glslcanvas.min.js')).default;
       const sandbox = new GlslCanvas(canvas);
 
       document.getElementById("hero").appendChild(canvas);
