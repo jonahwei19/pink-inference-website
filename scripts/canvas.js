@@ -1,4 +1,4 @@
-module.exports = function startAnimation() {
+module.exports = function startAnimation(frag) {
   const canvas = document.createElement('canvas');
   const sandbox = new GlslCanvas(canvas);
 
