@@ -4,11 +4,11 @@ export default function TopologicalBackground() {
   useEffect(() => {
     const startAnimation = require('../scripts/canvas.js');
 
-    startAnimation('../scripts/frag.js')
+    startAnimation('path/to/your/fragment/shader')
       .then(() => {
         console.log('Animation started successfully.');
       })
-      .catch((error) => {
+      .catch((error: any) => {
         console.error('Failed to start animation:', error);
       });
   }, []);
