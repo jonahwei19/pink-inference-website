@@ -2,7 +2,7 @@ module.exports = function startAnimation(frag) {
   return new Promise(async (resolve, reject) => {
     try {
       const canvas = document.createElement('canvas');
-      const GlslCanvas = (await import('../public/animations/topological/assets/glslCanvas.min.js')).default;
+      const GlslCanvas = (await import('./glslCanvas.min.js')).default;
       const sandbox = new GlslCanvas(canvas);
 
       document.getElementById("hero").appendChild(canvas);
