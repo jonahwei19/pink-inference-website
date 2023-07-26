@@ -1,7 +1,8 @@
 import Script from "next/script";
 import { useEffect } from 'react';
-import startAnimation from '././public/animations/topological/canvas.js';
-import { frag } from '././public/animations/topological/frag.js';
+import startAnimation from '../scripts/canvas.js';
+import { frag } from '../scripts/frag.js';
+
 
 export default function TopologicalBackground() {
   useEffect(() => {
