@@ -14,7 +14,7 @@ export default function TopologicalBackground() {
   }, []);
 
   return (
-    <div className='absolute w-full h-full top-0 left-0 z-50 bg-blue-100'>
+    <div id="hero" className='absolute w-full h-full top-0 left-0 z-50 bg-blue-100'>
       {/* Rest of your component */}
     </div>
   );
