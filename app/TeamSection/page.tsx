@@ -87,7 +87,7 @@ export default function TeamSection() {
             >
               <MemberDisplay
                 name='Michael Loftus'
-                role='Co-founder (CSO)'
+                role='CSO'
                 image='/Michael-Loftus-Pic.jpg'
                 linkedIn={
                   "https://www.google.com/url?q=https://www.linkedin.com/in/michael-loftus-6376531a3/&sa=D&source=docs&ust=1689786987788504&usg=AOvVaw2Ku3dUq-vFR88LdQS3lAE8"
@@ -95,7 +95,7 @@ export default function TeamSection() {
               />
               <MemberDisplay
                 name='Jonah Weinbaum'
-                role='Co-founder (CEO)'
+                role='CEO'
                 image='/Jonah-Weinbaum-Pic.jpg'
                 linkedIn={
                   "https://www.google.com/url?q=https://www.linkedin.com/in/weinbaumjonah/&sa=D&source=docs&ust=1689786987788323&usg=AOvVaw2tngPMkzzrqKf5xVCb1RW5"
@@ -103,7 +103,7 @@ export default function TeamSection() {
               />
               <MemberDisplay
                 name='Zan Huang'
-                role='Co-founder (CTO)'
+                role='Scientist I'
                 image='/Zan-Huang-Pic.png'
                 linkedIn={
                   "https://www.google.com/url?q=https://www.linkedin.com/in/zan-huang-36a69a110/&sa=D&source=docs&ust=1689786987788563&usg=AOvVaw0V_rHlgLn_CAkCScVmvo47"
