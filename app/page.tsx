@@ -114,7 +114,7 @@ export default function Home() {
               his titular novel, is a blanket term referring to the utilization
               of biological neurons for computation, sensory tasks, and medical
               applications. Wetware describes the interface used to stimulate
-              and record activity of in-vitro neural networks.
+              and record activity of in-vitro neuronal networks.
             </p>
           </div>
         </div>
@@ -126,7 +126,7 @@ export default function Home() {
             <h1
               className={`font-thin text-4xl ${robotoMonoFont.className} font-thin`}
             >
-              Why Wetware?
+              Why wetware?
             </h1>
             <p
               className={`font-light text-sm ${montserratFont.className} font-light`}
@@ -140,11 +140,10 @@ export default function Home() {
             >
               One compelling reason is that biological neurons are advantageous
               in both energy and data efficiency compared to traditional silicon
-              systems. More, biological neural networks exhibit self-healing and
-              massively parallel computing power as well as have been
-              hypothesized to exhibit active cognition and real-time learning
-              in-vitro. Wetware presents itself as a potential solution to
-              general intelligence problems and possesses interesting new ways
+              systems. More, biological neuronal networks exhibit massively 
+              parallel computing power, high thermodynamic efficiency, and 
+              real-time learning in-vitro. Wetware presents itself as a potential
+              solution to general intelligence problems and an interesting new way
               to research age-old questions of cognition and brain mechanisms.
             </p>
           </div>
