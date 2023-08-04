@@ -85,10 +85,9 @@ export default function AboutSection() {
               </div>
 
               <p className={`${montserratFont.className} font-light`}>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Cupiditate eum ipsum exercitationem architecto ipsam, fugit
-                error nam nesciunt temporibus sit ex consequatur, dignissimos
-                nobis tempore iste ab cum explicabo magni!
+                Pink Inference is focused on solving continuous control reinforcement learning problems.
+                We aim to utilize the massive data and energy efficiency of biological neural networks
+                for these ends.
               </p>
             </div>
 
@@ -115,9 +114,7 @@ export default function AboutSection() {
                 both in terms of cost and size constraints. <br />
                 We&apos;ve sidestepped these flaws by developing a system that
                 skips the electrode interface altogether. We are making wetware
-                a computational reality. Moreover, Pink Inference is focusing on
-                reinforcement learning applications where silicon simply cannot
-                compare.
+                a computational reality.
               </p>
             </div>
 
