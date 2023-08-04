@@ -156,11 +156,6 @@ export default function InvestorSection() {
                       <p className='text-sm'>Emergent Venture Grant</p>
                     </div>
                     <p>
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                      Autem, facilis. Saepe dignissimos accusantium natus magni
-                      cupiditate soluta consequatur illum repellendus,
-                      temporibus fuga! Dolorem quo vel alias iure exercitationem
-                      magnam minus.
                     </p>
                   </div>
                 </motion.div>
@@ -189,11 +184,6 @@ export default function InvestorSection() {
                       <p className='text-sm'>Accelerator Grant</p>
                     </div>
                     <p>
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                      Autem, facilis. Saepe dignissimos accusantium natus magni
-                      cupiditate soluta consequatur illum repellendus,
-                      temporibus fuga! Dolorem quo vel alias iure exercitationem
-                      magnam minus.
                     </p>
                   </div>
                 </motion.div>
