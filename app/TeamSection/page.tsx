@@ -92,6 +92,10 @@ export default function TeamSection() {
                 linkedIn={
                   "https://www.google.com/url?q=https://www.linkedin.com/in/michael-loftus-6376531a3/&sa=D&source=docs&ust=1689786987788504&usg=AOvVaw2Ku3dUq-vFR88LdQS3lAE8"
                 }
+                twitter={
+                  "https://www.google.com/url?q=https://twitter.com/Michael_Loftus3"
+                }
+                
               />
               <MemberDisplay
                 name='Jonah Weinbaum'
@@ -100,6 +104,9 @@ export default function TeamSection() {
                 linkedIn={
                   "https://www.google.com/url?q=https://www.linkedin.com/in/weinbaumjonah/&sa=D&source=docs&ust=1689786987788323&usg=AOvVaw2tngPMkzzrqKf5xVCb1RW5"
                 }
+                twitter={
+                  "https://www.google.com/url?q=https://twitter.com/WeinbaumJonah"
+                }
               />
               <MemberDisplay
                 name='Zan Huang'
@@ -107,6 +114,9 @@ export default function TeamSection() {
                 image='/Zan-Huang-Pic.png'
                 linkedIn={
                   "https://www.google.com/url?q=https://www.linkedin.com/in/zan-huang-36a69a110/&sa=D&source=docs&ust=1689786987788563&usg=AOvVaw0V_rHlgLn_CAkCScVmvo47"
+                }
+                      twitter={
+                  "https://www.google.com/url?q=https://twitter.com/TheZanHuang"
                 }
               />
             </div>
