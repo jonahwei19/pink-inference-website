@@ -21,7 +21,7 @@ export default function Home() {
       className={`flex min-h-screen flex-col items-center w-full bg-[#111111] text-white`}
     >
       <div className='relative h-screen flex flex-col w-full bg-topological p-6 sm:p-16 bg-center bg-cover'>
-        {  <TopologicalBackground /> }
+        <TopologicalBackground />
         <Link href={"/"} className='flex items-center gap-4'>
           <div className='relative h-12 w-12'>
             <Image src={"/logo.svg"} fill alt='logo' />
@@ -140,11 +140,12 @@ export default function Home() {
             >
               One compelling reason is that biological neurons are advantageous
               in both energy and data efficiency compared to traditional silicon
-              systems. More, biological neuronal networks exhibit massively 
-              parallel computing power, high thermodynamic efficiency, and 
-              real-time learning in-vitro. Wetware presents itself as a potential
-              solution to general intelligence problems and an interesting new way
-              to research age-old questions of cognition and brain mechanisms.
+              systems. More, biological neuronal networks exhibit massively
+              parallel computing power, high thermodynamic efficiency, and
+              real-time learning in-vitro. Wetware presents itself as a
+              potential solution to general intelligence problems and an
+              interesting new way to research age-old questions of cognition and
+              brain mechanisms.
             </p>
           </div>
         </div>

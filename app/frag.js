@@ -1,4 +1,4 @@
-const shaderSource = `
+export const shaderSource = `
 #ifdef GL_ES
 precision highp float;
 #endif
@@ -66,4 +66,4 @@ void main(void)
     
     gl_FragColor = color;
 }
-`; 
+`;
