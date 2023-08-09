@@ -25,14 +25,20 @@ import { shaderSource } from "./frag.js";
 // window.addEventListener("resize", sizer);
 
 export default function TopologicalBackground() {
+  const [randomState, setRandomState] = useState(0);
+
+  useEffect(() => {
+    setRandomState(Math.random());
+  }, [setRandomState])
+
   return (
-    <div id='hero' className='absolute w-full h-full top-0 left-0 z-50'>
-      <ShaderCanvas frag={shaderSource} />
+    <div id='hero'>
+      <ShaderCanvas frag={shaderSource} setUniforms={{seed: randomState.toString()}} />
     </div>
   );
 }
 
-import { FC, useEffect, useRef } from "react";
+import { FC, useEffect, useRef, useState } from "react";
 import GlslCanvas from "glslCanvas";
 
 interface ShaderCanvasProps {
@@ -58,12 +64,13 @@ export const ShaderCanvas: FC<ShaderCanvasProps> = (props): JSX.Element => {
     const node = canvasRef.current;
     const container = containerRef.current;
     const sandbox = new GlslCanvas(canvasRef.current);
+    sandbox.load(props.frag);
+    
     for (let k in props.setUniforms) {
       sandbox.setUniform(k, props.setUniforms[k]);
     }
 
     resizer(node!, container!);
-    sandbox.load(props.frag);
 
     const handler = () => {
       if (

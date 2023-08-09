@@ -20,8 +20,8 @@ export default function Home() {
     <main
       className={`flex min-h-screen flex-col items-center w-full bg-[#111111] text-white`}
     >
-      <div className='relative h-screen flex flex-col w-full bg-topological p-6 sm:p-16 bg-center bg-cover'>
-        <TopologicalBackground />
+      <TopologicalBackground />
+      <div className='relative h-screen flex flex-col w-full p-6 sm:p-16 bg-center bg-cover'>
         <Link href={"/"} className='flex items-center gap-4'>
           <div className='relative h-12 w-12'>
             <Image src={"/logo.svg"} fill alt='logo' />

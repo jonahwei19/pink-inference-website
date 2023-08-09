@@ -11,33 +11,45 @@ uniform float seed;
 
 varying vec2 v_texcoord;
 
-// Simple pseudo-random function
-float rand(vec2 co) {
-    return fract(sin(dot(co.xy, vec2(12.9898, 78.233))) * 43758.5453);
+#define NUM_OCTAVES 5
+
+float rand(vec2 n) { 
+    return fract(sin(dot(n, vec2(12.9898, 4.1414))) * 43758.5453);
 }
 
-// 2D rotation function
-vec2 rotation2d(float angle) {
-    float s = sin(angle);
-    float c = cos(angle);
-    return vec2(c, s);
+float noise(vec2 p){
+    vec2 ip = floor(p);
+    vec2 u = fract(p);
+    u = u*u*(3.0-2.0*u);
+    
+    float res = mix(
+        mix(rand(ip),rand(ip+vec2(1.0,0.0)),u.x),
+        mix(rand(ip+vec2(0.0,1.0)),rand(ip+vec2(1.0,1.0)),u.x),u.y);
+    return res*res;
 }
 
-// Simple noise function
-float noise(vec2 uv) {
-    return fract(sin(dot(uv, vec2(12.9898, 78.233))) * 43758.5453);
-}
-
-// Fractal Brownian motion function
-float fbm(vec2 uv) {
-    float total = 0.0;
-    float persistence = 0.5;
-    for(int i = 0; i < 4; i++) {
-        total += persistence * noise(uv);
-        uv *= 2.;
-        persistence *= 0.5;
+float fbm(vec2 x) {
+    float v = 0.0;
+    float a = 0.5;
+    vec2 shift = vec2(100);
+    // Rotate to reduce axial bias
+    mat2 rot = mat2(cos(0.5), sin(0.5), -sin(0.5), cos(0.50));
+    for (int i = 0; i < NUM_OCTAVES; ++i) {
+        v += a * noise(x);
+        x = rot * x * 2.0 + shift;
+        a *= 0.5;
     }
-    return total;
+    return v;
+}
+
+mat2 rotation2d(float angle) {
+  float s = sin(angle);
+  float c = cos(angle);
+
+  return mat2(
+    c, -s,
+    s, c
+  );
 }
 
 void main(void)
@@ -56,14 +68,14 @@ void main(void)
     f *= 50.0;
     f += u_time * 0.2;
     f += grain*3.0;
-    f += pow(mouse_distance, 0.10);
+    f += pow(mouse_distance,0.10);
     f = fract(f);
     float mixer = step(0.8, f) - step(0.9, f);
     
     vec4 black = vec4(0., 0., 0., 0.);
-    vec4 pink = vec4(254./255., 93./255., 168./255., 0.5);
+    vec4 pink = vec4(254./255.,93./255.,168./255.,0.5);
     vec4 color = mix(black, pink, mixer);
     
     gl_FragColor = color;
 }
-`;
+`
