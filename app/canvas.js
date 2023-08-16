@@ -1,8 +1,8 @@
 module.exports = function startAnimation(frag) {
   return new Promise(async (resolve, reject) => {
     try {
-      const canvas = document.createElement('canvas');
-      const GlslCanvas = (await import('./glslcanvas.min.js')).default;
+      const canvas = document.createElement("canvas");
+      const GlslCanvas = (await import("./glslcanvas.min.js")).default;
       const sandbox = new GlslCanvas(canvas);
 
       document.getElementById("hero").appendChild(canvas);
@@ -15,20 +15,20 @@ module.exports = function startAnimation(frag) {
         const wh = window.innerHeight;
         const dpi = window.devicePixelRatio;
         const s = Math.max(ww, wh);
-        
+
         canvas.width = s * dpi;
         canvas.height = s * dpi;
-        canvas.style.width = s + 'px';
-        canvas.style.height = s + 'px';
-      }
+        canvas.style.width = s + "px";
+        canvas.style.height = s + "px";
+      };
 
       sizer();
 
-      window.addEventListener('resize', sizer);
+      window.addEventListener("resize", sizer);
 
       resolve();
     } catch (error) {
       reject(error);
     }
   });
-}
+};
