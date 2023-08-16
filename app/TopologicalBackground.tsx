@@ -1,28 +1,5 @@
 import { shaderSource } from "./frag.js";
-
-// const canvas = document.createElement("canvas");
-// const sandbox = new GlslCanvas(canvas);
-
-// document.getElementById("hero").appendChild(canvas);
-
-// sandbox.load(frag);
-// sandbox.setUniform("seed", Math.random());
-
-// const sizer = function () {
-//   const ww = window.innerWidth;
-//   const wh = window.innerHeight;
-//   const dpi = window.devicePixelRatio;
-//   const s = Math.max(ww, wh);
-
-//   canvas.width = s * dpi;
-//   canvas.height = s * dpi;
-//   canvas.style.width = s + "px";
-//   canvas.style.height = s + "px";
-// };
-
-// sizer();
-
-// window.addEventListener("resize", sizer);
+import { FC, useEffect, useRef, useState } from "react";
 
 export default function TopologicalBackground() {
   const [randomState, setRandomState] = useState(0);
@@ -37,9 +14,6 @@ export default function TopologicalBackground() {
     </div>
   );
 }
-
-import { FC, useEffect, useRef, useState } from "react";
-import GlslCanvas from "glslCanvas";
 
 interface ShaderCanvasProps {
   frag: string;
@@ -61,14 +35,30 @@ export const ShaderCanvas: FC<ShaderCanvasProps> = (props): JSX.Element => {
   };
 
   useEffect(() => {
+    if(typeof window === 'undefined') return
+
+    const createAndUpdateCanvas = async () => {
+      // We need to import glslCanvas only on the client side since
+      // it breaks with a window is undefined issue when being rendered
+      // on the server. 
+
+      // We utilize lazy loading for external libraries as discussed here:
+      // https://nextjs.org/docs/pages/building-your-application/optimizing/lazy-loading#with-external-libraries
+      // This fixes the window issue without causing any hydration problems.
+      const GlslCanvas = (await import('glslCanvas')).default;
+
+      const sandbox = new GlslCanvas(canvasRef.current);
+      sandbox.load(props.frag);
+      
+      for (let k in props.setUniforms) {
+        sandbox.setUniform(k, props.setUniforms[k]);
+      }
+    }
+
     const node = canvasRef.current;
     const container = containerRef.current;
-    const sandbox = new GlslCanvas(canvasRef.current);
-    sandbox.load(props.frag);
-    
-    for (let k in props.setUniforms) {
-      sandbox.setUniform(k, props.setUniforms[k]);
-    }
+
+    createAndUpdateCanvas();
 
     resizer(node!, container!);
 
@@ -85,7 +75,7 @@ export const ShaderCanvas: FC<ShaderCanvasProps> = (props): JSX.Element => {
     return () => {
       window.removeEventListener("resize", handler);
     };
-  }, []);
+  }, [props.frag, props.setUniforms]);
 
   return (
     <div ref={containerRef} style={{ width: "100%", height: "100%" }}>
