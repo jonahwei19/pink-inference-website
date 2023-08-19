@@ -213,7 +213,7 @@ export default function InvestorSection() {
                 transition={{ duration: 0.5 }}
                 className='mx-auto max-w-xl transition duration-100 ease-in'
               >
-                <SubscribeForm message={"Subsribe to Our Email List"} />
+                <SubscribeForm message={"Subscribe to Our Email List"} />
               </motion.div>
             </div>
           </motion.section>
