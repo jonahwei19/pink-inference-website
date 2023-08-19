@@ -38,7 +38,7 @@ export default function FormComponent({ message }: { message?: string }) {
       <h1
         className={`${robotoMonoFont.className} text-3xl md:text-4xl font-thin text-center`}
       >
-        {message ? message : "Interested? Subsribe to Our Email List"}
+        {message ? message : "Interested? Subscribe to Our Email List"}
       </h1>
       <form
         onSubmit={handleSubmit}
