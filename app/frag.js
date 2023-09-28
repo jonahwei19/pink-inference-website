@@ -74,7 +74,7 @@ void main(void)
     
     vec4 black = vec4(0., 0., 0., 0.);
     vec4 orange = vec4(245./255., 128./255., 37./255., 1);
-    vec4 color = mix(black, orange, mixer);
+    vec4 color = orange;
     
     gl_FragColor = color;
 }
