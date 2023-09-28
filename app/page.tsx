@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen items-center justify-center w-full bg-[#111111] text-white">
       <TopologicalBackground />
-      <h1 className="text-10xl font-bold absolute">ALRT</h1>
+      <h1 className="text-8xl font-bold absolute">ALRT</h1>
     </main>
   );
 }
