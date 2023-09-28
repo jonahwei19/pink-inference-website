@@ -73,8 +73,8 @@ void main(void)
     float mixer = step(0.8, f) - step(0.9, f);
     
     vec4 black = vec4(0., 0., 0., 0.);
-    vec4 orange = vec4(245./255., 128./255., 37./255., 1);
-    vec4 color = orange;
+    vec4 orange = vec4(245./255., 0, 0, 1);
+    vec4 color = mix(black, orange, mixer);;
     
     gl_FragColor = color;
 }
