@@ -42,7 +42,7 @@ export default function AboutSection() {
           <h1
             className={`text-white font-thin text-2xl ${robotoMonoFont.className}`}
           >
-            <span className='text-[#FE5DA8]'>PINK</span> INFERENCE
+            <span className='text-[#FE5DA8]'>EXPERIENT</span>
           </h1>
         </Link>
         <motion.h1
@@ -52,8 +52,8 @@ export default function AboutSection() {
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.5, ease: "easeOut" }}
         >
-          Where Biological Neurons <br className='hidden sm:block' /> Truly
-          Shine
+          Where Venture Studio Things <br className='hidden sm:block' /> Truly
+          Happen
         </motion.h1>
         <div className='w-full md:px-12'>
           <motion.section
