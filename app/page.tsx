@@ -29,7 +29,7 @@ export default function Home() {
           <h1
             className={`text-white font-thin text-2xl ${robotoMonoFont.className}`}
           >
-            <span className='text-[#FE5DA8]'>PINK</span> INFERENCE
+            <span className='text-[#FE5DA8]'>EXPERIEST</span>
           </h1>
         </Link>
 
@@ -47,10 +47,10 @@ export default function Home() {
             className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl ${robotoMonoFont.className} font-thin `}
           >
             <p data-aos='fade-up'>
-              SCALABLE <br />& POWERFUL
+              An Experential<br />
             </p>
             <p data-aos='fade-up' data-aos-delay={1200}>
-              WETWARE COMPUTING
+               Venture Studio 
             </p>
           </h1>
           <div
@@ -61,7 +61,7 @@ export default function Home() {
             <p
               className={`text-sm sm:text-base md:text-2xl ${montserratFont.className} font-light lg:max-w-[60vw]`}
             >
-              Wetware architecture for the next generation of robotics
+              Building Things That Should Exist
             </p>
             <div
               className={`text-sm sm:text-base md:text-2xl flex gap-4 sm:gap-12 flex-wrap lg:max-w-[60vw] ${robotoMonoFont.className} font-thin`}
@@ -105,16 +105,14 @@ export default function Home() {
             <h1
               className={`font-thin text-4xl ${robotoMonoFont.className} font-thin`}
             >
-              What is wetware?
+              Why EXPERIST?
             </h1>
             <p
               className={`font-light text-sm ${montserratFont.className} font-light`}
             >
-              Wetware, a term coined by science fiction novelist Rudy Rucker in
-              his titular novel, is a blanket term referring to the utilization
-              of biological neurons for computation, sensory tasks, and medical
-              applications. Wetware describes the interface used to stimulate
-              and record activity of in-vitro neuronal networks.
+              We are vessels of experience, here until we are not. EXPERIST is a collective
+              focused on capatilizing on that. We use our existance for scalable creation...
+              
             </p>
           </div>
         </div>
@@ -126,26 +124,16 @@ export default function Home() {
             <h1
               className={`font-thin text-4xl ${robotoMonoFont.className} font-thin`}
             >
-              Why wetware?
+              Why Us?
             </h1>
             <p
               className={`font-light text-sm ${montserratFont.className} font-light`}
             >
-              It is no secret that neurons are notoriously difficult to keep
-              alive, let alone even obtain. So why would one bother with all the
-              hassle?
+              Because we are super cool.
             </p>
             <p
               className={`font-light text-sm ${montserratFont.className} font-light`}
             >
-              One compelling reason is that biological neurons are advantageous
-              in both energy and data efficiency compared to traditional silicon
-              systems. More, biological neuronal networks exhibit massively
-              parallel computing power, high thermodynamic efficiency, and
-              real-time learning in-vitro. Wetware presents itself as a
-              potential solution to general intelligence problems and an
-              interesting new way to research age-old questions of cognition and
-              brain mechanisms.
             </p>
           </div>
         </div>
