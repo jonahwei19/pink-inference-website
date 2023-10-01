@@ -105,12 +105,12 @@ export default function Home() {
             <h1
               className={`font-thin text-4xl ${robotoMonoFont.className} font-thin`}
             >
-              Why EXPERIST?
+              Why EXPERIEST?
             </h1>
             <p
               className={`font-light text-sm ${montserratFont.className} font-light`}
             >
-              We are vessels of experience, here until we are not. EXPERIST is a collective
+              We are vessels of experience, here until we are not. EXPERIEST is a collective
               focused on capatilizing on that. We use our existance for scalable creation...
               
             </p>
